@@ -31,6 +31,7 @@ BASE_URL = "https://data.bioontology.org"
 TCO_ACRONYM = "TCO"
 TIMEOUT = 30
 CACHE_FILE = "llm_cache.json"
+TCO_CORPUS_FILE = "tco_corpus.jsonl"
 RANDOM_SEED = 42
 
 # Load environment variables
@@ -210,17 +211,44 @@ def build_ontology_document(class_details: Dict) -> Dict:
     }
 
 
-# Fetch all classes
-print("Fetching all TCO classes...")
-all_classes = list_all_tco_classes(max_pages=10)
-print(f"✓ Retrieved {len(all_classes)} total classes")
+def load_tco_corpus_cache(path: str) -> Optional[Tuple[List[Dict], Dict[str, str]]]:
+    """Load cached TCO corpus from disk if available and valid."""
+    if not os.path.exists(path):
+        return None
+    try:
+        df = pd.read_json(path, lines=True)
+    except ValueError:
+        return None
+    if df.empty:
+        return None
 
-# Select representative classes
-print("\nSelecting representative thyroid cancer classes...")
-selected_classes = select_thyroid_cancer_classes(all_classes, n=8)
-print(f"✓ Selected {len(selected_classes)} thyroid cancer classes:")
-for cls in selected_classes:
-    print(f"  - {cls['label']}")
+    records = df.to_dict(orient="records")
+    corpus: List[Dict] = []
+    label_map: Dict[str, str] = {}
+    for rec in records:
+        tco_id = rec.get("tco_id")
+        label = rec.get("label")
+        if not tco_id or not label:
+            continue
+        corpus.append({
+            "tco_id": tco_id,
+            "label": label,
+            "synonyms": rec.get("synonyms") or [],
+            "definition": rec.get("definition") or "",
+            "parent_labels": rec.get("parent_labels") or [],
+            "document_text": rec.get("document_text") or "",
+        })
+        label_map[tco_id] = label
+
+    if not corpus:
+        return None
+
+    return corpus, label_map
+
+
+def save_tco_corpus_cache(corpus: List[Dict], path: str) -> None:
+    """Persist corpus to disk for reuse."""
+    pd.DataFrame(corpus).to_json(path, orient="records", lines=True)
 
 # Build corpus
 def build_rag_context(chart_text: str, retriever) -> str:
@@ -334,36 +362,40 @@ def main() -> None:
     print("Building TCO Retrieval Corpus")
     print("=" * 60)
 
-    print("Fetching all TCO classes...")
-    all_classes = list_all_tco_classes(max_pages=10)
-    print(f"✓ Retrieved {len(all_classes)} total classes")
+    cached = load_tco_corpus_cache(TCO_CORPUS_FILE)
+    if cached:
+        corpus, tco_label_map = cached
+        print(f"✓ Loaded cached corpus from {TCO_CORPUS_FILE} ({len(corpus)} classes)")
+    else:
+        print("Fetching all TCO classes...")
+        all_classes = list_all_tco_classes(max_pages=10)
+        print(f"✓ Retrieved {len(all_classes)} total classes")
 
-    print("\nSelecting representative thyroid cancer classes...")
-    selected_classes = select_thyroid_cancer_classes(all_classes, n=8)
-    print(f"✓ Selected {len(selected_classes)} thyroid cancer classes:")
-    for cls in selected_classes:
-        print(f"  - {cls['label']}")
+        print("\nSelecting representative thyroid cancer classes...")
+        selected_classes = select_thyroid_cancer_classes(all_classes, n=8)
+        print(f"✓ Selected {len(selected_classes)} thyroid cancer classes:")
+        for cls in selected_classes:
+            print(f"  - {cls['label']}")
 
-    print("\nFetching detailed information for selected classes...")
-    corpus = []
-    tco_label_map = {}  # IRI -> label mapping
+        print("\nFetching detailed information for selected classes...")
+        corpus = []
+        tco_label_map = {}  # IRI -> label mapping
 
-    for cls in selected_classes:
-        iri = cls["iri"]
-        print(f"  Fetching: {cls['label']}")
-        details = get_class_details(iri)
-        if "error" not in details:
-            doc = build_ontology_document(details)
-            corpus.append(doc)
-            tco_label_map[iri] = doc["label"]
-            time.sleep(0.2)  # Rate limit courtesy
+        for cls in selected_classes:
+            iri = cls["iri"]
+            print(f"  Fetching: {cls['label']}")
+            details = get_class_details(iri)
+            if "error" not in details:
+                doc = build_ontology_document(details)
+                corpus.append(doc)
+                tco_label_map[iri] = doc["label"]
+                time.sleep(0.2)  # Rate limit courtesy
 
-    print(f"\n✓ Built corpus with {len(corpus)} TCO classes")
+        print(f"\n✓ Built corpus with {len(corpus)} TCO classes")
 
-    # Save corpus
-    corpus_df = pd.DataFrame(corpus)
-    corpus_df.to_json("tco_corpus.jsonl", orient="records", lines=True)
-    print("✓ Saved corpus to tco_corpus.jsonl")
+        # Save corpus
+        save_tco_corpus_cache(corpus, TCO_CORPUS_FILE)
+        print(f"✓ Saved corpus to {TCO_CORPUS_FILE}")
 
     # Generate Synthetic Patient Charts
     print("\n" + "=" * 60)
@@ -571,7 +603,7 @@ def main() -> None:
     print(f"  Improvement: {(agreement_rag - agreement_no_rag):+.1f} percentage points")
     print(f"\nArtifacts Saved:")
     print("  - synthetic_charts.csv")
-    print("  - tco_corpus.jsonl")
+    print(f"  - {TCO_CORPUS_FILE}")
     print("  - results.json")
     print("  - examples.md")
     print("  - llm_cache.json")
