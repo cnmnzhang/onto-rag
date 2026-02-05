@@ -1,0 +1,11 @@
+pandas
+requests
+numpy
+scikit-learn
+sentence-transformers  # Optional: for better retrieval
+openai  # Optional: for OpenAI LLM calls
+google-generativeai  # Optional: for Google Gemini (FREE)
+transformers  # For Hugging Face models
+torch  # Required for Hugging Face models
+accelerate  # Optional: for faster HF model loading
+psutil  # For Colab RAM detection
