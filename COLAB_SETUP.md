@@ -227,7 +227,7 @@ os.environ["GOOGLE_API_KEY"] = "your-key-here"
 os.environ["BIOPORTAL_API_KEY"] = "98d19152-8c21-4a0c-bd50-c09b46543947"
 
 # Cell 3: Run
-!python tco_rag_comparison.py
+!python rag_exp.py
 ```
 
 ## Expected Runtime in Colab

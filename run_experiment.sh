@@ -76,7 +76,7 @@ if [ -z "$VIRTUAL_ENV" ]; then
 fi
 
 # Run the experiment
-python tco_rag_comparison.py
+python rag_exp.py
 
 echo
 echo "=================================="

@@ -40,7 +40,7 @@ Uses Gemini 1.5 Flash via Google AI API (free tier):
 
 ```bash
 export GOOGLE_API_KEY="your-gemini-key"
-python tco_rag_comparison.py
+python rag_exp.py
 ```
 
 Get a free API key: https://aistudio.google.com/app/apikey
@@ -62,7 +62,7 @@ Uses Qwen2.5-1.5B-Instruct model locally (no API costs):
 
 ```bash
 export USE_HUGGINGFACE="true"
-python tco_rag_comparison.py
+python rag_exp.py
 ```
 
 **Pros:**
@@ -82,7 +82,7 @@ Uses GPT-3.5-turbo via OpenAI API:
 ```bash
 export OPENAI_API_KEY="your-key"
 # Don't set USE_HUGGINGFACE or set it to false
-python tco_rag_comparison.py
+python rag_exp.py
 ```
 
 **Pros:**
@@ -101,7 +101,7 @@ Uses deterministic keyword heuristics:
 
 ```bash
 # Don't set any LLM-related environment variables
-python tco_rag_comparison.py
+python rag_exp.py
 ```
 
 **Pros:**
@@ -249,7 +249,7 @@ The script automatically falls back to TF-IDF for retrieval. This works fine and
 ## Architecture
 
 ```
-tco_rag_comparison.py
+rag_exp.py
 ├── Load proposal
 ├── Connect to BioPortal TCO API
 ├── Build retrieval corpus (8 TCO classes)
@@ -275,7 +275,7 @@ To modify the LLM behavior:
 
 To modify the evaluation:
 
-1. **Edit metrics:** Modify `calculate_agreement()` in `tco_rag_comparison.py`
+1. **Edit metrics:** Modify `calculate_agreement()` in `rag_exp.py`
 2. **Add visualizations:** Add plotting after evaluation section
 3. **Change corpus size:** Modify `select_thyroid_cancer_classes(n=8)` parameter
 
