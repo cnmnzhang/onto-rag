@@ -6,6 +6,42 @@ from typing import Dict, List
 
 import numpy as np
 
+class FaissRetriever:
+    def __init__(self, corpus: List[Dict], top_k: int = 3, model_name: str = "all-MiniLM-L6-v2"):
+        import faiss
+        from sentence_transformers import SentenceTransformer
+
+        self.corpus = corpus
+        self.top_k = top_k
+        print(f"Loading sentence transformer model: {model_name}...")
+        self.model = SentenceTransformer(model_name)
+        self.documents = [doc["document_text"] for doc in corpus]
+        print("Encoding corpus documents...")
+        embeddings = self.model.encode(self.documents, convert_to_tensor=False).astype("float32")
+        faiss.normalize_L2(embeddings)
+        self.index = faiss.IndexFlatIP(embeddings.shape[1])
+        self.index.add(embeddings)
+        print(f"✓ Encoded and indexed {len(self.documents)} documents")
+
+    def retrieve(self, query: str) -> List[Dict]:
+        """Retrieve top-k most similar documents using FAISS."""
+        import faiss
+
+        query_embedding = self.model.encode([query], convert_to_tensor=False).astype("float32")
+        faiss.normalize_L2(query_embedding)
+        scores, indices = self.index.search(query_embedding, self.top_k)
+        scores = scores[0]
+        indices = indices[0]
+
+        results = []
+        for idx, score in zip(indices, scores):
+            if idx < 0:
+                continue
+            results.append({
+                **self.corpus[idx],
+                "similarity_score": float(score)
+            })
+        return results
 
 class EmbeddingRetriever:
     def __init__(self, corpus: List[Dict], top_k: int = 3, model_name: str = "all-MiniLM-L6-v2"):
@@ -76,6 +112,13 @@ class TFIDFRetriever:
 def create_retriever(corpus: List[Dict], top_k: int = 3, prefer_embeddings: bool = True):
     """Create an embedding or TF-IDF retriever based on availability."""
     if prefer_embeddings:
+        try:
+            import faiss  # noqa: F401
+            import sentence_transformers  # noqa: F401
+            print("✓ Using FAISS + sentence-transformers for retrieval")
+            return FaissRetriever(corpus, top_k=top_k)
+        except Exception:
+            pass
         try:
             import sentence_transformers  # noqa: F401
             print("✓ Using sentence-transformers for retrieval")

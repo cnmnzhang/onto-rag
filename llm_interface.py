@@ -1,5 +1,5 @@
 """
-LLM Interface for Thyroid Cancer Differential Diagnosis
+LLM Interface for Disease Differential Diagnosis
 Supports OpenAI, Hugging Face (Qwen2.5-1.5B-Instruct), Google Gemini, and dry-run modes
 """
 
@@ -7,7 +7,10 @@ import os
 import json
 import hashlib
 import random
-from typing import Dict, List, Optional, Set
+from typing import Dict, List, Optional, Set, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from onto_config import OntologyConfig
 
 
 class LLMInterface:
@@ -21,10 +24,16 @@ class LLMInterface:
     - Dry-run (deterministic heuristics)
     """
 
-    def __init__(self, allowed_labels: List[str], cache_file: str = "llm_cache.json"):
+    def __init__(
+        self,
+        allowed_labels: List[str],
+        cache_file: str = "llm_cache.json",
+        config: Optional["OntologyConfig"] = None
+    ):
         self.allowed_labels = set(allowed_labels + ["NONE"])
         self.cache_file = cache_file
         self.cache = self._load_cache()
+        self.config = config
 
         # Determine backend
         self.backend = self._detect_backend()
@@ -129,35 +138,54 @@ class LLMInterface:
     def _dry_run_predict(self, chart_text: str, rag_context: Optional[str] = None) -> Dict:
         """Deterministic heuristic for dry-run mode."""
         text_lower = chart_text.lower()
-        cancer_labels = [l for l in self.allowed_labels if l != "NONE"]
-        cancer_labels_list = list(cancer_labels)
+        disease_labels = [l for l in self.allowed_labels if l != "NONE"]
+        disease_labels_list = list(disease_labels)
+
+        # Use config keywords if available, otherwise use generic fallback
+        if self.config:
+            positive_keywords = [kw.lower() for kw in self.config.positive_keywords]
+            negative_keywords = [kw.lower() for kw in self.config.negative_keywords]
+            disease_name = self.config.disease_name
+        else:
+            # Generic fallback keywords
+            positive_keywords = ["malignant", "carcinoma", "cancer", "tumor", "suspicious"]
+            negative_keywords = ["normal", "benign", "no abnormalities"]
+            disease_name = "disease"
 
         # Heuristic rules
-        if "malignant" in text_lower or "fna reveals malignant" in text_lower:
+        # Check for strong positive indicators
+        strong_positive = any(kw in text_lower for kw in positive_keywords[:3])  # Top 3 positive keywords
+        if strong_positive:
             return {
-                "predicted_label": cancer_labels_list[0] if cancer_labels_list else "NONE",
-                "top3_labels": cancer_labels_list[:3] if cancer_labels_list else ["NONE"],
-                "rationale": "Heuristic: malignant keywords detected"
+                "predicted_label": disease_labels_list[0] if disease_labels_list else "NONE",
+                "top3_labels": disease_labels_list[:3] if disease_labels_list else ["NONE"],
+                "rationale": f"Heuristic: {disease_name} keywords detected"
             }
-        elif any(kw in text_lower for kw in ["thyroid mass", "thyroid nodule", "fna cytology shows suspicious", "atypical cells"]):
-            pred_label = cancer_labels_list[1] if len(cancer_labels_list) > 1 else (cancer_labels_list[0] if cancer_labels_list else "NONE")
+
+        # Check for moderate positive indicators
+        moderate_positive = any(kw in text_lower for kw in positive_keywords[3:])
+        if moderate_positive:
+            pred_label = disease_labels_list[1] if len(disease_labels_list) > 1 else (disease_labels_list[0] if disease_labels_list else "NONE")
             return {
                 "predicted_label": pred_label,
-                "top3_labels": cancer_labels_list[:3] if cancer_labels_list else ["NONE"],
-                "rationale": "Heuristic: thyroid nodule/suspicious cytology detected"
+                "top3_labels": disease_labels_list[:3] if disease_labels_list else ["NONE"],
+                "rationale": f"Heuristic: possible {disease_name} indicators"
             }
-        elif "normal thyroid" in text_lower or "no thyroid" in text_lower or "tsh" in text_lower:
+
+        # Check for negative indicators
+        if any(kw in text_lower for kw in negative_keywords):
             return {
                 "predicted_label": "NONE",
                 "top3_labels": ["NONE"],
-                "rationale": "Heuristic: normal thyroid findings"
+                "rationale": f"Heuristic: normal/benign findings"
             }
-        else:
-            return {
-                "predicted_label": "NONE",
-                "top3_labels": ["NONE"],
-                "rationale": "Heuristic: no clear thyroid cancer indicators"
-            }
+
+        # Default to NONE if no clear indicators
+        return {
+            "predicted_label": "NONE",
+            "top3_labels": ["NONE"],
+            "rationale": f"Heuristic: no clear {disease_name} indicators"
+        }
 
     def _predict_gemini(self, system_prompt: str, user_prompt: str) -> Dict:
         """Generate prediction using Google Gemini."""
@@ -312,16 +340,18 @@ class LLMInterface:
             Dict with predicted_label, top3_labels, and rationale
         """
         # Build prompt
+        disease_name = self.config.disease_name if self.config else "disease"
+
         system_prompt = f"""You are a clinical diagnosis assistant. Given a patient chart,
-predict the most likely thyroid cancer diagnosis from the allowed label set.
+predict the most likely {disease_name} diagnosis from the allowed label set.
 
 ALLOWED LABELS: {', '.join(sorted([l for l in self.allowed_labels if l != 'NONE']))}, NONE
 
 Output valid JSON only:
 {{"predicted_label": "<label>", "top3_labels": ["<label1>", "<label2>", "<label3>"], "rationale": "<brief explanation>"}}
 
-If no thyroid cancer is evident, return "NONE" as the predicted_label.
-Use the full IRI (http://...) for thyroid cancer labels, not just the short name."""
+If no {disease_name} is evident, return "NONE" as the predicted_label.
+Use the full IRI (http://...) for {disease_name} labels, not just the short name."""
 
         user_prompt = f"Patient Chart:\n{chart_text}"
         if rag_context:

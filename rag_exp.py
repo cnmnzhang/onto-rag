@@ -19,6 +19,7 @@ import requests
 
 from llm_interface import LLMInterface
 from retrievers import create_retriever
+from onto_config import OntologyConfig, get_config, build_system_prompt, format_template
 
 warnings.filterwarnings('ignore')
 
@@ -27,11 +28,16 @@ warnings.filterwarnings('ignore')
 # Configuration
 # ============================================================================
 
+# Select ontology configuration
+# Options: "tco" (thyroid cancer), "diabetes", "lung_cancer"
+# Or create custom: CONFIG = OntologyConfig(acronym="...", ...)
+CONFIG = get_config("tco")
+
 BASE_URL = "https://data.bioontology.org"
-TCO_ACRONYM = "TCO"
+ONTOLOGY_ACRONYM = CONFIG.acronym
 TIMEOUT = 30
 CACHE_FILE = "llm_cache.json"
-TCO_CORPUS_FILE = "tco_corpus.jsonl"
+CORPUS_FILE = CONFIG.corpus_filename
 RANDOM_SEED = 42
 
 # Load environment variables
@@ -72,15 +78,15 @@ def api_get_auth(endpoint: str, params: Optional[Dict] = None) -> Dict:
     return api_get(endpoint, params)
 
 def test_bioportal_connection():
-    """Test connection to BioPortal and fetch TCO ontology metadata."""
+    """Test connection to BioPortal and fetch ontology metadata."""
     # Smoke test
     try:
-        ontology_meta = api_get_auth(f"/ontologies/{TCO_ACRONYM}")
+        ontology_meta = api_get_auth(f"/ontologies/{ONTOLOGY_ACRONYM}")
         print(f"✓ Successfully connected to BioPortal")
         print(f"  Ontology: {ontology_meta.get('name')}")
         print(f"  Acronym: {ontology_meta.get('acronym')}")
 
-        submission = api_get_auth(f"/ontologies/{TCO_ACRONYM}/latest_submission")
+        submission = api_get_auth(f"/ontologies/{ONTOLOGY_ACRONYM}/latest_submission")
         print(f"  Version: {submission.get('version', 'N/A')}")
         print(f"  Released: {submission.get('released', 'N/A')}")
     except Exception as e:
@@ -91,13 +97,13 @@ def test_bioportal_connection():
 # ============================================================================
 # Build TCO Retrieval Corpus
 # ============================================================================
-def list_all_tco_classes(max_pages: int = 10) -> List[Dict]:
-    """Retrieve all TCO classes with pagination."""
+def list_all_ontology_classes(max_pages: int = 10) -> List[Dict]:
+    """Retrieve all ontology classes with pagination."""
     classes = []
     for page in range(1, max_pages + 1):
         try:
             data = api_get_auth(
-                f"/ontologies/{TCO_ACRONYM}/classes",
+                f"/ontologies/{ONTOLOGY_ACRONYM}/classes",
                 params={"page": page, "pagesize": 100}
             )
             collection = data if isinstance(data, list) else data.get("collection", [])
@@ -111,38 +117,44 @@ def list_all_tco_classes(max_pages: int = 10) -> List[Dict]:
     return classes
 
 
-def select_thyroid_cancer_classes(classes: List[Dict], n: int = 8) -> List[Dict]:
-    """Select representative thyroid cancer class IRIs."""
-    cancer_keywords = ["carcinoma", "cancer", "tumor", "neoplasm", "adenoma"]
+def select_disease_classes(classes: List[Dict], config: OntologyConfig) -> List[Dict]:
+    """Select representative disease classes using config keywords."""
     candidates = []
 
+    # Filter classes by keywords
     for cls in classes:
         label = (cls.get("prefLabel") or cls.get("label") or "").lower()
-        if any(kw in label for kw in cancer_keywords) and "thyroid" in label:
-            candidates.append({
-                "iri": cls.get("@id"),
-                "label": cls.get("prefLabel") or cls.get("label")
-            })
+        # Check if any class keyword is present
+        if any(kw in label for kw in config.class_keywords):
+            # For organ-specific diseases, also check organ is mentioned
+            if config.organ.lower() != "n/a":
+                if config.organ.lower() in label or config.disease_name.lower() in label:
+                    candidates.append({
+                        "iri": cls.get("@id"),
+                        "label": cls.get("prefLabel") or cls.get("label")
+                    })
+            else:
+                # For non-organ diseases (like diabetes), just use class keywords
+                if config.disease_name.split()[0].lower() in label:  # First word of disease
+                    candidates.append({
+                        "iri": cls.get("@id"),
+                        "label": cls.get("prefLabel") or cls.get("label")
+                    })
 
-    # Select diverse subtypes
-    diversity_keywords = [
-        "papillary", "follicular", "medullary", "anaplastic",
-        "poorly differentiated", "hurthle cell", "clear cell", "insular"
-    ]
-
+    # Select diverse subtypes using subtype keywords
     selected = []
-    for keyword in diversity_keywords:
+    for keyword in config.subtype_keywords:
         for candidate in candidates:
             if keyword in candidate["label"].lower() and candidate not in selected:
                 selected.append(candidate)
-                if len(selected) >= n:
+                if len(selected) >= config.num_classes:
                     return selected
 
-    # Fill remaining slots
+    # Fill remaining slots with any candidates
     for candidate in candidates:
         if candidate not in selected:
             selected.append(candidate)
-            if len(selected) >= n:
+            if len(selected) >= config.num_classes:
                 break
 
     return selected
@@ -161,7 +173,7 @@ def get_class_details(iri: str) -> Dict:
     """Fetch full class details including synonyms and hierarchy."""
     encoded = quote(iri, safe="")
     try:
-        return api_get_auth(f"/ontologies/{TCO_ACRONYM}/classes/{encoded}")
+        return api_get_auth(f"/ontologies/{ONTOLOGY_ACRONYM}/classes/{encoded}")
     except requests.HTTPError as e:
         if e.response.status_code == 404:
             print(f"  Class not found: {iri}")
@@ -169,7 +181,7 @@ def get_class_details(iri: str) -> Dict:
         raise
 
 
-def build_ontology_document(class_details: Dict) -> Dict:
+def build_ontology_document(class_details: Dict, config: OntologyConfig) -> Dict:
     """Create searchable document from class details."""
     iri = class_details.get("@id")
     label = class_details.get("prefLabel") or class_details.get("label") or ""
@@ -202,7 +214,7 @@ def build_ontology_document(class_details: Dict) -> Dict:
     document_text = "\n".join([p for p in text_parts if p])
 
     return {
-        "tco_id": iri,
+        config.doc_id_field: iri,
         "label": label,
         "synonyms": synonyms,
         "definition": " ".join(definition),
@@ -211,8 +223,8 @@ def build_ontology_document(class_details: Dict) -> Dict:
     }
 
 
-def load_tco_corpus_cache(path: str) -> Optional[Tuple[List[Dict], Dict[str, str]]]:
-    """Load cached TCO corpus from disk if available and valid."""
+def load_corpus_cache(path: str, config: OntologyConfig) -> Optional[Tuple[List[Dict], Dict[str, str]]]:
+    """Load cached corpus from disk if available and valid."""
     if not os.path.exists(path):
         return None
     try:
@@ -225,20 +237,22 @@ def load_tco_corpus_cache(path: str) -> Optional[Tuple[List[Dict], Dict[str, str
     records = df.to_dict(orient="records")
     corpus: List[Dict] = []
     label_map: Dict[str, str] = {}
+    doc_id_field = config.doc_id_field
+
     for rec in records:
-        tco_id = rec.get("tco_id")
+        doc_id = rec.get(doc_id_field)
         label = rec.get("label")
-        if not tco_id or not label:
+        if not doc_id or not label:
             continue
         corpus.append({
-            "tco_id": tco_id,
+            doc_id_field: doc_id,
             "label": label,
             "synonyms": rec.get("synonyms") or [],
             "definition": rec.get("definition") or "",
             "parent_labels": rec.get("parent_labels") or [],
             "document_text": rec.get("document_text") or "",
         })
-        label_map[tco_id] = label
+        label_map[doc_id] = label
 
     if not corpus:
         return None
@@ -246,16 +260,18 @@ def load_tco_corpus_cache(path: str) -> Optional[Tuple[List[Dict], Dict[str, str
     return corpus, label_map
 
 
-def save_tco_corpus_cache(corpus: List[Dict], path: str) -> None:
+def save_corpus_cache(corpus: List[Dict], path: str) -> None:
     """Persist corpus to disk for reuse."""
     pd.DataFrame(corpus).to_json(path, orient="records", lines=True)
 
 # Build corpus
-def build_rag_context(chart_text: str, retriever) -> str:
+def build_rag_context(chart_text: str, retriever, config: OntologyConfig) -> str:
     """Build RAG context from retrieved ontology documents."""
     retrieved = retriever.retrieve(chart_text)
 
-    context_parts = ["Relevant thyroid cancer classifications from TCO:"]
+    context_header = format_template(config.rag_context_header, config)
+    context_parts = [context_header]
+
     for i, doc in enumerate(retrieved, 1):
         context_parts.append(f"\n{i}. {doc['label']}")
         if doc.get('synonyms'):
@@ -344,8 +360,9 @@ def main() -> None:
     np.random.seed(RANDOM_SEED)
 
     print("=" * 60)
-    print("Ontology-Grounded RAG for Thyroid Cancer Diagnosis")
+    print(f"Ontology-Grounded RAG for {CONFIG.disease_name.title()} Diagnosis")
     print("=" * 60)
+    print(f"Configuration: {CONFIG.name} ({CONFIG.acronym})")
     print(f"Random seed: {RANDOM_SEED}")
     print(f"BioPortal API key: {'Found' if BIOPORTAL_API_KEY else 'Not found'}")
     print(f"OpenAI API key: {'Found' if OPENAI_API_KEY else 'Not found'}")
@@ -357,58 +374,58 @@ def main() -> None:
     print("=" * 60)
     test_bioportal_connection()
 
-    # Build TCO Retrieval Corpus
+    # Build Ontology Retrieval Corpus
     print("\n" + "=" * 60)
-    print("Building TCO Retrieval Corpus")
+    print(f"Building {CONFIG.acronym} Retrieval Corpus")
     print("=" * 60)
 
-    cached = load_tco_corpus_cache(TCO_CORPUS_FILE)
+    cached = load_corpus_cache(CORPUS_FILE, CONFIG)
     if cached:
-        corpus, tco_label_map = cached
-        print(f"✓ Loaded cached corpus from {TCO_CORPUS_FILE} ({len(corpus)} classes)")
+        corpus, label_map = cached
+        print(f"✓ Loaded cached corpus from {CORPUS_FILE} ({len(corpus)} classes)")
     else:
-        print("Fetching all TCO classes...")
-        all_classes = list_all_tco_classes(max_pages=10)
+        print(f"Fetching all {CONFIG.acronym} classes...")
+        all_classes = list_all_ontology_classes(max_pages=10)
         print(f"✓ Retrieved {len(all_classes)} total classes")
 
-        print("\nSelecting representative thyroid cancer classes...")
-        selected_classes = select_thyroid_cancer_classes(all_classes, n=8)
-        print(f"✓ Selected {len(selected_classes)} thyroid cancer classes:")
+        print(f"\nSelecting representative {CONFIG.disease_name} classes...")
+        selected_classes = select_disease_classes(all_classes, CONFIG)
+        print(f"✓ Selected {len(selected_classes)} {CONFIG.disease_name} classes:")
         for cls in selected_classes:
             print(f"  - {cls['label']}")
 
         print("\nFetching detailed information for selected classes...")
         corpus = []
-        tco_label_map = {}  # IRI -> label mapping
+        label_map = {}  # IRI -> label mapping
 
         for cls in selected_classes:
             iri = cls["iri"]
             print(f"  Fetching: {cls['label']}")
             details = get_class_details(iri)
             if "error" not in details:
-                doc = build_ontology_document(details)
+                doc = build_ontology_document(details, CONFIG)
                 corpus.append(doc)
-                tco_label_map[iri] = doc["label"]
+                label_map[iri] = doc["label"]
                 time.sleep(0.2)  # Rate limit courtesy
 
-        print(f"\n✓ Built corpus with {len(corpus)} TCO classes")
+        print(f"\n✓ Built corpus with {len(corpus)} {CONFIG.acronym} classes")
 
         # Save corpus
-        save_tco_corpus_cache(corpus, TCO_CORPUS_FILE)
-        print(f"✓ Saved corpus to {TCO_CORPUS_FILE}")
+        save_corpus_cache(corpus, CORPUS_FILE)
+        print(f"✓ Saved corpus to {CORPUS_FILE}")
 
     # Generate Synthetic Patient Charts
     print("\n" + "=" * 60)
     print("Generating Synthetic Patient Charts")
     print("=" * 60)
 
-    domain_spec = DOMAIN_SPECS["tco_thyroid"]
+    from synthetic_data import generate_synthetic_dataset
     charts_df = generate_synthetic_dataset(
         corpus,
-        tco_label_map,
-        n_domain=60,
-        n_none=60,
-        domain=domain_spec,
+        label_map,
+        config=CONFIG,
+        n_domain=CONFIG.n_disease_charts,
+        n_none=CONFIG.n_none_charts,
     )
     charts_df.to_csv("synthetic_charts.csv", index=False)
 
@@ -418,7 +435,7 @@ def main() -> None:
     print("\nLabel distribution:")
     label_counts = charts_df["gold_label"].value_counts()
     for label, count in label_counts.items():
-        display_label = tco_label_map.get(label, label)
+        display_label = label_map.get(label, label)
         print(f"  {display_label}: {count}")
 
     # Build Retrieval Function
@@ -434,8 +451,8 @@ def main() -> None:
     print("Initializing LLM Interface")
     print("=" * 60)
 
-    allowed_labels = [doc["tco_id"] for doc in corpus]
-    llm = LLMInterface(allowed_labels, cache_file=CACHE_FILE)
+    allowed_labels = [doc[CONFIG.doc_id_field] for doc in corpus]
+    llm = LLMInterface(allowed_labels, cache_file=CACHE_FILE, config=CONFIG)
 
     backend_info = llm.get_backend_info()
     print(f"\nBackend: {backend_info['backend']}")
@@ -464,14 +481,14 @@ def main() -> None:
     no_rag_df = pd.DataFrame(no_rag_results)
     print(f"✓ Completed No-RAG predictions for {len(no_rag_df)} charts")
 
-    # Run RAG(TCO) Predictions
+    # Run RAG Predictions
     print("\n" + "=" * 60)
-    print("Running RAG(TCO) Predictions")
+    print(f"Running RAG({CONFIG.acronym}) Predictions")
     print("=" * 60)
 
     rag_results = []
     for idx, row in charts_df.iterrows():
-        rag_context = build_rag_context(row["chart_text"], retriever)
+        rag_context = build_rag_context(row["chart_text"], retriever, CONFIG)
         prediction = llm.predict(row["chart_text"], rag_context=rag_context)
         rag_results.append({
             "chart_id": row["chart_id"],
@@ -486,7 +503,7 @@ def main() -> None:
             print(f"  Processed {idx + 1}/{len(charts_df)} charts")
 
     rag_df = pd.DataFrame(rag_results)
-    print(f"✓ Completed RAG(TCO) predictions for {len(rag_df)} charts")
+    print(f"✓ Completed RAG({CONFIG.acronym}) predictions for {len(rag_df)} charts")
 
     # Evaluation
     print("\n" + "=" * 60)
@@ -502,23 +519,23 @@ def main() -> None:
     print("EVALUATION RESULTS")
     print("=" * 60)
     print(f"No-RAG Exact Agreement:    {agreement_no_rag:.1f}%")
-    print(f"RAG(TCO) Exact Agreement:  {agreement_rag:.1f}%")
+    print(f"RAG({CONFIG.acronym}) Exact Agreement:  {agreement_rag:.1f}%")
     print(f"Improvement:               {(agreement_rag - agreement_no_rag):+.1f} percentage points")
     print()
     print(f"No-RAG Agreement@3:        {agreement_at3_no_rag:.1f}%")
-    print(f"RAG(TCO) Agreement@3:      {agreement_at3_rag:.1f}%")
+    print(f"RAG({CONFIG.acronym}) Agreement@3:      {agreement_at3_rag:.1f}%")
     print("=" * 60)
 
     # Confusion matrices
     print("\nConfusion Matrix - No-RAG:")
     print("(Rows: Gold Label, Columns: Predicted Label)")
-    cm_no_rag = create_confusion_matrix(no_rag_df, tco_label_map)
+    cm_no_rag = create_confusion_matrix(no_rag_df, label_map)
     print(cm_no_rag)
 
     print("\n" + "=" * 60)
-    print("\nConfusion Matrix - RAG(TCO):")
+    print(f"\nConfusion Matrix - RAG({CONFIG.acronym}):")
     print("(Rows: Gold Label, Columns: Predicted Label)")
-    cm_rag = create_confusion_matrix(rag_df, tco_label_map)
+    cm_rag = create_confusion_matrix(rag_df, label_map)
     print(cm_rag)
 
     # Save artifacts
@@ -529,11 +546,17 @@ def main() -> None:
     results = {
         "metadata": {
             "timestamp": pd.Timestamp.now().isoformat(),
+            "config": {
+                "ontology_acronym": CONFIG.acronym,
+                "ontology_name": CONFIG.name,
+                "disease_name": CONFIG.disease_name,
+                "organ": CONFIG.organ,
+            },
             "random_seed": RANDOM_SEED,
             "n_charts": len(charts_df),
-            "n_thyroid": int((charts_df["gold_label"] != "NONE").sum()),
+            "n_disease": int((charts_df["gold_label"] != "NONE").sum()),
             "n_none": int((charts_df["gold_label"] == "NONE").sum()),
-            "n_tco_classes": len(corpus),
+            "n_classes": len(corpus),
             "retrieval_method": "embeddings" if retriever.__class__.__name__ == "EmbeddingRetriever" else "tfidf",
             "llm_backend": backend_info["backend"],
         },
@@ -542,7 +565,7 @@ def main() -> None:
                 "exact_agreement": float(agreement_no_rag),
                 "agreement_at_3": float(agreement_at3_no_rag),
             },
-            "rag_tco": {
+            f"rag_{CONFIG.acronym.lower()}": {
                 "exact_agreement": float(agreement_rag),
                 "agreement_at_3": float(agreement_at3_rag),
             },
@@ -552,7 +575,7 @@ def main() -> None:
             },
         },
         "label_distribution": charts_df["gold_label"].value_counts().to_dict(),
-        "tco_classes": {doc["tco_id"]: doc["label"] for doc in corpus},
+        "ontology_classes": {doc[CONFIG.doc_id_field]: doc["label"] for doc in corpus},
     }
 
     with open("results.json", "w") as f:
@@ -560,12 +583,12 @@ def main() -> None:
 
     print("✓ Saved results.json")
 
-    error_examples_no_rag = extract_error_examples(no_rag_df, charts_df, tco_label_map, n_examples=3)
-    error_examples_rag = extract_error_examples(rag_df, charts_df, tco_label_map, n_examples=3)
+    error_examples_no_rag = extract_error_examples(no_rag_df, charts_df, label_map, n_examples=3)
+    error_examples_rag = extract_error_examples(rag_df, charts_df, label_map, n_examples=3)
 
     with open("examples.md", "w") as f:
         f.write("# Representative Examples\n\n")
-        f.write("This file contains representative error examples from both No-RAG and RAG(TCO) conditions.\n\n")
+        f.write(f"This file contains representative error examples from both No-RAG and RAG({CONFIG.acronym}) conditions.\n\n")
 
         f.write("## No-RAG Error Examples\n\n")
         for i, ex in enumerate(error_examples_no_rag, 1):
@@ -576,7 +599,7 @@ def main() -> None:
             f.write(f"**Rationale:** {ex['rationale']}\n\n")
             f.write("---\n\n")
 
-        f.write("## RAG(TCO) Error Examples\n\n")
+        f.write(f"## RAG({CONFIG.acronym}) Error Examples\n\n")
         for i, ex in enumerate(error_examples_rag, 1):
             f.write(f"### Example {i}\n\n")
             f.write(f"**Chart:** {ex['chart_text']}\n\n")
@@ -591,19 +614,20 @@ def main() -> None:
     print("\n" + "=" * 60)
     print("FINAL SUMMARY")
     print("=" * 60)
+    print(f"Configuration: {CONFIG.disease_name.title()} ({CONFIG.acronym})")
     print(f"Total Charts: {len(charts_df)}")
-    print(f"  Thyroid Cancer: {(charts_df['gold_label'] != 'NONE').sum()}")
+    print(f"  {CONFIG.disease_name.title()}: {(charts_df['gold_label'] != 'NONE').sum()}")
     print(f"  NONE (distractors): {(charts_df['gold_label'] == 'NONE').sum()}")
-    print(f"\nTCO Classes Used: {len(corpus)}")
+    print(f"\n{CONFIG.acronym} Classes Used: {len(corpus)}")
     for doc in corpus:
         print(f"  - {doc['label']}")
     print(f"\nEvaluation Results:")
     print(f"  No-RAG Exact Agreement: {agreement_no_rag:.1f}%")
-    print(f"  RAG(TCO) Exact Agreement: {agreement_rag:.1f}%")
+    print(f"  RAG({CONFIG.acronym}) Exact Agreement: {agreement_rag:.1f}%")
     print(f"  Improvement: {(agreement_rag - agreement_no_rag):+.1f} percentage points")
     print(f"\nArtifacts Saved:")
     print("  - synthetic_charts.csv")
-    print(f"  - {TCO_CORPUS_FILE}")
+    print(f"  - {CORPUS_FILE}")
     print("  - results.json")
     print("  - examples.md")
     print("  - llm_cache.json")

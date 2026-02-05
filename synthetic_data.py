@@ -1,97 +1,58 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import Dict, List, Optional
+from typing import Dict, List
 import random
 
 import pandas as pd
-
-
-@dataclass(frozen=True)
-class DiseaseDomainSpec:
-    key: str
-    name: str
-    acronym: Optional[str]
-    organ: str
-    mass_location: str
-    disease_name: str
-    doc_id_field: str
-
-
-TCO_THYROID_DOMAIN = DiseaseDomainSpec(
-    key="tco_thyroid",
-    name="Thyroid Cancer",
-    acronym="TCO",
-    organ="thyroid",
-    mass_location="anterior neck",
-    disease_name="thyroid cancer",
-    doc_id_field="tco_id",
-)
-
-DOMAIN_SPECS: Dict[str, DiseaseDomainSpec] = {
-    TCO_THYROID_DOMAIN.key: TCO_THYROID_DOMAIN,
-}
+from onto_config import OntologyConfig, format_template
 
 
 def generate_disease_chart(
     domain_id: str,
     label: str,
-    domain: DiseaseDomainSpec,
+    config: OntologyConfig,
 ) -> Dict:
     """Generate a synthetic disease-domain patient chart."""
-    age = random.randint(25, 75)
+    age = random.randint(*config.disease_age_range)
     sex = random.choice(["M", "F"])
-    duration = random.choice(["2-month", "3-month", "6-week", "4-month"])
+    duration = random.choice(config.disease_durations)
 
-    symptoms = random.choice([
-        "dysphagia and hoarseness",
-        "mild dysphagia",
-        "throat discomfort",
-        "difficulty swallowing",
-        "voice changes",
-        "neck swelling",
-    ])
+    symptoms = random.choice(config.disease_symptoms)
 
-    exam_findings = random.choice([
-        f"firm 2.5 cm {domain.organ} nodule",
-        f"palpable right {domain.organ} mass",
-        f"fixed 3 cm left {domain.organ} nodule",
-        f"hard {domain.mass_location} mass",
-        f"irregular {domain.organ} enlargement",
-    ])
+    # Format exam findings with config values
+    exam_template = random.choice(config.exam_templates)
+    exam_findings = format_template(exam_template, config)
 
-    imaging = random.choice([
-        f"Ultrasound shows hypoechoic {domain.organ} nodule with microcalcifications",
-        f"CT shows heterogeneous {domain.organ} mass with local invasion",
-        f"MRI demonstrates solid {domain.organ} lesion with irregular borders",
-        f"PET-CT shows FDG-avid {domain.organ} nodule",
-        f"Ultrasound reveals solid {domain.organ} mass with increased vascularity",
-    ])
+    # Format imaging with config values
+    imaging_template = random.choice(config.imaging_templates)
+    imaging = format_template(imaging_template, config)
 
-    pathology = random.choice([
-        "FNA cytology shows suspicious cells",
-        "FNA reveals malignant cells",
-        "Biopsy demonstrates atypical cells",
-        "FNA shows atypical follicular cells",
-        "Cytology consistent with malignancy",
-    ])
+    # Pathology doesn't need formatting (no placeholders)
+    pathology = random.choice(config.pathology_templates)
 
-    distractor = random.choice([
-        "Patient also reports mild fatigue.",
-        "Patient has history of hyperlipidemia.",
-        "Family history of diabetes.",
-        f"Patient on levothyroxine for {domain.organ} dysfunction.",
-        "Occasional palpitations noted.",
-    ])
+    # Format distractor with config values
+    distractor_template = random.choice(config.distractor_templates)
+    distractor = format_template(distractor_template, config)
 
-    chart_text = (
-        f"{age}-year-old {sex} presents with {duration} history of {domain.mass_location} mass. "
-        f"Reports {symptoms}. "
-        f"Physical exam shows {exam_findings}. "
-        f"{imaging}. "
-        f"{pathology}. "
-        f"{distractor}"
-    )
+    # Build chart text
+    if config.mass_location.lower() != "n/a":
+        chart_text = (
+            f"{age}-year-old {sex} presents with {duration} history of {config.mass_location} mass. "
+            f"Reports {symptoms}. "
+            f"Physical exam shows {exam_findings}. "
+            f"{imaging}. "
+            f"{pathology}. "
+            f"{distractor}"
+        )
+    else:
+        # For diseases without anatomical mass (e.g., diabetes)
+        chart_text = (
+            f"{age}-year-old {sex} presents with {duration} history of {symptoms}. "
+            f"Physical exam {exam_findings}. "
+            f"{imaging}. "
+            f"{pathology}. "
+            f"{distractor}"
+        )
 
     return {
         "chart_text": chart_text,
@@ -101,52 +62,26 @@ def generate_disease_chart(
     }
 
 
-def generate_none_chart(domain: DiseaseDomainSpec) -> Dict:
+def generate_none_chart(config: OntologyConfig) -> Dict:
     """Generate a NONE (non-domain) distractor chart."""
-    age = random.randint(20, 70)
+    age = random.randint(*config.none_age_range)
     sex = random.choice(["M", "F"])
-    duration = random.choice(["2-week", "3-week", "1-month", "2-month"])
+    duration = random.choice(config.none_durations)
 
-    primary_symptom = random.choice([
-        "hoarseness",
-        "cervical lymphadenopathy",
-        "dysphagia",
-        "neck pain",
-        "fatigue",
-        "throat discomfort",
-    ])
+    primary_symptom = random.choice(config.none_symptoms)
+    secondary_symptoms = random.choice(config.none_secondary_symptoms)
 
-    secondary_symptoms = random.choice([
-        "Reports recent upper respiratory infection",
-        "Denies fever or weight loss",
-        "Reports concurrent sore throat",
-        "Reports voice strain from prolonged speaking",
-        "History of seasonal allergies",
-    ])
+    # Format exam with config values
+    exam_template = random.choice(config.none_exam_templates)
+    exam = format_template(exam_template, config)
 
-    exam = random.choice([
-        f"shows no {domain.organ} masses",
-        "reveals reactive cervical lymph nodes",
-        f"shows normal {domain.organ} examination",
-        "reveals laryngeal inflammation",
-        "demonstrates benign findings",
-    ])
+    # Format workup with config values
+    workup_template = random.choice(config.none_workup_templates)
+    workup = format_template(workup_template, config)
 
-    workup = random.choice([
-        "Laryngoscopy shows vocal cord inflammation",
-        f"Ultrasound shows normal {domain.organ}, reactive nodes",
-        f"CT shows no {domain.organ} abnormalities",
-        f"TSH and {domain.organ} ultrasound normal",
-        f"Labs show normal {domain.organ} function",
-    ])
-
-    diagnosis = random.choice([
-        "Diagnosed with viral laryngitis.",
-        "Diagnosed with reactive lymphadenopathy.",
-        "Diagnosed with gastroesophageal reflux.",
-        "Diagnosed with vocal cord strain.",
-        f"Diagnosed with benign {domain.organ} nodule.",
-    ])
+    # Format diagnosis with config values
+    diagnosis_template = random.choice(config.none_diagnosis_templates)
+    diagnosis = format_template(diagnosis_template, config)
 
     chart_text = (
         f"{age}-year-old {sex} presents with {duration} of {primary_symptom}. "
@@ -167,24 +102,24 @@ def generate_none_chart(domain: DiseaseDomainSpec) -> Dict:
 def generate_synthetic_dataset(
     corpus: List[Dict],
     label_map: Dict[str, str],
+    config: OntologyConfig,
     n_domain: int = 60,
     n_none: int = 60,
-    domain: DiseaseDomainSpec = TCO_THYROID_DOMAIN,
 ) -> pd.DataFrame:
     """Generate balanced synthetic dataset."""
     charts = []
 
     # Generate disease-domain charts (balanced across ontology classes)
-    domain_ids = [doc[domain.doc_id_field] for doc in corpus]
+    domain_ids = [doc[config.doc_id_field] for doc in corpus]
     for i in range(n_domain):
         domain_id = domain_ids[i % len(domain_ids)]
         label = label_map[domain_id]
-        chart = generate_disease_chart(domain_id, label, domain)
+        chart = generate_disease_chart(domain_id, label, config)
         charts.append(chart)
 
     # Generate NONE charts
     for _ in range(n_none):
-        chart = generate_none_chart(domain)
+        chart = generate_none_chart(config)
         charts.append(chart)
 
     # Shuffle
