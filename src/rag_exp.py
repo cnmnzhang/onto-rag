@@ -33,11 +33,24 @@ warnings.filterwarnings('ignore')
 # Or create custom: CONFIG = OntologyConfig(acronym="...", ...)
 CONFIG = get_config("tco")
 
+# ============================================================================
+# QUICK TEST MODE - Set to True for fast testing with 3 cases
+# ============================================================================
+TEST_MODE = True  # Change to False for full run (60 disease + 60 NONE)
+
+if TEST_MODE:
+    N_DISEASE_CHARTS = 2  # 2 disease cases
+    N_NONE_CHARTS = 1     # 1 NONE case
+    print("🧪 TEST MODE: Running with 3 charts (2 disease + 1 NONE)")
+else:
+    N_DISEASE_CHARTS = CONFIG.n_disease_charts  # 60
+    N_NONE_CHARTS = CONFIG.n_none_charts        # 60
+
 BASE_URL = "https://data.bioontology.org"
 ONTOLOGY_ACRONYM = CONFIG.acronym
 TIMEOUT = 30
-CACHE_FILE = "llm_cache.json"
-CORPUS_FILE = CONFIG.corpus_filename
+CACHE_FILE = "../data/llm_cache.json"
+CORPUS_FILE = f"../data/{CONFIG.corpus_filename}"
 RANDOM_SEED = 42
 
 # Load environment variables from .env file FIRST
@@ -423,13 +436,13 @@ def main() -> None:
         corpus,
         label_map,
         config=CONFIG,
-        n_domain=CONFIG.n_disease_charts,
-        n_none=CONFIG.n_none_charts,
+        n_domain=N_DISEASE_CHARTS,
+        n_none=N_NONE_CHARTS,
     )
-    charts_df.to_csv("synthetic_charts.csv", index=False)
+    charts_df.to_csv("../data/synthetic_charts.csv", index=False)
 
     print(f"✓ Generated {len(charts_df)} charts")
-    print("✓ Saved charts to synthetic_charts.csv")
+    print("✓ Saved charts to data/synthetic_charts.csv")
 
     print("\nLabel distribution:")
     label_counts = charts_df["gold_label"].value_counts()
@@ -575,15 +588,15 @@ def main() -> None:
         "ontology_classes": {doc[CONFIG.doc_id_field]: doc["label"] for doc in corpus},
     }
 
-    with open("results.json", "w") as f:
+    with open("../data/results.json", "w") as f:
         json.dump(results, f, indent=2)
 
-    print("✓ Saved results.json")
+    print("✓ Saved data/results.json")
 
     error_examples_no_rag = extract_error_examples(no_rag_df, charts_df, label_map, n_examples=3)
     error_examples_rag = extract_error_examples(rag_df, charts_df, label_map, n_examples=3)
 
-    with open("examples.md", "w") as f:
+    with open("../data/examples.md", "w") as f:
         f.write("# Representative Examples\n\n")
         f.write(f"This file contains representative error examples from both No-RAG and RAG({CONFIG.acronym}) conditions.\n\n")
 
@@ -605,7 +618,7 @@ def main() -> None:
             f.write(f"**Rationale:** {ex['rationale']}\n\n")
             f.write("---\n\n")
 
-    print("✓ Saved examples.md")
+    print("✓ Saved data/examples.md")
 
     # Final Summary
     print("\n" + "=" * 60)
@@ -623,11 +636,11 @@ def main() -> None:
     print(f"  RAG({CONFIG.acronym}) Exact Agreement: {agreement_rag:.1f}%")
     print(f"  Improvement: {(agreement_rag - agreement_no_rag):+.1f} percentage points")
     print(f"\nArtifacts Saved:")
-    print("  - synthetic_charts.csv")
+    print("  - data/synthetic_charts.csv")
     print(f"  - {CORPUS_FILE}")
-    print("  - results.json")
-    print("  - examples.md")
-    print("  - llm_cache.json")
+    print("  - data/results.json")
+    print("  - data/examples.md")
+    print("  - data/llm_cache.json")
     print("=" * 60)
     print("\n✓ Execution complete!")
 

@@ -76,7 +76,7 @@ if [ -z "$VIRTUAL_ENV" ]; then
 fi
 
 # Run the experiment
-python rag_exp.py
+python src/rag_exp.py
 
 echo
 echo "=================================="

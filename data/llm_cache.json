@@ -1,0 +1,110 @@
+{
+  "c41961494d5d9a6fdefb6290d3bc3e8a": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient has a 3-month history of an anterior neck mass, a firm 2.5 cm thyroid nodule on physical examination, and FNAC showing suspicious cells. The presence of a thyroid nodule in this context strongly suggests papillary carcinoma. Additionally, the mention of PET-CT findings and FNA cytology further supports the diagnosis of papillary thyroid carcinoma."
+  },
+  "aeb2c5195f4c50df727cd2cb2b8000dd": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The biopsy results indicate atypical cells, which suggests papillary carcinoma. The presence of an anterior neck mass and a solid thyroid lesion with irregular borders further support this diagnosis. The patient's history of hyperlipidemia does not directly relate to thyroid cancer but may be relevant in other contexts."
+  },
+  "ac4cb900881cddaf9825ae9d1944a38b": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient's symptoms and physical examination results do not suggest any signs or symptoms consistent with thyroid cancer. The patient has been diagnosed with gastroesophageal reflux disease, which does not involve the thyroid gland."
+  },
+  "57fb929f8243c0108289f39c069b3fdf": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient's symptoms and physical examination findings do not suggest any thyroid-related issues. The presence of vocal cord inflammation does not indicate papillary thyroid carcinoma or other thyroid cancers."
+  },
+  "a286324268c0b460ea606bea205d7877": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient has a palpable thyroid mass with increased vascularity on ultrasound, which suggests malignancy. The presence of dysphagia and hoarseness, along with a history of fatigue, further supports this diagnosis. Papillary carcinoma is commonly associated with these symptoms in the thyroid gland."
+  },
+  "2616420c17442b3b55b03a515f679030": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient's symptoms and physical examination results do not suggest any indication of thyroid cancer. The presence of a benign thyroid nodule and normal laryngoscopic findings are consistent with this diagnosis."
+  },
+  "c4d9338d1669646429d1e3d553362168": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient has been diagnosed with a benign thyroid nodule, which does not align with any of the provided thyroid cancer labels."
+  },
+  "c4476814b89a5e4db4fece243b7dab0c": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient's symptoms and physical examination findings do not suggest any thyroid-related issues. The absence of thyroid masses on physical exam and normal thyroid function in lab results rule out thyroid cancer. No other thyroid-related conditions or malignancies are indicated by the provided information."
+  },
+  "abc82f2863c21e23edb4813d9745bc2a": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient has a 2-month history of an anterior neck mass, dysphagia, hoarseness, and a firm 2.5 cm thyroid nodule on physical examination. The CT scan shows a heterogeneous thyroid mass with local invasion, which strongly suggests papillary carcinoma. Additionally, cytology is consistent with malignancy, further supporting this diagnosis. The presence of lymph node involvement in Stage III or IV indicates advanced disease."
+  },
+  "effbe746951c51723ab5b6090f047181": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient's symptoms and physical examination findings do not suggest any significant thyroid abnormalities or malignancy. The ultrasound results are normal, and there are no palpable thyroid masses. The patient was diagnosed with gastroesophageal reflux disease, which does not typically present with thyroid-related issues."
+  },
+  "90269cd77b37d861bdb2df8fc10d87f5": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient has a 3-month history of an anterior neck mass, dysphagia, hoarseness, and a fixed 3 cm left thyroid nodule on ultrasound. The cytology is consistent with malignancy, which strongly suggests papillary thyroid carcinoma. The presence of microcalcifications further supports this diagnosis. The high likelihood of highly invasive papillary thyroid carcinoma due to the aggressive nature of papillary thyroid cancer in this context."
+  },
+  "db9226b929cedc46feaa3afd16c5b8c2": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient has a palpable right thyroid mass on physical examination and ultrasound findings suggestive of a solid thyroid mass with increased vascularity. The fine-needle aspiration (FNA) results show atypical follicular cells, which aligns with papillary carcinoma. Additionally, the presence of fatigue could be related to metastatic disease in a highly invasive form of papillary thyroid cancer."
+  }
+}

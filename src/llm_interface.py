@@ -342,16 +342,27 @@ class LLMInterface:
         # Build prompt
         disease_name = self.config.disease_name if self.config else "disease"
 
+        # Format allowed labels for clarity
+        allowed_labels_list = sorted([l for l in self.allowed_labels if l != 'NONE'])
+        allowed_labels_formatted = "\n".join([f"  - {label}" for label in allowed_labels_list])
+
         system_prompt = f"""You are a clinical diagnosis assistant. Given a patient chart,
 predict the most likely {disease_name} diagnosis from the allowed label set.
 
-ALLOWED LABELS: {', '.join(sorted([l for l in self.allowed_labels if l != 'NONE']))}, NONE
+ALLOWED LABELS (use EXACT string, including full IRI):
+{allowed_labels_formatted}
+  - NONE
 
-Output valid JSON only:
-{{"predicted_label": "<label>", "top3_labels": ["<label1>", "<label2>", "<label3>"], "rationale": "<brief explanation>"}}
+CRITICAL RULES:
+1. Your predicted_label MUST be one of the exact labels listed above
+2. Use the FULL IRI starting with "http://" - do NOT shorten or modify it
+3. If uncertain, use "NONE" rather than inventing a label
+4. Output ONLY valid JSON with this exact structure:
 
-If no {disease_name} is evident, return "NONE" as the predicted_label.
-Use the full IRI (http://...) for {disease_name} labels, not just the short name."""
+{{"predicted_label": "<exact_label_from_list_above>", "top3_labels": ["<label1>", "<label2>", "<label3>"], "rationale": "<brief explanation>"}}
+
+Example valid output:
+{{"predicted_label": "NONE", "top3_labels": ["NONE", "NONE", "NONE"], "rationale": "No clear {disease_name} indicators present"}}"""
 
         user_prompt = f"Patient Chart:\n{chart_text}"
         if rag_context:
@@ -387,17 +398,47 @@ Use the full IRI (http://...) for {disease_name} labels, not just the short name
         """Validate response and coerce invalid labels to NONE."""
         predicted = response.get("predicted_label", "NONE")
 
+        # Check if predicted label is valid
         if predicted not in self.allowed_labels:
-            print(f"  Invalid label '{predicted}' coerced to NONE")
+            print(f"  ⚠️  Invalid label '{predicted[:50]}...' coerced to NONE")
+            print(f"     (Not in allowed set of {len(self.allowed_labels)} labels)")
             response["predicted_label"] = "NONE"
+
+            # Try to find a close match (fuzzy matching)
+            predicted_lower = str(predicted).lower()
+            for allowed_label in self.allowed_labels:
+                if allowed_label != "NONE" and allowed_label.lower() in predicted_lower:
+                    print(f"     💡 Did you mean: {allowed_label[:50]}...?")
+                    response["predicted_label"] = allowed_label
+                    break
 
         # Validate top3
         top3 = response.get("top3_labels", [])
-        validated_top3 = [l for l in top3 if l in self.allowed_labels][:3]
+        validated_top3 = []
+        for label in top3:
+            if label in self.allowed_labels:
+                validated_top3.append(label)
+            else:
+                # Try to fix common issues
+                if isinstance(label, str):
+                    # Check if it's a partial match
+                    for allowed in self.allowed_labels:
+                        if allowed != "NONE" and label.lower() in allowed.lower():
+                            validated_top3.append(allowed)
+                            break
+                    else:
+                        validated_top3.append("NONE")
+                else:
+                    validated_top3.append("NONE")
+
+            if len(validated_top3) >= 3:
+                break
+
         # Pad with NONE if needed
         while len(validated_top3) < 3:
             validated_top3.append("NONE")
-        response["top3_labels"] = validated_top3
+
+        response["top3_labels"] = validated_top3[:3]
 
         return response
 
