@@ -40,15 +40,16 @@ CACHE_FILE = "llm_cache.json"
 CORPUS_FILE = CONFIG.corpus_filename
 RANDOM_SEED = 42
 
-# Load environment variables
+# Load environment variables from .env file FIRST
+from dotenv import load_dotenv
+load_dotenv()
+
+# Now read environment variables (after .env is loaded)
 BIOPORTAL_API_KEY = os.getenv("BIOPORTAL_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-
-from dotenv import load_dotenv
-load_dotenv()
-# Force Gemini (not Hugging Face)
-os.environ['USE_HUGGINGFACE'] = 'true'
+# Optional: Force specific backend (comment out to use auto-detection)
+# os.environ['USE_HUGGINGFACE'] = 'true'
 
 
 # ============================================================================
@@ -415,9 +416,7 @@ def main() -> None:
         print(f"✓ Saved corpus to {CORPUS_FILE}")
 
     # Generate Synthetic Patient Charts
-    print("\n" + "=" * 60)
-    print("Generating Synthetic Patient Charts")
-    print("=" * 60)
+    print("Generating Synthetic Patient Charts....")
 
     from synthetic_data import generate_synthetic_dataset
     charts_df = generate_synthetic_dataset(
@@ -439,9 +438,7 @@ def main() -> None:
         print(f"  {display_label}: {count}")
 
     # Build Retrieval Function
-    print("\n" + "=" * 60)
-    print("Building Retrieval Function")
-    print("=" * 60)
+    print("Building Retrieval Function.........")
 
     retriever = create_retriever(corpus, top_k=3, prefer_embeddings=True)
     print("✓ Retriever initialized")
