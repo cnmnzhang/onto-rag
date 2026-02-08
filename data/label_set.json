@@ -1,0 +1,11 @@
+{
+  "labels": [
+    "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Highly_Invasive_Papillary_Thyroid_Cancer",
+    "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+  ],
+  "none_label": "NONE"
+}

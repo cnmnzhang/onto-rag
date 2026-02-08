@@ -18,7 +18,7 @@ class LLMInterface:
     Unified interface for LLM predictions with multiple backend support.
 
     Backends:
-    - Google Gemini (gemini-1.5-flash) - FREE with API key
+    - Google Gemini (gemini-3-flash-preview) - FREE with API key
     - OpenAI (gpt-3.5-turbo)
     - Hugging Face (Qwen2.5-1.5B-Instruct)
     - Dry-run (deterministic heuristics)
@@ -93,7 +93,7 @@ class LLMInterface:
                 self.tokenizer = AutoTokenizer.from_pretrained(model_name)
                 self.model = AutoModelForCausalLM.from_pretrained(
                     model_name,
-                    torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+                    dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
                     device_map="auto" if torch.cuda.is_available() else None
                 )
 
@@ -194,10 +194,11 @@ class LLMInterface:
             # Combine them into a single prompt
             full_prompt = f"{system_prompt}\n\n{user_prompt}"
 
+            temperature = float(os.getenv("LLM_TEMPERATURE", "0.3"))
             response = self.client.generate_content(
                 full_prompt,
                 generation_config={
-                    "temperature": 0.3,
+                    "temperature": temperature,
                     "max_output_tokens": 200,
                 }
             )
@@ -235,13 +236,14 @@ class LLMInterface:
     def _predict_openai(self, system_prompt: str, user_prompt: str) -> Dict:
         """Generate prediction using OpenAI."""
         try:
+            temperature = float(os.getenv("LLM_TEMPERATURE", "0.3"))
             completion = self.client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_prompt}
                 ],
-                temperature=0.3,
+                temperature=temperature,
                 max_tokens=200
             )
             response_text = completion.choices[0].message.content
@@ -258,6 +260,9 @@ class LLMInterface:
         """Generate prediction using Hugging Face model."""
         try:
             import torch
+
+            temperature = float(os.getenv("LLM_TEMPERATURE", "0.3"))
+            do_sample = temperature > 0.0
 
             # Construct prompt for chat model
             messages = [
@@ -282,8 +287,8 @@ class LLMInterface:
                 outputs = self.model.generate(
                     **inputs,
                     max_new_tokens=200,
-                    temperature=0.3,
-                    do_sample=True,
+                    temperature=temperature,
+                    do_sample=do_sample,
                     pad_token_id=self.tokenizer.eos_token_id
                 )
 

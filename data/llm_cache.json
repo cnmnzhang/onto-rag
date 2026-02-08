@@ -106,5 +106,2525 @@
       "NONE"
     ],
     "rationale": "The patient has a palpable right thyroid mass on physical examination and ultrasound findings suggestive of a solid thyroid mass with increased vascularity. The fine-needle aspiration (FNA) results show atypical follicular cells, which aligns with papillary carcinoma. Additionally, the presence of fatigue could be related to metastatic disease in a highly invasive form of papillary thyroid cancer."
+  },
+  "3415a64a9fcd741dcc5c9bf9c0f72833": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "e8580887c417c841819baece78ea76fc": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "91a9566f05bc021d6ede758badec1a70": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "24da0ad2782e43343d45595703b32b7b": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "bd5c3948be73968a96afa360cfc71ad8": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "03ca6d051d06f11fa564a522ba53133f": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "c7bf58ec5062457fb65ece389f82b7a2": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "5b8714849c7cf9833da1dfc94ef8f6f7": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "723f1baf19af415eca318af7a6bb15ca": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "0c133e103e7e9f2187e8f7b7b1dbf27b": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "0ab4288b7a82b34f49c91987ed5260d1": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "d8814f030262dd97731c6c3b74cda470": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "95d6536fbb4a5dfcb02912220539d168": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "bbd2ab543ae539f7d59aa32c6761a90c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "0ef5f30015b8b5dbc984be44da31e43b": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "3f40213b224fbce5f03b3bc6ea714a31": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "4396934e11c484a3b24bff2b6adf7273": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "9498c41bf314b42764c7e60fea6818a2": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "ac29a57a827980e9c23a081fcdda98de": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "4a7694389cb526e2ec675157b5ae14f7": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "16696da16db9bc4dd850aa9baccb6830": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "fc9d232d8dd42ec2eb1a71b69a4e1b1d": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "cdd6f0ec2dbceeeb2f538202a87c2f2d": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "2d38260cc70a2aa77415ae15e9e062dc": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "13468007eed7bf6a67bdd744f2d7dfc2": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "5da440236287d7a758d1140bcf1c4379": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "90c5329ee2eb579215a661db46e0863d": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "e8fe9477509981c01bb2e35595e65be4": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "02811e8ae5bb089c3461f6f8acc3cbe7": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "ce8acf3ea6af13911ffac0ce49056912": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "535cfdf29a29a072822db2dfa68e5e12": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "257669c88cd00fb6666c13e595528301": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "d566a753ba3c240316489a6d43d30bb9": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "c949a4d18e4a66c4d6e9d635911e1d2b": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "47ad179106663013f14757c2b98b7984": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "02141139bc8264e591bef646ebccff0d": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "a7dc7d1bb786ad5acee6bbab9d28d58b": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "0c5658e8acbb8f3515f50ed928c033a7": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "a94bfa808bd8a911d768b3cca39bf986": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "469d80a676024e34d3a46f9cccc0c5dc": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "20b05173c55201bfc08d7123b68b41ea": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "bbac7280b9c386153b30277a561f36e9": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "c04fc3119a76aaa88b889db1e629ad5f": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "746e1f2e5cfbe9c28bd31cc881b3a356": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "41878893cfd7d7dbc404565986ae681c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "a5abd3b5d5855ea55118bc9a23b31f7c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "55d9ba040f6f0b8f7f736b7265d9b530": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "e9144772c358c655448bf7526ccfffb2": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "a573bd9ee47a2091c0ec98e395a06fdb": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "e1d4c74a28dd27099a19eaae89b04e41": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "f64659da62af787143976c848119cee6": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "5bd9f904e40981121c19d6f3786913f4": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "b6e267f12cbdce69fbcd490d9241ee88": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "6f388b9b1492554f06348f46aec31402": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "5073d3b8c171cfa3e94074d38301f0b3": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "a682caf1eaf77fd90302769c03d8669e": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "21f54d807949553354a73090420bf623": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "9a9c22258065bd3a20d8e39e7694f20e": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "c600e1390397fdbee6e8cf307711840c": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "8ba1e627a7bff2b98ae3d4fb90043a06": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "936650395ef4751c5f9716b3adc14415": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "fb9639562757345ccabf9f31b8035323": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "847454751d312433b5b2c36c36589e7f": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "48bfa6e7484bd4419b2697e75f75049e": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "3c1874926c39397d872585a17e4cdd75": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "e03ebc083556e2119ae143d5af21a913": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "22da16199e8afbbcb5e0582db5cf1e4c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "c5d05b0454bdd2f2a6735db45a3f663f": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "bba0c4d6984cb9e8dc09b3f95b2ee81b": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "aa918ba5ce8f79e5c1425ad30d36203a": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "808dc03edab330f7199ca45a8cf6ac2b": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "03d0cf747cee05b242270db58fcf164e": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "4d40e771c6d4f90e98486eeced319972": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "a3597b62bdbd0345bbb8262d2e193d4a": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "b6fae5a4e76c2be027f587de00fb8474": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "bb16588fff8ed59e28ea8b2f8dd0f405": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "6456dbdce573bbdfb78c05c839093def": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "76a32b47f9d329b2a4733f874551598a": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "7b86e3145c10d0c1a36b4a24b9a4853a": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "bcac3b2752113cb8463e548776682d40": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "77c10b750158c5aff9851ccb0098af02": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "62687e7cc65ddfa25be9146336b25aaa": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "761a333dd58cd1947a92f0bb39b799e3": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "d6ee67c83b80a0235f440a5b762927b3": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "491a7b4cf43a3790046a15e429316cfd": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "1a4861a1590a16fa3e7a66915c8b028c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "ff532df820da64afc18e3719d42db079": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "c92ab347677db648873fbe13f5805861": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "69b1ffb02eeff72bda6c0cd6fbea2254": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "d78392cd653d76d99835e4cc837598f7": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "db66a3f26871faaeed6827398601672a": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "d99d6f9019d31c9a7b56c3449d16cb4a": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "4442be6ef6f98848345092b1410433c8": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "9761102b80197effa76f291edd959755": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "3c29c721c572b8c5454dad6bc750305c": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "1b902f4ad6152a831c645bdfbd066cb2": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "d2f09da2b802ef632c0e8059daa69435": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "dc3c4a3d42e5c4f68b5be30a5fab1705": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "ee86172630a128dec643b13b45d65514": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "5a32363bf63a9f34a4c2671bb06164a0": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "0f762f14523e3b559b906e03244e9113": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "4f0399523bd423955da3ac4fd11f96bf": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "b8d29932e2fe3ca5993659e09ee9c83b": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "48081f6514d91c70228b04cf05939c21": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "bf95adcf41c374482e71ffb1d8f34663": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "81f2d99bf259c2e0b9100e0b11a6eaed": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "e846891765d79a7a9eaaeaa6601d9fba": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "fd8f0f9ae9a2aafd3792417f5fc622c9": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "5cc9549e6d13413e8f8302037e770e05": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "2cfd04cb4cdf2d722c91ed91d82ea93e": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "7547d948d89329148c1e27be92fd0ef7": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "40fd7b2706d9fa0ff05e4d1f303c9829": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "85b1ecad5c407ced4361e5c1ee6d27b7": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "41ea1054c4fbee90b6e71beab6783c53": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "77c9a1b593d1d1ac94cce84c1c4f5a56": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "263e8a86f9a624658011457678ac58be": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "1de3d15f8745402b2f30379f8eae969d": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "22efef0025c1ef4c8a35763bfa2407f8": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "a3877b044ec47cdf79347818f1eb64e0": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "e2442c4762aed6e86d986da21548f27b": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "e0a8c97d18a0f19f581cd17d90d77668": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "8842948f61f16e548f81ad22f046c021": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "014b18fd4d53c94484e72e4ef46f83aa": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "07611cd41db56f8cfe4dbcaebc698e97": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "f2ba49b7ef9cb7da69a5a0da14be5107": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "aa7348ed35e1820667e8fd9c8ae8a043": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "38ab4c2ba69395d014cabecad83d1f6a": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "2a6a09a7fe7030a258d4e15a4c58df0b": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "143571320c6570d28f5211a5c8a6402c": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "685c98f10d98a73dafb31ce720d773aa": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "8967ea401967f8412f4d37216395432d": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "8b1ec7ff957a64d5de2c513aa893f49a": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "410ffedd92d79812ee2303ec4d12c387": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "df7871ec7801dec66dccdcf9e1f64065": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "4247c6af6b7c8739f113af1705b63e6f": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "bd487f05b5d4fd0b93c9b58b404b089a": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "dbc06951741a04770076ab9ed51d91f1": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "3e29534431449e1a5c5a3816b373e308": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "955dff1f3d8260995fab8090f417bb7d": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "b8fd079c977c6991907fea5a2a9d81ee": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "553c530066b74f9eb509f37c4bc70dac": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "94e7b60c311117db871399f43197392a": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "a8ed37970a92e550616577698fce441c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "b4f299c8a198cba1dadafb219929b41a": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "1ffdc06011f608aae7cc97834e5e9653": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "defbf181c4cf46adfe722fb8496068c9": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "492d2b88d390f857c3769506f5f9cb99": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "27ef13d5820893132ac9632ace6d9d86": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "14fa70700cd6cbe50f501964c3b23bc3": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "c38637619f255a12eea3dbdd5416177c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "1c4a793deeb6fa2dfa82e03a5d310a48": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "58c44367a8bb6214a63bc334fba483d5": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "d337601522c1fa5fa0feea8776b69cc3": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "037f40549dd7eee1400bc4cbcad17260": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "83bdf7996451ddf335f57109bf71f741": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "2798ccc6aaf1b79e0e1ff116407ab8a5": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "ed04875f23ed360c7aac15ff7c38f3f8": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "831494c2b0b62c73b0d953b01cbe6474": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "7e021fbadd8fe2c08190c7fbf603231c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "b09c161c8787de3061a18e014355c10a": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "f9013b2dea7fc1f98f4aabda1999bb92": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "6a4ef00123a40ce7aa1e47ba08ef4d55": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "3535dda375ef39ed61ea378140243321": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "3e725da5a3c211c5510c07f52cfeab1e": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "a6b8f86b6885b231c6ccf4b19952afb1": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "f295affc62cec4f706a1ff8dbedced8f": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "20f28c3133349e014807f0bf81653f85": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "690963b73af613f2ef4d698ad723586e": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "0ff87e94164979363c814a4aa0f2481a": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "f14d45d286d88b8825eaeda83839e471": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "8b03053d05371964fc39594c2d965431": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "df7283ccfebd333d057f895faf0b224b": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "e11a670898704ec943c0b774fe5b88e3": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "b496e77aae4576d6beadc3b392bc8b8e": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "084cfd4d13508f7be5a8ff31c22f3304": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "028ea9650ad96e8f5aa37644b747f56d": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "64cc362d760dab3ce1eec12ca3a6ee15": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "a8b30df2c61474a82e86e892510404a4": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "0551ff62feb675e02329f4c854a52627": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "a40c5bc8eff9841a3f6a411d2133b7de": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "bb3088fde6e9821b0c29f411476211ec": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "b5415ed203366405c06d2dec2fbea6aa": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "25cf2c943909b0a27ca8c955f53066af": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "0fc65d21c1a4ca253aefa60eed26e84b": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "598fc63c34bd7eedef88a09a6936b095": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "97c76461c02f177ea7c82bbeb3941d1b": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "7a15a612476ad43d74ecbbbc7d1bdea2": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "25c802c6cbd4fe29735a2843bd8a2717": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "c840f2a35d4fc2ca396e0a3e14a89d26": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "1aaac170cdad47e3d143c0e690067f2f": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "c4df3d76ab427cc87414ca2aeb801d97": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "c3454fc92f9d2cf224f70ae8d589283f": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "cef60cbc81cda5f4892e1a1a2dbac5d4": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "e39fcc20796782579fe1f2d5b4fb0738": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "593014a4c688c4e4648f3f58015116a0": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "d4028af5109f73b507649a9418553d91": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "71d35740055b8489721184280b62904e": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "adc22076a055c907192989a2f14f5995": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "0d39b3458f6106d4ba1599434d16e2f3": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "e8b5abd4b124778f5d5e0f1f840659ad": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "9b2577b2f25e327527565db2d1cb8dfd": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "64e749b8d3e8783d5b025297c994488c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "c85a9d4f4095955d9d0c1e9aafdf4ef8": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "c02ba3a97de8aed76a054dc2aa7f956c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "ae8f2166e886460f1ed28cc83564e18c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "fadb59f0c98354d9e36cfefc1a0e17a4": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "188f7f2144454b5a7030ede553fe7162": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "3ce93dd8212d209e82da80d04ac4ef87": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "b872c7897d12355a88f2adfa9c37d6bd": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "ba8710b9a016a42e21c6273b53fdade1": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "05c98793af348f3a4a48acea42e1945b": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "52cdb3387f00b23852664f5fd2cc7cb4": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "c725f5e6c7119f631cf4e77c9e19563b": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "4605df1e6f282aa021eb451a28691687": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "b5f451167f7308e97353e15252f3f9c2": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "c44617d11cfc58ed215f779bd2e99415": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "c6e94d9708b598234f03777eed1b1eb9": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "f90c50d0a363bab35f6d7e35a52f3c41": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "0a335cc42e59a81a901f7b6025c85ed5": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "0a876fafa7c1482190d81b8f760423d0": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "0aff94344fcec3caa742eb3308c21fdb": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "a392a94341df1fb4436e12f0a80e76d0": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "ea6794e166321512ce6bb3b2fd4ba682": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "2f2bb2e7982abc26480966218c77ff60": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "e2ca194985c644fc9a3bcadaf03be4eb": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "d051cc063e95f710dbb806f3437c7a16": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "96a14112a0ed73a0950d4a74279c9a6d": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "660ef70da92fdb3755c6af4ad1c6f256": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "20cc54923656b0fe1475b85637889b32": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "02ce85973b1e0c31bda41423b96d3d4c": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "1a3bc515352d0e52845972bab5a988ed": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "2f5dd04a516b9c609bcd10c5cc6f67c9": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "8054f2616e06b944fa384397d79721a1": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "f7718f997f72e950e9352562c2d25d72": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "b28a24c87e5a0486798668d29afd3eb8": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "6db6043c8c2f036fe9b02f1ea3c98a2a": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "c510147e6d357606857ca9d3bd62a8ad": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "379def1f936c87063d4064bd4db1efe5": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: possible thyroid cancer indicators"
+  },
+  "ca00a62103a447aefe6fcf7cd0a2051c": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "2c8ee4b2b4e4aed5b4ed6597fd9b82ae": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "1ac44d12732a033f7558a1662bd62221": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "023bc451e98641615c1bce4c9f497b35": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "Heuristic: normal/benign findings"
+  },
+  "59a10a4e922fd1fb870ff4e351d3359e": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "cb588f2f2eaddaee1c9e396696657ebc": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+    "top3_labels": [
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_II_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8"
+    ],
+    "rationale": "Heuristic: thyroid cancer keywords detected"
+  },
+  "2abf9aa568a9c0a16c9efb291eda6a1e": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/RA",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/PMR",
+      "http://purl.bioontology.org/ontology/AIR/PSO",
+      "http://purl.bioontology.org/ontology/AIR/SLE"
+    ],
+    "rationale": "The presence of rheumatoid factor (RF) positivity, anti-cyclic citrullinated peptide (anti-CCP) positivity, and elevated erythrocyte sedimentation rate (ESR) strongly suggest an autoimmune disorder such as rheumatoid arthritis (RA). The symptoms of symmetric joint pain, morning stiffness, and swollen joints also align with typical manifestations of RA."
+  },
+  "d4e59adac677064063084e4cd9500feb": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/RA",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/RA",
+      "http://purl.bioontology.org/ontology/AIR/PMR",
+      "http://purl.bioontology.org/ontology/AIR/PSO"
+    ],
+    "rationale": "The presence of rheumatoid factor (RF) positivity, anti-cyclic citrullinated peptide antibody (anti-CCP) positivity, and elevated erythrocyte sedimentation rate (ESR) strongly suggest rheumatoid arthritis (RA). The symptoms of symmetric joint pain, morning stiffness, and swollen joints also align well with RA."
+  },
+  "9d945aa66ce56677855bc5565d64edf6": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "http://purl.bioontology.org/ontology/AIR/PMR",
+      "http://purl.bioontology.org/ontology/AIR/RA"
+    ],
+    "rationale": "The presence of anti-CCP antibodies, joint swelling, early erosions on hand radiographs, and a history of progressive wrist and forefoot pain are consistent with rheumatoid arthritis."
+  },
+  "6c72d83d77c179d025b21796e035676d": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "http://purl.bioontology.org/ontology/AIR/PMR",
+      "http://purl.bioontology.org/ontology/AIR/PSO"
+    ],
+    "rationale": "The presence of anti-CCP antibodies, joint swelling, early erosions on hand radiographs, and a history of progressive wrist and forefoot pain are consistent with rheumatoid arthritis."
+  },
+  "f941e615fd9a02a740f4ce3df39596bb": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/SLE",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/RA",
+      "http://purl.bioontology.org/ontology/AIR/PSO",
+      "http://purl.bioontology.org/ontology/AIR/PMR"
+    ],
+    "rationale": "The presence of skin rashes, photosensitivity, oral ulcers, ANA positivity, anti-dsDNA positivity, and proteinuria on dipstick strongly suggest Systemic Lupus Erythematosus (SLE). The absence of erosions and arthritis further supports this diagnosis over other conditions in the top three options."
+  },
+  "3f50c770ef09e8783d102d43b1e204cd": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The presence of a positive ANA test, anti-dsDNA antibodies, and systemic symptoms such as joint pain, fatigue, and skin rashes strongly suggest systemic lupus erythematosus."
+  },
+  "e493713313e0640adb192097402c13e6": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/SLE",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/SLE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The presence of malar rash, ANA positivity, lupus-like symptoms such as joint pain and skin lesions, along with elevated ANA titers and leukopenia suggest an active systemic lupus erythematosus (SLE) flare."
+  },
+  "847b950010f9d13f5e9d2f8aac698e9b": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/SLE",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/SLE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The presence of systemic lupus erythematosus (SLE) markers such as ANA positivity, along with symptoms like pleuritic chest discomfort and joint aches, supports the classification of SLE. The mild renal involvement and leukopenia further support this diagnosis."
+  },
+  "9e5778dedc9e9264a161f737faa28be6": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/RA",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/RA",
+      "http://purl.bioontology.org/ontology/AIR/PSO",
+      "http://purl.bioontology.org/ontology/AIR/SLE"
+    ],
+    "rationale": "The presence of needle-shaped crystals in the synovial fluid is consistent with gout, which is an inflammatory arthritis caused by hyperuricemia leading to crystal deposition. The symptoms and triggers align well with gout."
+  },
+  "f140ec2ac74492968677170206279d87": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/GT",
+      "http://purl.bioontology.org/ontology/AIR/PSO",
+      "http://purl.bioontology.org/ontology/AIR/RA"
+    ],
+    "rationale": "The patient presents with acute red swelling in the great toe, which is typical for gout. The presence of needle-shaped crystals on aspiration further supports the diagnosis."
+  },
+  "2f1ad11a4fbc42fc00ebb2088b79ea7e": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/RA",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/PMR",
+      "http://purl.bioontology.org/ontology/AIR/PSO",
+      "http://purl.bioontology.org/ontology/AIR/SLE"
+    ],
+    "rationale": "The presence of gouty arthritis in the knees and ankles, along with elevated uric acid levels and synovial fluid examination showing monosodium urate crystals, strongly suggests Rheumatoid Arthritis (RA). The other conditions listed (PMR, PSO, SLE) are less likely given the specific presentation of gout."
+  },
+  "b488383efc5d2ef1019b25e5d63890d3": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/SLE",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/PMR",
+      "NONE",
+      "http://purl.bioontology.org/ontology/AIR/RA"
+    ],
+    "rationale": "The presence of uric acid elevation and synovial fluid with monosodium urate crystals strongly suggests gout, which is an autoimmune disorder that can cause joint inflammation similar to rheumatoid arthritis."
+  },
+  "795d5a248a46a921a97f5f6fc582066a": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/PMR",
+      "http://purl.bioontology.org/ontology/AIR/RA",
+      "http://purl.bioontology.org/ontology/AIR/SLE"
+    ],
+    "rationale": "The presence of psoriatic arthritis is strongly indicative of Psoriatic Arthritis (PSO). The other conditions have different presentations that do not match the given symptoms."
+  },
+  "e923791f14894e40bebde95c1dbfc586": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "http://purl.bioontology.org/ontology/AIR/PMR"
+    ],
+    "rationale": "The presence of joint pain, skin involvement consistent with psoriasis, and radiographic evidence of erosive changes suggest psoriatic arthritis as the most likely diagnosis among the given options."
+  },
+  "a9c1b2a3bb99bf4ac4ae18614b8813fc": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "http://purl.bioontology.org/ontology/AIR/PMR",
+      "http://purl.bioontology.org/ontology/AIR/RA"
+    ],
+    "rationale": "The presence of ankylosing spondylitis symptoms such as chronic low back pain, inflammation, and imaging findings like sacroiliitis aligns best with AS. The elevated CRP and HLA-B27 positivity further support this diagnosis."
+  },
+  "c902dcb02adb107ae3b082517af5b3d7": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient has chronic low back pain that improves with activity and is associated with inflammatory symptoms such as elevated CRP and HLA-B27 positivity. The imaging findings of sacroiliitis support the diagnosis of ankylosing spondylitis."
+  },
+  "6d5e8a9d298ad68f8f28a1cec977d1ed": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/PMR",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/RA",
+      "http://purl.bioontology.org/ontology/AIR/PSO",
+      "http://purl.bioontology.org/ontology/AIR/SLE"
+    ],
+    "rationale": "The patient presents with bilateral shoulder and hip girdle aching, morning stiffness lasting more than 60 minutes, difficulty rising from chair, elevated ESR and CRP, and response to low-dose steroid therapy. These symptoms are consistent with polymyalgia rheumatica."
+  },
+  "2282106fd1ea56ee01c7792e589a744b": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "http://purl.bioontology.org/ontology/AIR/PMR",
+      "http://purl.bioontology.org/ontology/AIR/RA"
+    ],
+    "rationale": "The patient presents with bilateral shoulder and hip girdle aching, morning stiffness lasting more than 60 minutes, and an elevated erythrocyte sedimentation rate (ESR) and C-reactive protein (CRP). These symptoms are consistent with polymyalgia rheumatica."
+  },
+  "ccd3518264d6642cd54b9e8338a75443": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/PMR",
+      "http://purl.bioontology.org/ontology/AIR/PSO",
+      "http://purl.bioontology.org/ontology/AIR/RA"
+    ],
+    "rationale": "The patient presents with hand stiffness and swelling following a viral illness, which is consistent with post-viral arthritis. The absence of typical rheumatoid features such as RF negativity, anti-CCP positivity, and joint deformities suggests PMR or PSO, but without further diagnostic criteria, 'NONE' is the safest prediction."
+  },
+  "c72b78484a510f6c6a45230da9a29705": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient's chief concern is hand stiffness and swelling after a viral illness, which could suggest an acute inflammatory condition like post-viral arthritis. However, the absence of typical signs such as joint deformities, morning stiffness, or specific laboratory findings that would typically support these diagnoses makes it difficult to definitively classify them into any of the given categories."
+  },
+  "f62cce20120a459919466e85f4701b64": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient's symptoms, such as diffuse body pain, fatigue, non-restorative sleep, and brain fog, are more consistent with fibromyalgia rather than any other specific rheumatologic condition indicated in the list."
+  },
+  "ee1a7fc82daf0bcb2e90923e54f65bc0": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient's symptoms, such as diffuse body pain, fatigue, non-restorative sleep, and brain fog, suggest conditions like polymyalgia rheumatica or ankylosing spondylitis. However, the absence of typical inflammatory markers and imaging findings makes systemic lupus erythematosus less likely. The presence of fibromyalgia is also considered a distractor in this context."
+  },
+  "bb20eab5ccf997105831a07a74706a9b": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/PMR",
+      "http://purl.bioontology.org/ontology/AIR/PSO",
+      "http://purl.bioontology.org/ontology/AIR/RA"
+    ],
+    "rationale": "The patient's chief complaint is knee pain with intermittent swelling, which suggests an inflammatory condition. The imaging findings indicate joint space narrowing and osteophytes, consistent with osteoarthritis. However, the lack of specific signs for PMR, PSO, or RA in the provided information makes it difficult to predict these conditions definitively."
+  },
+  "8047dc0e3800e2207107e3effef21b6d": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient's chief concern is knee pain with intermittent swelling, which could suggest osteoarthritis as a distractor. The imaging findings of joint space narrowing and osteophytes also support this possibility. However, the absence of inflammatory markers and the lack of specific symptoms typical of polymyalgia rheumatica or psoriatic arthritis make these conditions less likely."
+  },
+  "73c0b331e8bcff001988c3e7fc629d92": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/PMR",
+      "http://purl.bioontology.org/ontology/AIR/PSO",
+      "http://purl.bioontology.org/ontology/AIR/RA"
+    ],
+    "rationale": "The symptoms and imaging findings suggest pseudogout (CPPD), but the absence of typical gout features such as elevated uric acid levels makes it challenging to definitively diagnose gout. The presence of rhomboid crystals in the aspiration further supports the diagnosis of pseudogout."
+  },
+  "d396109f05d40659f9bf97211838f9a4": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient's chief concern is an acute swollen knee that resembles gout, but imaging shows chondrocalcinosis, which is more consistent with CPPD (pseudo-gout). The trigger is recent minor trauma, suggesting polymyalgia rheumatica as well. Psoriatic arthritis can also cause joint swelling and may have similar symptoms to gout."
+  },
+  "7cfadcf7cb384c4ef394881ff28ff2cd": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/PMR",
+      "http://purl.bioontology.org/ontology/AIR/PSO",
+      "http://purl.bioontology.org/ontology/AIR/RA"
+    ],
+    "rationale": "The patient's symptoms, imaging findings, and lack of inflammatory markers suggest non-inflammatory causes such as mechanical back pain."
+  },
+  "f66e9f2864e38a03395e00f084e2b81f": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient's symptoms, imaging findings, and lack of specific rheumatological markers suggest that the primary issue is mechanical back pain due to a distractor such as lifting and prolonged sitting. The absence of typical signs like sacroiliitis in imaging and the normal CRP levels further support this interpretation."
+  },
+  "d5789f8c04738aa869c22765d9d8b513": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/RA",
+      "http://purl.bioontology.org/ontology/AIR/SLE",
+      "NONE"
+    ],
+    "rationale": "The presence of shoulder pain, morning stiffness, and positive impingement signs suggest PMR as a potential cause. The imaging finding of rotator cuff tendinopathy is consistent with PMR but does not definitively rule out other diagnoses like RA or SLE."
+  },
+  "bf9e981361a2162bb510f83d5f84f061": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/PMR",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient presents with shoulder pain, morning stiffness, and positive impingement signs, which are consistent with PMR. The imaging finding of rotator cuff tendinopathy is also suggestive of PMR. However, polymyalgia rheumatica and ankylosing spondylitis can also cause similar symptoms."
+  },
+  "b2f9c3af31ccf452b561528cd4278404": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "http://purl.bioontology.org/ontology/AIR/PSO",
+      "http://purl.bioontology.org/ontology/AIR/SLE"
+    ],
+    "rationale": "The presence of an ANA test result and anti-dsDNA negativity suggests a lupus-like condition, while the positive anti-histone antibody indicates SLE. The absence of skin photosensitivity supports a non-light-sensitizing form of lupus."
+  },
+  "4b8f6c027b8caf33c8fc641bc05edf6e": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "http://purl.bioontology.org/ontology/AIR/PSO"
+    ],
+    "rationale": "The presence of an ANA test result and anti-dsDNA negativity suggests systemic lupus erythematosus (http://purl.bioontology.org/ontology/AIR/LUP). The skin rash is consistent with cutaneous manifestations of SLE, which can include erythematous lesions such as a facial rash. The combination of these findings supports a diagnosis of drug-induced lupus-like syndrome."
+  },
+  "57b6096d4c5ebd9a900ca456fd6a56ee": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/PMR",
+      "http://purl.bioontology.org/ontology/AIR/RA",
+      "http://purl.bioontology.org/ontology/AIR/SLE"
+    ],
+    "rationale": "The patient presents with symptoms suggestive of reactive arthritis, which can have a PMR-like presentation but is not typically associated with RF negativity or specific skin findings like SLE. The lack of typical rheumatoid features and the absence of other autoimmune markers further supports a non-specific inflammatory response."
+  },
+  "b69e4b05f1554a54f8b5bb259c41423b": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient presents with symptoms suggestive of an inflammatory condition affecting joints and skin, but without specific markers like RF or CRP elevation consistent with rheumatoid arthritis. The presence of polymyalgia rheumatica is also possible given the joint involvement described. No evidence of psoriasis or active inflammation in other systems suggests these conditions are less likely."
+  },
+  "a3f5dcb5d29e6f03130102fd38382377": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "http://purl.bioontology.org/ontology/AIR/GT",
+      "http://purl.bioontology.org/ontology/AIR/PSO",
+      "http://purl.bioontology.org/ontology/AIR/SLE"
+    ],
+    "rationale": "The chief concern is episodic swelling of wrists with dry eyes, which could be related to Sj\u00f6gren's syndrome (GT). The absence of specific rheumatoid factor (RF) and positive anti-SSA/anti-SSB antibodies rules out rheumatoid arthritis (RA). However, the presence of sicca symptoms suggests an autoimmune condition like Sj\u00f6gren's syndrome. The lack of erosions and normal labs further supports this interpretation."
+  },
+  "5a09cf7675ed79d1f5f65f88e2216f46": {
+    "predicted_label": "NONE",
+    "top3_labels": [
+      "NONE",
+      "NONE",
+      "NONE"
+    ],
+    "rationale": "The patient's chief concern is episodic swelling of wrists with dry eyes, which could be related to either polymyalgia rheumatica or psoriatic arthritis. However, the absence of specific signs like joint erosions on imaging and the normal ESR suggest that these conditions may not be the primary diagnoses. The presence of sicca symptoms further complicates the assessment but does not clearly point towards any single condition."
   }
 }

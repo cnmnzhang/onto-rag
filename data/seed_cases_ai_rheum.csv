@@ -1,0 +1,126 @@
+case_id,register,chart_text,gold_label
+seed-air-001,chart,"Chief concern: symmetric hand pain and morning stiffness
+Duration: 5 months; stiffness ~90 minutes
+Joints: MCP/PIP swelling bilaterally; reduced grip strength
+ROS: fatigue; no oral ulcers; no photosensitivity
+Labs: RF positive; anti-CCP positive; ESR elevated
+Imaging: hand US with synovitis
+Assessment: inflammatory polyarthritis consistent with RA",http://purl.bioontology.org/ontology/AIR/RA
+seed-air-002,clinical_note,"HPI: progressive wrist and forefoot pain, worse in morning
+Exam: tender/swollen MCPs and MTPs; no tophi
+ROS: dry eyes intermittently; no malar rash
+Labs: anti-CCP strongly positive; CRP elevated
+Imaging: early erosions on hand radiographs
+A/P: rheumatoid arthritis; start DMARD discussion",http://purl.bioontology.org/ontology/AIR/RA
+seed-air-003,clinical_note,"HPI: episodic joint pain with fatigue and low-grade fevers
+Skin: photosensitive rash after sun exposure; alopecia noted
+Mucosa: painless oral ulcers
+Joints: non-erosive arthralgias; mild swelling
+Labs: ANA positive; anti-dsDNA positive; low complement
+Urine: proteinuria on dipstick
+Assessment: systemic lupus erythematosus",http://purl.bioontology.org/ontology/AIR/SLE
+seed-air-004,chart,"Chief concern: pleuritic chest discomfort and joint aches
+Skin: malar-pattern facial erythema reported
+Joints: migratory arthralgias; no deformities
+Labs: ANA positive; low C3/C4
+Renal: creatinine mildly up; urine protein/hematuria
+Other: leukopenia on CBC
+Impression: SLE flare pattern",http://purl.bioontology.org/ontology/AIR/SLE
+seed-air-005,chart,"Chief concern: acute red swollen great toe
+Onset: sudden overnight; severe pain with light touch
+Exam: 1st MTP erythematous, warm, swollen
+Labs: serum urate elevated
+Aspiration: negatively birefringent needle-shaped crystals
+Triggers: recent dehydration and high-purine meal
+Assessment: gout",http://purl.bioontology.org/ontology/AIR/GT
+seed-air-006,clinical_note,"HPI: recurrent attacks of monoarthritis (knee, then ankle)
+Exam: knee effusion; marked tenderness
+Labs: uric acid elevated; ESR mildly elevated
+Procedure: synovial fluid with monosodium urate crystals
+Imaging: erosions with overhanging edges at 1st MTP
+ROS: no chronic diarrhea; no psoriasis
+Dx: gout",http://purl.bioontology.org/ontology/AIR/GT
+seed-air-007,chart,"Chief concern: joint pain with known plaque psoriasis
+Joints: DIP pain and swelling; intermittent dactylitis
+Skin: scaly plaques on extensor surfaces
+Nails: pitting noted
+Labs: RF negative; anti-CCP negative
+Imaging: erosive changes with new bone formation
+Assessment: psoriatic arthritis",http://purl.bioontology.org/ontology/AIR/PSO
+seed-air-008,clinical_note,"HPI: chronic low back pain improving with activity
+Pattern: inflammatory back pain; wakes in second half of night
+Exam: reduced spinal flexion; tenderness at SI joints
+Labs: CRP elevated; HLA-B27 positive
+Imaging: sacroiliitis on MRI
+Extra-articular: prior episode of anterior uveitis
+Assessment: ankylosing spondylitis",http://purl.bioontology.org/ontology/AIR/DXANK
+seed-air-009,chart,"Chief concern: bilateral shoulder and hip girdle aching
+Age group: older adult with new stiffness
+Morning stiffness: >60 minutes; difficulty rising from chair
+Exam: pain with active ROM but no true weakness
+Labs: ESR markedly elevated; CRP elevated
+Response: rapid improvement with low-dose steroid trial
+Assessment: polymyalgia rheumatica",http://purl.bioontology.org/ontology/AIR/PMR
+seed-air-010,chart,"Chief concern: hand stiffness and swelling after viral illness
+Onset: abrupt; multiple small joints painful
+Exam: mild synovitis; no nodules
+Labs: RF negative; anti-CCP negative; ESR mildly elevated
+Course: symptoms improving over 2 weeks
+Exposure: household viral symptoms reported
+Assessment: post-viral arthritis (distractor)",NONE
+seed-air-011,clinical_note,"HPI: diffuse body pain and fatigue for 9 months
+Symptoms: non-restorative sleep; brain fog
+Exam: no synovitis; diffuse soft tissue tenderness
+Labs: ESR normal; CRP normal; ANA negative
+Imaging: no erosions; normal joints
+Notes: stiffness reported but not clearly inflammatory
+Assessment: fibromyalgia (distractor)",NONE
+seed-air-012,chart,"Chief concern: knee pain with intermittent swelling
+Pattern: worse after stairs and prolonged standing
+Exam: crepitus; mild effusion; no warmth
+Imaging: joint space narrowing and osteophytes
+Labs: inflammatory markers normal
+ROS: fatigue present but stable
+Assessment: osteoarthritis (distractor)",NONE
+seed-air-013,chart,"Chief concern: acute swollen knee resembling gout flare
+Exam: warm effusion; significant pain
+Aspiration: rhomboid crystals with positive birefringence
+Imaging: chondrocalcinosis on knee radiograph
+Labs: uric acid normal
+Trigger: recent minor trauma
+Assessment: CPPD (pseudo-gout) distractor",NONE
+seed-air-014,clinical_note,"HPI: low back pain after lifting and long sitting
+Pattern: worse with flexion; improves with rest
+Exam: negative SI joint provocative tests; normal neuro exam
+Labs: CRP normal
+Imaging: lumbar degenerative changes; no sacroiliitis
+ROS: fatigue and stiffness reported
+Assessment: mechanical back pain (distractor)",NONE
+seed-air-015,chart,"Chief concern: shoulder pain and morning stiffness
+Exam: painful arc; positive impingement signs
+Strength: intact; no hip girdle symptoms
+Labs: ESR normal; CRP normal
+Imaging: rotator cuff tendinopathy on ultrasound
+Response: improved with PT and NSAIDs
+Assessment: shoulder tendinopathy (PMR mimic distractor)",NONE
+seed-air-016,clinical_note,"HPI: intermittent joint pain with facial rash after new medication
+Skin: rash; no photosensitivity history
+Joints: arthralgias without swelling
+Labs: ANA positive; anti-dsDNA negative; antihistone positive
+Complement: normal
+Urine: no proteinuria
+Assessment: drug-induced lupus-like syndrome (distractor)",NONE
+seed-air-017,chart,"Chief concern: swollen finger and heel pain after recent diarrhea
+Joints: asymmetric oligoarthritis; enthesitis at Achilles
+Skin: no psoriasis plaques
+Labs: RF negative; CRP mildly elevated
+Infectious testing: stool PCR previously positive per report
+Imaging: no erosions; no sacroiliitis
+Assessment: reactive arthritis pattern (distractor)",NONE
+seed-air-018,chart,"Chief concern: episodic swelling of wrists with dry eyes
+Symptoms: sicca complaints; parotid fullness denied
+Exam: minimal swelling; no erosions
+Labs: SSA/SSB negative; RF negative; ESR normal
+Imaging: normal hand radiographs
+Course: flares correlate with stress and overuse
+Assessment: nonspecific arthralgia with sicca symptoms (distractor)",NONE

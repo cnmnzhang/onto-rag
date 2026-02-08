@@ -1,0 +1,11 @@
+{
+  "labels": [
+    "http://purl.bioontology.org/ontology/AIR/RA",
+    "http://purl.bioontology.org/ontology/AIR/SLE",
+    "http://purl.bioontology.org/ontology/AIR/GT",
+    "http://purl.bioontology.org/ontology/AIR/PSO",
+    "http://purl.bioontology.org/ontology/AIR/DXANK",
+    "http://purl.bioontology.org/ontology/AIR/PMR"
+  ],
+  "none_label": "NONE"
+}
