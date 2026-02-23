@@ -1,7 +1,7 @@
-"""TCO corpus ingestion and normalization.
+"""Ontology corpus ingestion and normalization.
 
-Builds/loads `data/tco_corpus.jsonl` using BioPortal when online, with a
-graceful offline fallback to an existing on-disk corpus.
+Builds/loads JSONL corpora using BioPortal when online, with a graceful offline
+fallback to an existing on-disk corpus.
 
 Output contract (stable fields):
 - tco_id: str
@@ -9,7 +9,7 @@ Output contract (stable fields):
 - synonyms: list[str]
 - text: str
 
-For backward compatibility with existing code, we also populate:
+For backward compatibility with existing code and artifacts, we also populate:
 - document_text: str  (same as `text`)
 - definition: str
 - parent_labels: list[str]
@@ -37,7 +37,7 @@ DEFAULT_TIMEOUT_S = 30
 
 
 @dataclass(frozen=True)
-class TcoDoc:
+class OntoDoc:
     tco_id: str
     label: str
     synonyms: tuple[str, ...]
@@ -66,7 +66,13 @@ def _normalize_list_field(value: Any) -> list[str]:
     return [str(value)]
 
 
-def _api_get(session: requests.Session, endpoint: str, *, params: dict[str, Any] | None = None, timeout_s: int = DEFAULT_TIMEOUT_S) -> Any:
+def _api_get(
+    session: requests.Session,
+    endpoint: str,
+    *,
+    params: dict[str, Any] | None = None,
+    timeout_s: int = DEFAULT_TIMEOUT_S,
+) -> Any:
     url = f"{BIOPORTAL_BASE_URL}{endpoint}"
     resp = session.get(url, params=params or {}, timeout=timeout_s)
     if resp.status_code == 429:
@@ -76,7 +82,13 @@ def _api_get(session: requests.Session, endpoint: str, *, params: dict[str, Any]
     return resp.json()
 
 
-def _api_get_auth(session: requests.Session, endpoint: str, *, params: dict[str, Any] | None = None, timeout_s: int = DEFAULT_TIMEOUT_S) -> Any:
+def _api_get_auth(
+    session: requests.Session,
+    endpoint: str,
+    *,
+    params: dict[str, Any] | None = None,
+    timeout_s: int = DEFAULT_TIMEOUT_S,
+) -> Any:
     params = dict(params or {})
     api_key = os.getenv("BIOPORTAL_API_KEY")
     if api_key:
@@ -105,12 +117,12 @@ def _fetch_parent_labels(session: requests.Session, class_details: dict[str, Any
     return labels
 
 
-def fetch_tco_class_details(session: requests.Session, *, acronym: str, tco_id: str) -> dict[str, Any]:
+def fetch_class_details(session: requests.Session, *, acronym: str, tco_id: str) -> dict[str, Any]:
     encoded = quote(tco_id, safe="")
     return _api_get_auth(session, f"/ontologies/{acronym}/classes/{encoded}")
 
 
-def build_tco_doc_from_details(*, tco_id: str, details: dict[str, Any]) -> TcoDoc:
+def build_doc_from_details(*, tco_id: str, details: dict[str, Any]) -> OntoDoc:
     label = str(details.get("prefLabel") or details.get("label") or "").strip()
     synonyms = _normalize_list_field(details.get("synonym"))
     definition_list = _normalize_list_field(details.get("definition"))
@@ -124,10 +136,9 @@ def build_tco_doc_from_details(*, tco_id: str, details: dict[str, Any]) -> TcoDo
         parts.append(f"Synonyms: {', '.join(synonyms)}")
     if definition:
         parts.append(f"Definition: {definition}")
-    # parent labels appended later if available
 
     text = "\n".join([p for p in parts if p])
-    return TcoDoc(
+    return OntoDoc(
         tco_id=tco_id,
         label=label or tco_id,
         synonyms=tuple(synonyms),
@@ -137,7 +148,7 @@ def build_tco_doc_from_details(*, tco_id: str, details: dict[str, Any]) -> TcoDo
     )
 
 
-def ensure_tco_corpus(
+def ensure_corpus(
     *,
     config: OntologyConfig | None = None,
     acronym: str | None = None,
@@ -155,7 +166,7 @@ def ensure_tco_corpus(
 
     if not acronym:
         if config is None:
-            raise TypeError("ensure_tco_corpus requires either config=... or acronym=...")
+            raise TypeError("ensure_corpus requires either config=... or acronym=...")
         acronym = config.acronym
 
     output_path = Path(output_path)
@@ -167,10 +178,10 @@ def ensure_tco_corpus(
             # quick connectivity check
             _api_get_auth(session, f"/ontologies/{acronym}")
 
-            docs: list[TcoDoc] = []
+            docs: list[OntoDoc] = []
             for tco_id in label_ids:
-                details = fetch_tco_class_details(session, acronym=acronym, tco_id=tco_id)
-                doc = build_tco_doc_from_details(tco_id=tco_id, details=details)
+                details = fetch_class_details(session, acronym=acronym, tco_id=tco_id)
+                doc = build_doc_from_details(tco_id=tco_id, details=details)
 
                 parents = _fetch_parent_labels(session, details)
                 if parents:
@@ -181,7 +192,7 @@ def ensure_tco_corpus(
                     if doc.definition:
                         parts.append(f"Definition: {doc.definition}")
                     parts.append(f"Parent classes: {', '.join(parents)}")
-                    doc = TcoDoc(
+                    doc = OntoDoc(
                         tco_id=doc.tco_id,
                         label=doc.label,
                         synonyms=doc.synonyms,
@@ -201,19 +212,19 @@ def ensure_tco_corpus(
             pass
 
     if output_path.exists():
-        records = load_tco_corpus(output_path)
+        records = load_corpus(output_path)
         # Persist normalized schema (adds stable `text` field) if needed.
         if any("text" not in r or not r.get("text") for r in records):
             _write_jsonl(output_path, records)
         return records
 
     raise RuntimeError(
-        "Unable to build TCO corpus from BioPortal and no cached corpus exists at "
-        f"{output_path}. Set BIOPORTAL_API_KEY or add a cached data/tco_corpus.jsonl."
+        "Unable to build corpus from BioPortal and no cached corpus exists at "
+        f"{output_path}. Set BIOPORTAL_API_KEY or add a cached corpus JSONL."
     )
 
 
-def load_tco_corpus(path: str | Path) -> list[dict[str, Any]]:
+def load_corpus(path: str | Path) -> list[dict[str, Any]]:
     """Load corpus and normalize to include stable fields."""
 
     path = Path(path)
@@ -245,3 +256,8 @@ def _write_jsonl(path: Path, records: list[dict[str, Any]]) -> None:
     # Deterministic ordering: write in the provided order.
     lines = [json.dumps(r, ensure_ascii=False) for r in records]
     path.write_text("\n".join(lines) + "\n")
+
+
+# Backwards-compat aliases for any internal scripts that still use old names.
+ensure_tco_corpus = ensure_corpus
+load_tco_corpus = load_corpus

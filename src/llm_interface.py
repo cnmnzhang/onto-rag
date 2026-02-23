@@ -6,8 +6,9 @@ Supports OpenAI, Hugging Face (Qwen2.5-1.5B-Instruct), Google Gemini, and dry-ru
 import os
 import json
 import hashlib
-import random
-from typing import Dict, List, Optional, Set, TYPE_CHECKING
+from typing import Dict, List, Optional, TYPE_CHECKING
+
+from label_alias import LabelNormalizer
 
 if TYPE_CHECKING:
     from onto_config import OntologyConfig
@@ -30,7 +31,10 @@ class LLMInterface:
         cache_file: str = "llm_cache.json",
         config: Optional["OntologyConfig"] = None
     ):
-        self.allowed_labels = set(allowed_labels + ["NONE"])
+        self.none_label = "NONE"
+        self.allowed_labels = set(allowed_labels + [self.none_label])
+        self._allowed_uris = sorted([l for l in self.allowed_labels if l != self.none_label])
+        self.label_normalizer = LabelNormalizer(self._allowed_uris, none_label=self.none_label)
         self.cache_file = cache_file
         self.cache = self._load_cache()
         self.config = config
@@ -138,7 +142,7 @@ class LLMInterface:
     def _dry_run_predict(self, chart_text: str, rag_context: Optional[str] = None) -> Dict:
         """Deterministic heuristic for dry-run mode."""
         text_lower = chart_text.lower()
-        disease_labels = [l for l in self.allowed_labels if l != "NONE"]
+        disease_labels = [l for l in self.allowed_labels if l != self.none_label]
         disease_labels_list = list(disease_labels)
 
         # Use config keywords if available, otherwise use generic fallback
@@ -157,9 +161,15 @@ class LLMInterface:
         strong_positive = any(kw in text_lower for kw in positive_keywords[:3])  # Top 3 positive keywords
         if strong_positive:
             return {
-                "predicted_label": disease_labels_list[0] if disease_labels_list else "NONE",
-                "top3_labels": disease_labels_list[:3] if disease_labels_list else ["NONE"],
-                "rationale": f"Heuristic: {disease_name} keywords detected"
+                "predicted_label": disease_labels_list[0] if disease_labels_list else self.none_label,
+                "ddx_top3": [
+                    {
+                        "label": lbl,
+                        "rationale": f"Heuristic candidate based on {disease_name} keywords",
+                    }
+                    for lbl in (disease_labels_list[:3] if disease_labels_list else [self.none_label])
+                ],
+                "evidence": [],
             }
 
         # Check for moderate positive indicators
@@ -168,23 +178,36 @@ class LLMInterface:
             pred_label = disease_labels_list[1] if len(disease_labels_list) > 1 else (disease_labels_list[0] if disease_labels_list else "NONE")
             return {
                 "predicted_label": pred_label,
-                "top3_labels": disease_labels_list[:3] if disease_labels_list else ["NONE"],
-                "rationale": f"Heuristic: possible {disease_name} indicators"
+                "ddx_top3": [
+                    {
+                        "label": lbl,
+                        "rationale": f"Heuristic candidate based on possible {disease_name} indicators",
+                    }
+                    for lbl in (disease_labels_list[:3] if disease_labels_list else [self.none_label])
+                ],
+                "evidence": [],
             }
 
         # Check for negative indicators
         if any(kw in text_lower for kw in negative_keywords):
             return {
-                "predicted_label": "NONE",
-                "top3_labels": ["NONE"],
-                "rationale": f"Heuristic: normal/benign findings"
+                "predicted_label": self.none_label,
+                "ddx_top3": [{"label": self.none_label, "rationale": "Heuristic: normal/benign findings"}],
+                "evidence": [],
             }
 
         # Default to NONE if no clear indicators
         return {
-            "predicted_label": "NONE",
-            "top3_labels": ["NONE"],
-            "rationale": f"Heuristic: no clear {disease_name} indicators"
+            "predicted_label": self.none_label,
+            "ddx_top3": [{"label": self.none_label, "rationale": f"Heuristic: no clear {disease_name} indicators"}],
+            "evidence": [],
+        }
+
+    def _error_response(self, message: str) -> Dict:
+        return {
+            "predicted_label": self.none_label,
+            "ddx_top3": [{"label": self.none_label, "rationale": message[:200]}],
+            "evidence": [],
         }
 
     def _predict_gemini(self, system_prompt: str, user_prompt: str) -> Dict:
@@ -220,18 +243,10 @@ class LLMInterface:
         except json.JSONDecodeError as e:
             print(f"JSON parse error from Gemini: {e}")
             print(f"Raw response: {response_text[:200]}")
-            return {
-                "predicted_label": "NONE",
-                "top3_labels": ["NONE"],
-                "rationale": f"Parse error: {response_text[:100]}"
-            }
+            return self._error_response(f"Parse error: {response_text[:100]}")
         except Exception as e:
             print(f"Gemini error: {e}")
-            return {
-                "predicted_label": "NONE",
-                "top3_labels": ["NONE"],
-                "rationale": f"Error: {str(e)}"
-            }
+            return self._error_response(f"Error: {str(e)}")
 
     def _predict_openai(self, system_prompt: str, user_prompt: str) -> Dict:
         """Generate prediction using OpenAI."""
@@ -250,19 +265,16 @@ class LLMInterface:
             return json.loads(response_text)
         except Exception as e:
             print(f"OpenAI error: {e}")
-            return {
-                "predicted_label": "NONE",
-                "top3_labels": ["NONE"],
-                "rationale": f"Error: {str(e)}"
-            }
+            return self._error_response(f"Error: {str(e)}")
 
     def _predict_huggingface(self, system_prompt: str, user_prompt: str) -> Dict:
         """Generate prediction using Hugging Face model."""
         try:
             import torch
 
-            temperature = float(os.getenv("LLM_TEMPERATURE", "0.3"))
-            do_sample = temperature > 0.0
+            temperature = float(os.getenv("LLM_TEMPERATURE", "0"))
+            top_p = float(os.getenv("LLM_TOP_P", "1.0"))
+            do_sample = os.getenv("LLM_DO_SAMPLE", "false").lower() in ["1", "true", "yes"]
 
             # Construct prompt for chat model
             messages = [
@@ -283,13 +295,19 @@ class LLMInterface:
                 inputs = {k: v.to(self.device) for k, v in inputs.items()}
 
             # Generate
+            generation_kwargs = {
+                "max_new_tokens": 220,
+                "do_sample": do_sample,
+                "pad_token_id": self.tokenizer.eos_token_id,
+            }
+            if do_sample:
+                generation_kwargs["temperature"] = temperature
+                generation_kwargs["top_p"] = top_p
+
             with torch.no_grad():
                 outputs = self.model.generate(
                     **inputs,
-                    max_new_tokens=200,
-                    temperature=temperature,
-                    do_sample=do_sample,
-                    pad_token_id=self.tokenizer.eos_token_id
+                    **generation_kwargs,
                 )
 
             # Decode
@@ -319,19 +337,10 @@ class LLMInterface:
         except json.JSONDecodeError as e:
             print(f"JSON parse error from HF model: {e}")
             print(f"Raw response: {response_text[:200]}")
-            # Try to extract label from text
-            return {
-                "predicted_label": "NONE",
-                "top3_labels": ["NONE"],
-                "rationale": f"Parse error: {response_text[:100]}"
-            }
+            return self._error_response(f"Parse error: {response_text[:100]}")
         except Exception as e:
             print(f"Hugging Face error: {e}")
-            return {
-                "predicted_label": "NONE",
-                "top3_labels": ["NONE"],
-                "rationale": f"Error: {str(e)}"
-            }
+            return self._error_response(f"Error: {str(e)}")
 
     def predict(self, chart_text: str, rag_context: Optional[str] = None) -> Dict:
         """
@@ -342,13 +351,13 @@ class LLMInterface:
             rag_context: Optional retrieved ontology context
 
         Returns:
-            Dict with predicted_label, top3_labels, and rationale
+            Dict with predicted_label, optional ddx_top3, and optional evidence
         """
         # Build prompt
         disease_name = self.config.disease_name if self.config else "disease"
 
         # Format allowed labels for clarity
-        allowed_labels_list = sorted([l for l in self.allowed_labels if l != 'NONE'])
+        allowed_labels_list = self._allowed_uris
         allowed_labels_formatted = "\n".join([f"  - {label}" for label in allowed_labels_list])
 
         system_prompt = f"""You are a clinical diagnosis assistant. Given a patient chart,
@@ -362,12 +371,25 @@ CRITICAL RULES:
 1. Your predicted_label MUST be one of the exact labels listed above
 2. Use the FULL IRI starting with "http://" - do NOT shorten or modify it
 3. If uncertain, use "NONE" rather than inventing a label
-4. Output ONLY valid JSON with this exact structure:
-
-{{"predicted_label": "<exact_label_from_list_above>", "top3_labels": ["<label1>", "<label2>", "<label3>"], "rationale": "<brief explanation>"}}
+4. Output ONLY valid JSON with this schema:
+{{
+    "predicted_label": "<exact_label_or_NONE>",
+    "ddx_top3": [
+        {{"label": "<exact_label_or_NONE>", "rationale": "<short reason>"}},
+        {{"label": "<exact_label_or_NONE>", "rationale": "<short reason>"}},
+        {{"label": "<exact_label_or_NONE>", "rationale": "<short reason>"}}
+    ],
+    "evidence": ["<retrieved_doc_id_if_available>"]
+}}
+5. ddx_top3 is optional but if present it must contain at most 3 items.
+6. evidence is optional and should list retrieved doc identifiers only when available.
 
 Example valid output:
-{{"predicted_label": "NONE", "top3_labels": ["NONE", "NONE", "NONE"], "rationale": "No clear {disease_name} indicators present"}}"""
+{{
+    "predicted_label": "NONE",
+    "ddx_top3": [{{"label": "NONE", "rationale": "No clear {disease_name} indicators"}}],
+    "evidence": []
+}}"""
 
         user_prompt = f"Patient Chart:\n{chart_text}"
         if rag_context:
@@ -400,52 +422,48 @@ Example valid output:
         return response
 
     def _validate_response(self, response: Dict) -> Dict:
-        """Validate response and coerce invalid labels to NONE."""
-        predicted = response.get("predicted_label", "NONE")
+        """Validate response and coerce labels to allowed URI set or NONE."""
+        raw_predicted = response.get("predicted_label", self.none_label)
+        predicted = self.label_normalizer.normalize_label(raw_predicted)
+        if predicted == self.none_label and str(raw_predicted).strip().upper() != self.none_label:
+            print(f"  ⚠️  Invalid label coerced to {self.none_label}: {str(raw_predicted)[:80]}")
 
-        # Check if predicted label is valid
-        if predicted not in self.allowed_labels:
-            print(f"  ⚠️  Invalid label '{predicted[:50]}...' coerced to NONE")
-            print(f"     (Not in allowed set of {len(self.allowed_labels)} labels)")
-            response["predicted_label"] = "NONE"
+        ddx_input = response.get("ddx_top3")
+        if ddx_input is None:
+            # Backward compatibility with older field name.
+            legacy = response.get("top3_labels") or []
+            ddx_input = [{"label": x, "rationale": "legacy_top3"} for x in legacy]
 
-            # Try to find a close match (fuzzy matching)
-            predicted_lower = str(predicted).lower()
-            for allowed_label in self.allowed_labels:
-                if allowed_label != "NONE" and allowed_label.lower() in predicted_lower:
-                    print(f"     💡 Did you mean: {allowed_label[:50]}...?")
-                    response["predicted_label"] = allowed_label
+        validated_ddx: list[dict[str, str]] = []
+        if isinstance(ddx_input, list):
+            for item in ddx_input:
+                if len(validated_ddx) >= 3:
                     break
-
-        # Validate top3
-        top3 = response.get("top3_labels", [])
-        validated_top3 = []
-        for label in top3:
-            if label in self.allowed_labels:
-                validated_top3.append(label)
-            else:
-                # Try to fix common issues
-                if isinstance(label, str):
-                    # Check if it's a partial match
-                    for allowed in self.allowed_labels:
-                        if allowed != "NONE" and label.lower() in allowed.lower():
-                            validated_top3.append(allowed)
-                            break
-                    else:
-                        validated_top3.append("NONE")
+                if isinstance(item, dict):
+                    raw_label = item.get("label", self.none_label)
+                    rationale = str(item.get("rationale", "")).strip()
                 else:
-                    validated_top3.append("NONE")
+                    raw_label = item
+                    rationale = ""
+                normalized = self.label_normalizer.normalize_label(raw_label)
+                validated_ddx.append(
+                    {
+                        "label": normalized,
+                        "rationale": rationale[:240],
+                    }
+                )
 
-            if len(validated_top3) >= 3:
-                break
+        evidence = response.get("evidence")
+        if isinstance(evidence, list):
+            evidence_out = [str(x).strip() for x in evidence if str(x).strip()][:6]
+        else:
+            evidence_out = []
 
-        # Pad with NONE if needed
-        while len(validated_top3) < 3:
-            validated_top3.append("NONE")
-
-        response["top3_labels"] = validated_top3[:3]
-
-        return response
+        return {
+            "predicted_label": predicted,
+            "ddx_top3": validated_ddx,
+            "evidence": evidence_out,
+        }
 
     def get_backend_info(self) -> Dict:
         """Get information about the current backend."""

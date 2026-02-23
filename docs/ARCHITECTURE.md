@@ -8,21 +8,42 @@ This repo is an ontology-grounded NLP methods experiment (not clinical decision-
 - Constrain predictions to: selected AI‑RHEUM IDs ∪ NONE sentinel.
 - Evaluation is mechanical: exact percent agreement only (no clinical claims, no stratified analyses).
 
+## 2026-02 Scope Update: 12-Label Differential + Auxiliary Outputs
+
+This repo’s **official metric remains unchanged**:
+- **Scored field**: `predicted_label` only
+- **Metric**: exact percent agreement, `predicted_label == gold_label`
+
+The following are **auxiliary, non-scored** outputs used only for qualitative inspection:
+- `ddx_top3` (up to 3 alternatives)
+- `next_step` (one sentence)
+- `evidence` (optional retrieved doc ids)
+
+No label discovery is allowed. All outputs must map back to the constrained label set ∪ `NONE`.
+
 ## Identifier rule (most important)
 
-IDs in [data/label_set.json](../data/label_set.json) **must exactly equal** the `id` field in [data/ai_rheum_corpus.jsonl](../data/ai_rheum_corpus.jsonl) (byte-for-byte string match). Any mismatch is treated as “label out of set” and will break evaluation (typically via exclusions or coercions).
+IDs in [data/ai_rheum_label_set.json](../data/ai_rheum_label_set.json) **must exactly equal** the corpus identifier field in [data/ai_rheum_corpus.jsonl](../data/ai_rheum_corpus.jsonl) (byte-for-byte string match).
+
+Important legacy naming note: the corpus currently stores the class identifier under the field name `tco_id`. For AI‑RHEUM runs, `tco_id` contains AI‑RHEUM URIs; the name is legacy.
 
 ## Key artifacts (expected)
 
-- Label set: [data/label_set.json](../data/label_set.json) (AI‑RHEUM IDs + NONE)
+- Label set: [data/ai_rheum_label_set.json](../data/ai_rheum_label_set.json) (AI‑RHEUM IDs + NONE)
 - Corpus cache: [data/ai_rheum_corpus.jsonl](../data/ai_rheum_corpus.jsonl)
-- Dataset: [data/synthetic_charts.csv](../data/synthetic_charts.csv)
+- Dataset: [data/seed_cases_ai_rheum.csv](../data/seed_cases_ai_rheum.csv)
 - Retriever cache directory: [data/retriever_cache/ai_rheum/](../data/retriever_cache/)
 - LLM cache: [data/llm_cache.json](../data/llm_cache.json)
 - Official evaluation outputs:
   - [results/results.json](../results/results.json)
   - [results/predictions.csv](../results/predictions.csv)
   - [results/summary.md](../results/summary.md)
+
+Done criteria:
+- [ ] Label set contains **exactly 12 unique AI‑RHEUM URIs** under `labels`
+- [ ] `none_label` is exactly the string `NONE`
+- [ ] All gold labels in the evaluated dataset are in `labels ∪ {NONE}`
+- [ ] Evaluation scoring uses `predicted_label` only (aux fields never affect agreement)
 
 ## Component map (module-level)
 
@@ -32,10 +53,10 @@ Purpose: fetch ontology class metadata for a small, explicit set of AI‑RHEUM I
 
 Where it lives:
 - Ontology configuration registry: [src/onto_config.py](../src/onto_config.py)
-- BioPortal fetch + JSONL normalization/caching: [src/tco_corpus.py](../src/tco_corpus.py)
+- BioPortal fetch + JSONL normalization/caching: [src/corpus.py](../src/corpus.py)
 
 Notes (legacy naming):
-- The ingest module is currently named “tco_corpus.py” for historical reasons. In the AI‑RHEUM-only setup it is treated as the generic BioPortal corpus builder, and the ontology-specific artifact is [data/ai_rheum_corpus.jsonl](../data/ai_rheum_corpus.jsonl).
+- The ingest module is named [src/corpus.py](../src/corpus.py). In the AI‑RHEUM-only setup it is treated as the generic BioPortal corpus builder, and the ontology-specific artifact is [data/ai_rheum_corpus.jsonl](../data/ai_rheum_corpus.jsonl).
 
 Done criteria:
 - [ ] AI‑RHEUM config exists in [src/onto_config.py](../src/onto_config.py) (acronym matches BioPortal)
@@ -49,16 +70,16 @@ Done criteria:
 Purpose: store one “document” per allowed AI‑RHEUM ID for retrieval.
 
 Where it lives:
-- Corpus writer/loader + record normalization: [src/tco_corpus.py](../src/tco_corpus.py)
+- Corpus writer/loader + record normalization: [src/corpus.py](../src/corpus.py)
 
 Artifact:
 - [data/ai_rheum_corpus.jsonl](../data/ai_rheum_corpus.jsonl)
 
 In-memory representation:
-- The in-memory corpus is a `list[dict]` with (at minimum) keys: `id`, `label`, `text`, `synonyms` (and optionally `definition`, `parent_labels`). Retrievers and evaluators should treat this as the canonical schema.
+- The in-memory corpus is a `list[dict]` with (at minimum) keys: `tco_id`, `label`, `text`, `synonyms` (and optionally `definition`, `parent_labels`).
 
-Data contract (per JSONL record; canonical field names):
-- id: string (**canonical identifier**, must match entries in label_set.json)
+Data contract (per JSONL record; canonical field names in this repo):
+- tco_id: string (**identifier**, must match entries in the label set JSON)
 - label: string
 - synonyms: list[string]
 - text: string (primary indexable field)
@@ -67,13 +88,13 @@ Optional enrichment fields:
 - definition: string
 - parent_labels: list[string]
 
-Backwards-compat (legacy aliasing):
-- Some existing code may still emit/read `tco_id` as the identifier field name. Treat `tco_id` as an alias of `id` during the migration, but the **contract** is `id`.
+Naming note:
+- `tco_id` is legacy naming from earlier TCO runs. For AI‑RHEUM, it stores AI‑RHEUM class URIs.
 
 Done criteria:
-- [ ] Each record has id, label, text
-- [ ] id values are unique and match the label set IDs exactly
-- [ ] Corpus length equals number of labels in [data/label_set.json](../data/label_set.json)
+- [ ] Each record has tco_id, label, text
+- [ ] tco_id values are unique and match the label set IDs exactly
+- [ ] Corpus length equals number of labels in [data/ai_rheum_label_set.json](../data/ai_rheum_label_set.json)
 
 ---
 
@@ -157,8 +178,7 @@ Purpose: run No‑RAG vs RAG and compute exact percent agreement.
 
 Where it lives:
 - Official evaluation runner: [src/eval_official.py](../src/eval_official.py)
-- Seeded evaluation runner (optional small slice): [src/seed_eval.py](../src/seed_eval.py)
-- Entrypoints: [evaluate.py](../evaluate.py), [evaluate_seed.py](../evaluate_seed.py)
+- Entrypoint: [evaluate.py](../evaluate.py)
 
 Determinism note (official runs):
 - For official runs, set temperature=0 (or backend equivalent) where applicable; disk caching further enforces repeatability across reruns.
@@ -188,12 +208,12 @@ Where it lives:
 - Dataset/label validators: [src/validators.py](../src/validators.py)
 
 Done criteria:
-- [ ] label_set.json meets size and uniqueness constraints
-- [ ] CSV gold labels validate against label_set.json (allowed ∪ NONE)
+- [ ] data/ai_rheum_label_set.json meets size and uniqueness constraints
+- [ ] CSV gold labels validate against the AI‑RHEUM label set (allowed ∪ NONE)
 
 
 1) Identifier sanity rule (do this first)
-IDs in data/label_set.json must exactly equal the id field in data/ai_rheum_corpus.jsonl. If you see exclusions/coercions, check this first.
+IDs in data/ai_rheum_label_set.json must exactly equal the `tco_id` field in data/ai_rheum_corpus.jsonl. If you see exclusions/coercions, check this first.
 
 2) Smoke test: build (or load) the AI‑RHEUM corpus cache
 PYTHONPATH=src python3 - <<'PY'
@@ -203,7 +223,7 @@ from pathlib import Path
 from onto_config import get_config
 from tco_corpus import ensure_tco_corpus
 
-labels = json.loads(Path("data/label_set.json").read_text())["labels"]
+labels = json.loads(Path("data/ai_rheum_label_set.json").read_text())["labels"]
 cfg = get_config("ai_rheum")
 
 corpus = ensure_tco_corpus(
@@ -231,7 +251,7 @@ retriever = create_retriever(
 
 hits = retriever.retrieve("joint pain with morning stiffness and swelling")
 for i, d in enumerate(hits, 1):
-    print(i, d.get("label"), d.get("id") or d.get("tco_id"))
+    print(i, d.get("label"), d.get("tco_id"))
 PY
 
 4) Run official evaluation

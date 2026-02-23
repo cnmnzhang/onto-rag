@@ -27,7 +27,7 @@ except Exception:  # pragma: no cover
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from tco_corpus import ensure_tco_corpus  # noqa: E402
+from corpus import ensure_corpus  # noqa: E402
 
 
 LABEL_SET_PATH = Path("data/ai_rheum_label_set.json")
@@ -50,7 +50,7 @@ def main() -> int:
         print(f"No labels found in {LABEL_SET_PATH}", file=sys.stderr)
         return 3
 
-    records = ensure_tco_corpus(
+    records = ensure_corpus(
         acronym=ACRONYM,
         label_ids=label_ids,
         output_path=OUTPUT_PATH,

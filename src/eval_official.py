@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import subprocess
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -35,7 +36,7 @@ from llm_interface import LLMInterface
 from onto_config import get_config
 from rag_context import build_rag_context
 from retrievers import create_retriever
-from tco_corpus import ensure_tco_corpus
+from corpus import ensure_corpus
 
 
 DEFAULT_SEED = 42
@@ -53,6 +54,7 @@ class RunConfig:
     llm_cache_path: Path = Path("data/llm_cache.json")
     corpus_path: Path = Path("data/tco_corpus.jsonl")
     retriever_cache_dir: Path = Path("data/retriever_cache")
+    embedding_model: str = "all-MiniLM-L6-v2"
     results_dir: Path = Path("results")
 
 
@@ -89,6 +91,11 @@ def _coerce(pred: str, allowed: set[str], none_label: str) -> tuple[str, bool]:
     return none_label, True
 
 
+def _sanitize_model_name_for_path(model_name: str) -> str:
+    safe = re.sub(r"[^A-Za-z0-9._-]+", "-", str(model_name).strip())
+    return safe.strip("-") or "default"
+
+
 def _model_name_for_backend(llm: LLMInterface) -> str:
     if llm.backend == "gemini":
         return os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
@@ -107,21 +114,23 @@ def run_official_eval(cfg: RunConfig) -> dict[str, Any]:
     allowed = set(labels) | {none_label}
 
     config = get_config(cfg.ontology_key)
+    embedding_model = os.getenv("EMBEDDING_MODEL", cfg.embedding_model).strip() or "all-MiniLM-L6-v2"
 
     # Corpus restricted to the allowed TCO labels.
-    corpus = ensure_tco_corpus(
+    corpus = ensure_corpus(
         config=config,
         label_ids=labels,
         output_path=cfg.corpus_path,
         prefer_bioportal=True,
     )
 
+    model_cache_dir = cfg.retriever_cache_dir / _sanitize_model_name_for_path(embedding_model)
     retriever = create_retriever(
         corpus,
         top_k=cfg.top_k,
         prefer_embeddings=True,
-        cache_dir=str(cfg.retriever_cache_dir),
-        model_name="all-MiniLM-L6-v2",
+        cache_dir=str(model_cache_dir),
+        model_name=embedding_model,
     )
 
     llm = LLMInterface(labels, cache_file=str(cfg.llm_cache_path), config=config)
@@ -152,6 +161,10 @@ def run_official_eval(cfg: RunConfig) -> dict[str, Any]:
 
     preds_no_rag: list[str] = []
     preds_rag: list[str] = []
+    ddx_no_rag: list[str] = []
+    ddx_rag: list[str] = []
+    evidence_no_rag: list[str] = []
+    evidence_rag: list[str] = []
     coerced_no_rag = 0
     coerced_rag = 0
 
@@ -162,12 +175,16 @@ def run_official_eval(cfg: RunConfig) -> dict[str, Any]:
         p0, did0 = _coerce(str(out0.get("predicted_label", none_label)), allowed, none_label)
         coerced_no_rag += int(did0)
         preds_no_rag.append(p0)
+        ddx_no_rag.append(json.dumps(out0.get("ddx_top3") or [], ensure_ascii=False))
+        evidence_no_rag.append(json.dumps(out0.get("evidence") or [], ensure_ascii=False))
 
         ctx = build_rag_context(text, retriever, config, top_k=cfg.top_k, max_chars=cfg.max_context_chars)
         out1 = llm.predict(text, rag_context=ctx)
         p1, did1 = _coerce(str(out1.get("predicted_label", none_label)), allowed, none_label)
         coerced_rag += int(did1)
         preds_rag.append(p1)
+        ddx_rag.append(json.dumps(out1.get("ddx_top3") or [], ensure_ascii=False))
+        evidence_rag.append(json.dumps(out1.get("evidence") or [], ensure_ascii=False))
 
     gold = [str(x) for x in df["gold_label"].tolist()]
     agreement_no_rag = _exact_agreement(gold, preds_no_rag)
@@ -181,6 +198,10 @@ def run_official_eval(cfg: RunConfig) -> dict[str, Any]:
             "gold_label": gold,
             "pred_no_rag": preds_no_rag,
             "pred_rag": preds_rag,
+            "ddx_no_rag": ddx_no_rag,
+            "ddx_rag": ddx_rag,
+            "evidence_no_rag": evidence_no_rag,
+            "evidence_rag": evidence_rag,
         }
     )
     pred_path = cfg.results_dir / "predictions.csv"
@@ -200,6 +221,8 @@ def run_official_eval(cfg: RunConfig) -> dict[str, Any]:
             "label_set_path": str(cfg.label_set_path),
             "corpus_path": str(cfg.corpus_path),
             "retriever_cache_dir": str(cfg.retriever_cache_dir),
+            "retriever_model_cache_dir": str(model_cache_dir),
+            "embedding_model": embedding_model,
         },
         "metrics": {
             "agreement_no_rag": float(agreement_no_rag),
@@ -234,6 +257,7 @@ def _render_summary(pred_df: pd.DataFrame, results: dict[str, Any]) -> str:
     a1 = float(results["metrics"]["agreement_rag"])
     backend = str(results["run"]["model_backend"])
     model_name = str(results["run"].get("model_name") or backend)
+    embedding_model = str(results["run"].get("embedding_model") or "")
     k = int(results["run"]["k"])
     ontology_key = str(results["run"].get("ontology_key") or "")
     dataset_path = str(results["run"].get("dataset_path") or "")
@@ -288,6 +312,8 @@ def _render_summary(pred_df: pd.DataFrame, results: dict[str, Any]) -> str:
         lines.append(f"- Dataset: {dataset_path}")
     lines.append(f"- Seed: {results['run']['seed']}")
     lines.append(f"- Model: {model_name}")
+    if embedding_model:
+        lines.append(f"- Embedding model: {embedding_model}")
     if results["run"].get("git_commit"):
         lines.append(f"- Git commit: {results['run']['git_commit']}")
     if results["run"].get("excluded_gold_rows"):
@@ -299,6 +325,19 @@ def _render_summary(pred_df: pd.DataFrame, results: dict[str, Any]) -> str:
         lines.append(
             f"- {ex['case_id']}: gold={ex['gold']} | no-rag={ex['no_rag']} | rag={ex['rag']}"
         )
+    if "ddx_rag" in pred_df.columns:
+        lines.append("")
+        lines.append("## Differential Diagnosis Snippets (RAG)")
+        lines.append("")
+        shown = 0
+        for _, row in pred_df.iterrows():
+            if shown >= 5:
+                break
+            ddx_text = str(row.get("ddx_rag", "")).strip()
+            if not ddx_text or ddx_text == "[]":
+                continue
+            lines.append(f"- {row['case_id']}: {ddx_text}")
+            shown += 1
     lines.append("")
 
     return "\n".join(lines)
@@ -323,6 +362,11 @@ def main() -> None:
     p.add_argument("--seed", type=int, default=DEFAULT_SEED)
     p.add_argument("--k", type=int, default=DEFAULT_TOP_K)
     p.add_argument("--max-context-chars", type=int, default=1800)
+    p.add_argument(
+        "--embedding-model",
+        default=os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2"),
+        help="Embedding model name for retrieval (or set EMBEDDING_MODEL)",
+    )
     args = p.parse_args()
 
     cfg = RunConfig(
@@ -334,6 +378,7 @@ def main() -> None:
         dataset_path=Path(args.dataset),
         corpus_path=Path(args.corpus),
         retriever_cache_dir=Path(args.retriever_cache_dir),
+        embedding_model=str(args.embedding_model),
         results_dir=Path(args.results_dir),
     )
     run_official_eval(cfg)
