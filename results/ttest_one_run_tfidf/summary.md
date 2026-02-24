@@ -4,8 +4,8 @@
 
 | Condition | Exact agreement | N | k | Backend |
 |---|---:|---:|---:|---|
-| No-RAG | 43.3% | 104 | 3 | dry_run |
-| RAG(tco) | 42.3% | 104 | 3 | dry_run |
+| No-RAG | 43.3% | 104 | 3 | gemini |
+| RAG(tco) | 42.3% | 104 | 3 | gemini |
 
 ## Inferential (Paired t-test)
 
@@ -20,10 +20,10 @@
 - Ontology: tco
 - Dataset: data/synthetic_charts.csv
 - Seed: 42
-- Model: dry_run
+- Model: gemini-1.5-flash
 - Embedding model: all-MiniLM-L6-v2
 - Retrieval mode: tfidf
-- Git commit: ecbab2312fe2e976add793c771085fca99131d6a
+- Git commit: a9b3ab8db968d10da214c063531b39e546d94409
 - Excluded rows (gold label outside allowed set): 16
 
 ## Example Cases (5–10)

@@ -40,7 +40,7 @@ python3 -m pip install -r requirements.txt
 Writes [data/ai_rheum_corpus.jsonl](../data/ai_rheum_corpus.jsonl).
 
 ```bash
-python3 scripts/build_ai_rheum_corpus.py
+python3 exploratory/build_corpus.py
 ```
 
 ### 2) Smoke test retrieval (optional)

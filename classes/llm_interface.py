@@ -63,7 +63,7 @@ class LLMInterface:
         """Initialize the selected backend."""
         if self.backend == "gemini":
             try:
-                import google.generativeai as genai
+                import google.genai as genai
                 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
                 model_name = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
                 self.client = genai.GenerativeModel(model_name)

@@ -6,7 +6,7 @@ It reads label IDs from data/ai_rheum_label_set.json and writes:
   data/ai_rheum_corpus.jsonl
 
 Usage:
-  python scripts/build_ai_rheum_corpus.py
+  python3 exploratory/build_corpus.py
 
 Env:
   BIOPORTAL_API_KEY (recommended)
