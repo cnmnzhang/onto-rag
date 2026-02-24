@@ -1,0 +1,106 @@
+{
+  "seed": 42,
+  "model_key": "bge",
+  "assignments": {
+    "case-001": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "bge"
+    },
+    "case-002": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "bge"
+    },
+    "case-003": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "bge"
+    },
+    "case-004": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "bge"
+    },
+    "case-005": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "bge"
+    },
+    "case-006": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "bge"
+    },
+    "case-007": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "bge"
+    },
+    "case-008": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "bge"
+    },
+    "case-009": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "bge"
+    },
+    "case-010": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "bge"
+    },
+    "case-011": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "bge"
+    },
+    "case-012": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "bge"
+    },
+    "case-013": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "bge"
+    },
+    "case-014": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "bge"
+    },
+    "case-015": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "bge"
+    },
+    "case-016": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "bge"
+    },
+    "case-017": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "bge"
+    },
+    "case-018": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "bge"
+    },
+    "case-019": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "bge"
+    },
+    "case-020": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "bge"
+    }
+  }
+}

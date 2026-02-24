@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-02-24T05:01:27.862153+00:00",
+  "cases_path": "data/test_cases.csv",
+  "corpus_path": "data/ai_rheum_corpus_rich.jsonl",
+  "corpus_size": 231,
+  "n_cases": 20,
+  "model_keys": [
+    "minilm",
+    "bge"
+  ],
+  "model_names": [
+    "all-MiniLM-L6-v2",
+    "BAAI/bge-small-en-v1.5"
+  ],
+  "top_k": 5,
+  "llm_backend": "anthropic",
+  "llm_model": "claude-haiku-4-5-20251001",
+  "dry_run": false
+}
