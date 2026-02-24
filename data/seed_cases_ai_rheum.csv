@@ -1,0 +1,19 @@
+case_id,register,chart_text,gold_label,source_top1,source_top1_prob,source_top2,source_top2_prob,source_top3,source_top3_prob
+seed-air-001,chart,"Symmetric MCP/PIP inflammatory arthritis, RF+, anti-CCP+, elevated ESR",http://purl.bioontology.org/ontology/AIR/DXRA,Rheumatoid arthritis,85,Psoriatic arthritis,10,Systemic lupus erythematosus,5
+seed-air-002,chart,"Progressive wrist and forefoot pain, anti-CCP strongly positive, early erosions",http://purl.bioontology.org/ontology/AIR/DXRA,Rheumatoid arthritis,90,Secondary Sjogren syndrome,5,Psoriatic arthritis,5
+seed-air-003,chart,"Photosensitive rash, oral ulcers, anti-dsDNA positive, low complement, proteinuria",http://purl.bioontology.org/ontology/AIR/DXSLE,Systemic lupus erythematosus,92,Mixed connective tissue disease,5,Drug-induced lupus,3
+seed-air-004,chart,"Pleuritic chest pain, malar rash, cytopenia, nephritis, low complement",http://purl.bioontology.org/ontology/AIR/DXSLE,Systemic lupus erythematosus,90,Antiphospholipid syndrome,6,Mixed connective tissue disease,4
+seed-air-005,chart,"Acute red swollen first MTP, negatively birefringent needle-shaped crystals",http://purl.bioontology.org/ontology/AIR/DXGT,Gout,95,Septic arthritis,3,Calcium pyrophosphate deposition disease,2
+seed-air-006,chart,Recurrent monoarthritis with monosodium urate crystals and erosions,http://purl.bioontology.org/ontology/AIR/DXGT,Gout,93,Septic arthritis,4,Calcium pyrophosphate deposition disease,3
+seed-air-007,chart,DIP arthritis with psoriasis and nail pitting,http://purl.bioontology.org/ontology/AIR/DXPSO,Psoriatic arthritis,90,Osteoarthritis,7,Rheumatoid arthritis,3
+seed-air-008,chart,"Inflammatory back pain, HLA-B27 positive, MRI sacroiliitis",http://purl.bioontology.org/ontology/AIR/DXANK,Ankylosing spondylitis,88,Axial spondyloarthritis,8,Reactive arthritis,4
+seed-air-009,chart,"Older adult with proximal stiffness, elevated ESR/CRP, steroid responsive",http://purl.bioontology.org/ontology/AIR/DXPMR,Polymyalgia rheumatica,85,Late-onset rheumatoid arthritis,10,Hypothyroidism,5
+seed-air-010,chart,Acute symmetric small-joint swelling after viral illness,NONE,Post-viral inflammatory arthritis,70,Early rheumatoid arthritis,20,Parvovirus B19 arthritis,10
+seed-air-011,chart,"Diffuse pain and fatigue, normal labs, no synovitis",NONE,Fibromyalgia,85,Hypothyroidism,10,Early inflammatory arthritis,5
+seed-air-012,chart,"Knee pain worse with stairs, osteophytes on imaging, normal inflammatory markers",NONE,Osteoarthritis,90,Meniscal degeneration,7,Patellofemoral pain syndrome,3
+seed-air-013,chart,Acute swollen knee with positively birefringent rhomboid crystals,NONE,Calcium pyrophosphate deposition disease,92,Septic arthritis,5,Gout,3
+seed-air-014,chart,"Low back pain worse with flexion, improves with rest, degenerative imaging",NONE,Mechanical back pain,90,Lumbar spinal stenosis,7,Sacroiliac dysfunction,3
+seed-air-015,chart,"Shoulder pain with positive impingement signs, normal ESR/CRP",NONE,Rotator cuff tendinopathy,85,Adhesive capsulitis,10,Polymyalgia rheumatica,5
+seed-air-016,chart,"ANA positive, antihistone positive, normal complement, no nephritis",NONE,Drug-induced lupus,90,Systemic lupus erythematosus,7,Viral exanthem with arthralgias,3
+seed-air-017,chart,Asymmetric oligoarthritis and enthesitis after diarrhea,NONE,Reactive arthritis,85,Psoriatic arthritis,10,Ankylosing spondylitis,5
+seed-air-018,chart,"Episodic wrist swelling with sicca symptoms, negative SSA/SSB",NONE,Early seronegative rheumatoid arthritis,45,Sjogren syndrome,35,Fibromyalgia,20

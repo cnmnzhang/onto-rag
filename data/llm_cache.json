@@ -7358,5 +7358,550 @@
       }
     ],
     "evidence": []
+  },
+  "4b938b02a4dcd7e7405fd458e0876fe1": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Symmetric joint involvement consistent with polyarticular form of psoriatic arthritis"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "RF+ and anti-CCP+ suggest autoimmune process, which can lead to various forms of arthritis"
+      }
+    ],
+    "evidence": []
+  },
+  "243cf92a0d149aadc61502e692ffa73c": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXRA",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXRA",
+        "rationale": "Symmetric MCP/PIP inflammatory arthritis, RF+ indicates Rheumatoid Arthritis"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Inflammatory polyarthritis, elevated ESR suggests systemic inflammation consistent with other forms of polyarthritis"
+      }
+    ],
+    "evidence": []
+  },
+  "d02c2b4eba78b678e833cb844fd07907": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Anti-CCP strongly positive suggests systemic lupus erythematosus"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXRA",
+        "rationale": "Early erosions suggest rheumatoid arthritis"
+      }
+    ],
+    "evidence": [
+      "progressive_wrist_and_forefoot_pain",
+      "anti_ccp_strongly_positive",
+      "early_erosions"
+    ]
+  },
+  "798d81b4a4daa6faf268683227454359": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Ankylosing Spondylitis has progressive joint involvement, especially in the spine and lower extremities."
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPMR",
+        "rationale": "Polymyalgia Rheumatica presents with myalgia and can involve multiple joints, including the wrists and forefeet."
+      }
+    ],
+    "evidence": []
+  },
+  "701098f402fc83922e3467bde26e00b7": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Photosensitivity, oral ulcers, and anti-dsDNA positivity suggest systemic lupus erythematosus"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXSLE",
+        "rationale": "Low complement levels and proteinuria support SLE"
+      }
+    ],
+    "evidence": [
+      "patient_photo",
+      "oral_ulcer_image",
+      "anti_dsDNA_result",
+      "complement_level_test",
+      "proteinuria_measurement"
+    ]
+  },
+  "61a4b69c96009424a60c1d669a1a92dd": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Systemic lupus erythematosus (SLE) is characterized by photosensitivity, oral ulcers, anti-dsDNA positivity, and low complement levels."
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "The presence of anti-dsDNA antibodies suggests an autoimmune process, which could indicate systemic lupus erythematosus."
+      }
+    ],
+    "evidence": [
+      "patient_photo",
+      "oral_ulcer_image",
+      "anti_dsDNA_result",
+      "complement_level_test"
+    ]
+  },
+  "cc416155e61d3d7de26cc6dd86b29bec": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXSLE",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXSLE",
+        "rationale": "Symptoms suggestive of systemic lupus erythematosus"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXRA",
+        "rationale": "Cytopenia suggests autoimmune disorder"
+      }
+    ],
+    "evidence": [
+      "patient_symptoms",
+      "cytopenia_diagnosis"
+    ]
+  },
+  "f1f405be113a79104dae4489a3c424fd": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Symptoms such as pleuritic chest pain, malar rash, cytopenia, nephritis, and low complement suggest systemic lupus erythematosus."
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "The combination of pleuritic chest pain and malar rash could also point towards an autoimmune condition like ANCA-associated vasculitis."
+      }
+    ],
+    "evidence": []
+  },
+  "a013177a334e424bd2d2246f32d5c97f": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "First metatarsophalangeal joint affected, needle-shaped crystals"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Redness and swelling in the first MTP"
+      }
+    ],
+    "evidence": [
+      "patient_chart_001"
+    ]
+  },
+  "bf1fad71624fdc07871b4f8c6fe16873": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPMR",
+        "rationale": "First MTP involvement suggests polyarticular onset which aligns with inflammatory polyarthritis classification."
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXRA",
+        "rationale": "Redness and swelling indicate an inflammatory process, consistent with rheumatoid arthritis classification."
+      }
+    ],
+    "evidence": []
+  },
+  "ced8293b73f065b8875c536ff9774760": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Recurrent monoarthritis with crystal deposition suggests gout"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Erosions in joints suggest osteoarthritis"
+      }
+    ],
+    "evidence": [
+      "patient_chart_001"
+    ]
+  },
+  "1c5b0eb541fc2711424406d5c2b7a2be": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Gout has recurrent monoarthritis, monosodium urate crystals, and erosions."
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPMR",
+        "rationale": "Ankylosing Spondylitis also presents with inflammatory polyarthritis and erosions."
+      }
+    ],
+    "evidence": []
+  },
+  "67fe2e066e8461f5ec25ae9ee31e2359": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Psoriasis and nail pitting are common features in Psoriatic Arthritis"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "DIP arthritis can sometimes co-occur with other autoimmune conditions like Ankylosing Spondylitis"
+      }
+    ],
+    "evidence": [
+      "patient_chart_001"
+    ]
+  },
+  "8c2c1e712e34ed1a6e0e7f92f0124768": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPMR",
+        "rationale": "Psoriasis may indicate psoriatic arthritis"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Nail pitting could suggest an inflammatory condition like gout or pseudogout"
+      }
+    ],
+    "evidence": []
+  },
+  "768b7a59153d4cb48359b6395cc109b4": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "HLA-B27 positivity suggests ankylosing spondylitis"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Inflammatory back pain consistent with ankylosing spondylitis"
+      }
+    ],
+    "evidence": [
+      "MRI results showing sacroiliitis"
+    ]
+  },
+  "0b25329302fe0909b8aab56947f0e618": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Ankylosing Spondylitis has inflammatory back pain, HLA-B27 positivity, and MRI findings consistent with sacroiliitis."
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPMR",
+        "rationale": "Polymyalgia Rheumatica also presents with inflammatory back pain and HLA-B27 positivity, though not specifically associated with MRI findings like sacroiliitis."
+      }
+    ],
+    "evidence": []
+  },
+  "f877bfdc8c6a120dbbb8b73ce0357a15": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Proximal joint stiffness and elevated inflammatory markers suggest systemic lupus erythematosus"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXRA",
+        "rationale": "Steroid responsiveness suggests an autoimmune condition"
+      }
+    ],
+    "evidence": [
+      "patient_proximal_stiffness",
+      "elevated_ESR_CRP",
+      "steroid_responsive"
+    ]
+  },
+  "8cedc0d6c045518fb89cc7c1910f7149": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Proximal stiffness and elevated ESR/CRP are characteristic features of ankylosing spondylitis."
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPMR",
+        "rationale": "Steroid responsiveness suggests an inflammatory process, which is consistent with psoriatic arthritis."
+      }
+    ],
+    "evidence": []
+  },
+  "6afd64e0992f63dd51fdcf367e60b01f": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Symmetric joint swelling can be indicative of arthritis."
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Small-joint swelling often suggests psoriatic arthritis."
+      }
+    ],
+    "evidence": []
+  },
+  "1223a5e95b8232c878d99bb028d2635f": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Symmetric joint swelling can be indicative of inflammatory polyarthritis."
+      },
+      {
+        "label": "NONE",
+        "rationale": "Acute onset of joint swelling after a viral illness could suggest gout."
+      }
+    ],
+    "evidence": []
+  },
+  "e2d7161d2411aa94ef34f6cc1a13acde": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Symptoms of diffuse pain and fatigue can suggest an autoimmune condition"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Fatigue and diffuse pain could indicate systemic lupus erythematosus"
+      }
+    ],
+    "evidence": []
+  },
+  "1088d436ff14536ca3e2f7cb40395a29": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Symptoms like diffuse pain and fatigue align with ankylosing spondylitis."
+      },
+      {
+        "label": "NONE",
+        "rationale": "Symptoms such as myalgia and fatigue suggest polymyalgia rheumatica."
+      }
+    ],
+    "evidence": []
+  },
+  "be01be56f8a82726c9800c12fc6d94c2": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Osteoarthritis presentation with knee pain worsened by stairs and visible osteophytes"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Possible degenerative joint disease due to osteophytes"
+      }
+    ],
+    "evidence": [
+      "Imaging report: Osteophytes noted"
+    ]
+  },
+  "151c82ae1b38509522622595c92700f4": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPMR",
+        "rationale": "Inflammatory polyarthritis is often associated with knee pain and osteophytes."
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Psoriatic arthritis can cause joint pain and inflammation, especially in the knees."
+      }
+    ],
+    "evidence": []
+  },
+  "512512576db2ee87439e85cac4dadcb7": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Positive birefringent rhomboid crystals suggest gout"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Acute swelling in the knee could indicate an inflammatory condition like gout"
+      }
+    ],
+    "evidence": [
+      "patient_knee_swelling",
+      "positive_birefringent_rhomboid_crystals"
+    ]
+  },
+  "1abc459a6da8ea99132e242bc2015fe2": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXRA",
+        "rationale": "Positive birefringent rhomboid crystals suggest gout"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPMR",
+        "rationale": "Inflammatory polyarthritis is common in both gout and psoriatic arthritis"
+      }
+    ],
+    "evidence": []
+  },
+  "633df5e92ebabca3912e46396522e467": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Degenerative changes in the spine suggest possible spinal issues"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Low back pain with flexion suggests possible disc problems"
+      }
+    ],
+    "evidence": [
+      "patient_chart_001"
+    ]
+  },
+  "88ea3b9bcb6b39fc27cd942cd0bd8f44": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Low back pain with worsening on flexion and improvement with rest suggests an inflammatory process."
+      },
+      {
+        "label": "NONE",
+        "rationale": "Symptoms align with those described for polymyalgia rheumatica, which presents as myalgia and stiffness in the neck and shoulders."
+      }
+    ],
+    "evidence": []
+  },
+  "d27fca32c425f752b806befa4895770e": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Impingement signs suggest rotator cuff pathology"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Shoulder pain with positive impingement signs points to rotator cuff disorder"
+      }
+    ],
+    "evidence": [
+      "patient_chart_001"
+    ]
+  },
+  "579934a912e0dce216b3d45bdfbb58a9": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Positive impingement signs suggest inflammation in the spine, which could indicate ankylosing spondylitis."
+      },
+      {
+        "label": "NONE",
+        "rationale": "Myalgias/myopathy symptoms align with polymyalgia rheumatica, especially given the presence of positive impingement signs."
+      }
+    ],
+    "evidence": []
+  },
+  "5860077abc91187f9206c3f725a358be": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXGT",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "ANCA positivity suggests ANCA-associated vasculitis"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Positive ANA and anti-histone antibodies suggest systemic lupus erythematosus"
+      }
+    ],
+    "evidence": []
+  },
+  "a38ba8a47a4eb3da52e20b7267d9e2e1": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "ANAs and antihistones are characteristic markers for systemic lupus erythematosus."
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPMR",
+        "rationale": "The combination of ANA and antihistone positivity suggests an autoimmune process that could lead to other autoimmune diseases like polymyositis or dermatomyositis."
+      }
+    ],
+    "evidence": []
+  },
+  "ac23121e9936658ef4d30bd1ed1f2c9e": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Symptoms align with psoriatic arthritis"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Possible association with inflammatory bowel disease"
+      }
+    ],
+    "evidence": [
+      "Diarrhea history"
+    ]
+  },
+  "62dad4dcc398aeee331a46c8ac5be7ef": {
+    "predicted_label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Symptoms of asymmetric oligoarthritis and enthesitis suggest ankylosing spondylitis."
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPMR",
+        "rationale": "The presence of inflammatory polyarthritis suggests other autoimmune conditions like psoriatic arthritis."
+      }
+    ],
+    "evidence": []
+  },
+  "36cc7995c78a6ecba2d6687308b823b7": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXANK",
+        "rationale": "Wrist swelling suggests gout"
+      },
+      {
+        "label": "http://purl.bioontology.org/ontology/AIR/DXPSO",
+        "rationale": "Negative for Sj\u00f6gren's syndrome, suggesting primary osteoarthritis"
+      }
+    ],
+    "evidence": []
+  },
+  "9f34f1c879a2c2f48201a788f29bb7d6": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Wrist swelling and sicca symptoms suggest an inflammatory process, which aligns with Ankylosing Spondylitis."
+      },
+      {
+        "label": "NONE",
+        "rationale": "The presence of sicca symptoms suggests involvement of the joints, consistent with Psoriatic Arthritis."
+      }
+    ],
+    "evidence": []
   }
 }

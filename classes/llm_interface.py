@@ -5,6 +5,7 @@ Supports OpenAI, Hugging Face (Qwen2.5-1.5B-Instruct), Google Gemini, and dry-ru
 
 import os
 import json
+import copy
 import hashlib
 from typing import Dict, List, Optional, TYPE_CHECKING
 
@@ -297,12 +298,30 @@ class LLMInterface:
             # Generate
             generation_kwargs = {
                 "max_new_tokens": 220,
-                "do_sample": do_sample,
                 "pad_token_id": self.tokenizer.eos_token_id,
             }
-            if do_sample:
-                generation_kwargs["temperature"] = temperature
-                generation_kwargs["top_p"] = top_p
+            generation_config = None
+            try:
+                generation_config = copy.deepcopy(self.model.generation_config)
+            except Exception:
+                generation_config = None
+
+            # Avoid transformers warnings about sampling-only flags when do_sample=False.
+            if generation_config is not None:
+                generation_config.do_sample = do_sample
+                if do_sample:
+                    generation_config.temperature = temperature
+                    generation_config.top_p = top_p
+                else:
+                    generation_config.temperature = 1.0
+                    generation_config.top_p = 1.0
+                    generation_config.top_k = 50
+                generation_kwargs["generation_config"] = generation_config
+            else:
+                generation_kwargs["do_sample"] = do_sample
+                if do_sample:
+                    generation_kwargs["temperature"] = temperature
+                    generation_kwargs["top_p"] = top_p
 
             with torch.no_grad():
                 outputs = self.model.generate(
