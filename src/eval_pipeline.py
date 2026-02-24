@@ -15,7 +15,7 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
-from classes.corpus import ensure_corpus
+from classes.corpus import load_or_build_corpus
 from classes.llm_interface import LLMInterface
 from classes.onto_config import get_config
 from classes.retrievers import create_retriever
@@ -260,7 +260,7 @@ def prepare_runtime(cfg: RunConfig) -> PreparedRuntime:
     allowed = label_set.allowed_set()
 
     embedding_model = os.getenv("EMBEDDING_MODEL", cfg.embedding_model).strip() or "all-MiniLM-L6-v2"
-    corpus = ensure_corpus(
+    corpus = load_or_build_corpus(
         config=config,
         label_ids=label_set.labels,
         output_path=cfg.corpus_path,

@@ -79,7 +79,7 @@ Still required before eval:
 
 Corpus behavior:
 
-- Eval calls `ensure_corpus(...)` for `data/ai_rheum_corpus.jsonl`.
+- Eval calls `load_or_build_corpus(...)` for `data/ai_rheum_corpus.jsonl`.
 - If BioPortal is reachable, corpus is (re)built from label IDs.
 - If BioPortal is unavailable, eval falls back to an existing corpus file on disk.
 - If neither works, eval exits with an error.

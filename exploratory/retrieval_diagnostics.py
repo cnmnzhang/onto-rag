@@ -28,7 +28,7 @@ ensure_repo_on_sys_path()
 
 from classes.onto_config import get_config  # noqa: E402
 from classes.retrievers import create_retriever  # noqa: E402
-from classes.corpus import ensure_corpus, load_corpus  # noqa: E402
+from classes.corpus import load_or_build_corpus, load_corpus  # noqa: E402
 
 
 def _sanitize_model_name_for_path(model_name: str) -> str:
@@ -64,7 +64,7 @@ def main() -> int:
         corpus = load_corpus(str(corpus_path))
     else:
         config = get_config(args.ontology_key)
-        corpus = ensure_corpus(
+        corpus = load_or_build_corpus(
             config=config,
             label_ids=labels,
             output_path=corpus_path,

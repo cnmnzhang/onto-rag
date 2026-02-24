@@ -398,7 +398,7 @@ def build_doc_from_details(*, tco_id: str, details: dict[str, Any]) -> OntoDoc:
     )
 
 
-def ensure_corpus(
+def load_or_build_corpus(
     *,
     config: OntologyConfig | None = None,
     acronym: str | None = None,
@@ -416,7 +416,7 @@ def ensure_corpus(
 
     if not acronym:
         if config is None:
-            raise TypeError("ensure_corpus requires either config=... or acronym=...")
+            raise TypeError("load_or_build_corpus requires either config=... or acronym=...")
         acronym = config.acronym
 
     output_path = Path(output_path)
@@ -545,5 +545,5 @@ def _write_jsonl(path: Path, records: list[dict[str, Any]]) -> None:
 
 
 # Backwards-compat aliases for any internal scripts that still use old names.
-ensure_tco_corpus = ensure_corpus
+ensure_tco_corpus = load_or_build_corpus
 load_tco_corpus = load_corpus

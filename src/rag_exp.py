@@ -19,7 +19,7 @@ from pathlib import Path
 from classes.onto_config import get_config
 from classes.retrievers import create_retriever
 from rag_context import build_rag_context as _build_rag_context
-from classes.corpus import ensure_corpus
+from classes.corpus import load_or_build_corpus
 
 
 _CONFIG = get_config("ai_rheum")
@@ -37,7 +37,7 @@ def _init_retriever() -> None:
         return
 
     label_ids = _load_label_ids()
-    corpus = ensure_corpus(config=_CONFIG, label_ids=label_ids, output_path=f"data/{_CONFIG.corpus_filename}")
+    corpus = load_or_build_corpus(config=_CONFIG, label_ids=label_ids, output_path=f"data/{_CONFIG.corpus_filename}")
 
     # Cache embeddings/index under data/ to speed up reruns.
     _RETRIEVER = create_retriever(

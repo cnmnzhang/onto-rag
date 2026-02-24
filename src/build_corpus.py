@@ -31,7 +31,7 @@ else:  # pragma: no cover
 
 ensure_repo_on_sys_path()
 
-from classes.corpus import ensure_corpus  # noqa: E402
+from classes.corpus import load_or_build_corpus  # noqa: E402
 from config.constants import DEFAULT_ONTOLOGY  # noqa: E402
 from config.paths import AI_RHEUM_CORPUS_PATH, AI_RHEUM_LABEL_SET_PATH  # noqa: E402
 from schemas import LabelSet  # noqa: E402
@@ -57,7 +57,7 @@ def main() -> int:
         print(f"No labels found in {LABEL_SET_PATH}", file=sys.stderr)
         return 3
 
-    records = ensure_corpus(
+    records = load_or_build_corpus(
         acronym=ACRONYM,
         label_ids=label_ids,
         output_path=OUTPUT_PATH,
