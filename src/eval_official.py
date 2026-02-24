@@ -1,8 +1,8 @@
 """Official evaluation runner (mechanical scoring).
 
-Reads:
-- data/synthetic_charts.csv
-- data/label_set.json
+Reads (defaults):
+- data/seed_cases_ai_rheum.csv
+- data/ai_rheum_label_set.json
 
 Writes:
 - results/results.json
@@ -49,12 +49,12 @@ class RunConfig:
     top_k: int = DEFAULT_TOP_K
     max_context_chars: int = 1800
     prefer_embeddings: bool = True
-    ontology_key: str = "tco"
-    label_set_path: Path = Path("data/label_set.json")
-    dataset_path: Path = Path("data/synthetic_charts.csv")
+    ontology_key: str = "ai_rheum"
+    label_set_path: Path = Path("data/ai_rheum_label_set.json")
+    dataset_path: Path = Path("data/seed_cases_ai_rheum.csv")
     llm_cache_path: Path = Path("data/llm_cache.json")
-    corpus_path: Path = Path("data/tco_corpus.jsonl")
-    retriever_cache_dir: Path = Path("data/retriever_cache")
+    corpus_path: Path = Path("data/ai_rheum_corpus.jsonl")
+    retriever_cache_dir: Path = Path("data/retriever_cache/ai_rheum")
     embedding_model: str = "all-MiniLM-L6-v2"
     results_dir: Path = Path("results")
 
@@ -269,7 +269,7 @@ def run_official_eval(cfg: RunConfig) -> dict[str, Any]:
     if df.empty:
         raise RuntimeError(
             "No rows have gold_label in the allowed set ∪ NONE. "
-            "Update data/label_set.json or the dataset gold labels."
+            "Update the selected --label-set or the dataset gold labels."
         )
 
     preds_no_rag: list[str] = []
@@ -500,11 +500,11 @@ def main() -> None:
         pass
 
     p = argparse.ArgumentParser(description="Official evaluation runner (exact agreement)")
-    p.add_argument("--ontology-key", default="tco", help="Key for onto_config.get_config (e.g., ai_rheum)")
-    p.add_argument("--label-set", default="data/label_set.json", help="Path to label set JSON")
-    p.add_argument("--dataset", default="data/synthetic_charts.csv", help="Path to dataset CSV")
-    p.add_argument("--corpus", default="data/tco_corpus.jsonl", help="Path to corpus JSONL")
-    p.add_argument("--retriever-cache-dir", default="data/retriever_cache", help="Retriever cache dir")
+    p.add_argument("--ontology-key", default="ai_rheum", help="Key for onto_config.get_config (e.g., ai_rheum)")
+    p.add_argument("--label-set", default="data/ai_rheum_label_set.json", help="Path to label set JSON")
+    p.add_argument("--dataset", default="data/seed_cases_ai_rheum.csv", help="Path to dataset CSV")
+    p.add_argument("--corpus", default="data/ai_rheum_corpus.jsonl", help="Path to corpus JSONL")
+    p.add_argument("--retriever-cache-dir", default="data/retriever_cache/ai_rheum", help="Retriever cache dir")
     p.add_argument("--results-dir", default="results", help="Results output directory")
     p.add_argument("--seed", type=int, default=DEFAULT_SEED)
     p.add_argument("--k", type=int, default=DEFAULT_TOP_K)
