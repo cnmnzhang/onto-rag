@@ -1,98 +1,95 @@
-"""RAG context builder.
+#!/usr/bin/env python3
+"""src/rag_context.py
 
-Given chart-like input text and a retriever, formats a bounded prompt context.
+Formats retrieved ontology chunks into a bounded context string for the LLM prompt.
 """
 
 from __future__ import annotations
 
-from typing import Dict, List
-
-from classes.onto_config import OntologyConfig, format_template
-
-
-def _clip(text: str, max_chars: int) -> str:
-    text = str(text)
-    if max_chars <= 0:
-        return ""
-    if len(text) <= max_chars:
-        return text
-    return text[: max(0, max_chars - 1)] + "…"
-
-
-def _join_labels(values: object, *, max_items: int, max_chars: int) -> str:
-    if not isinstance(values, list):
-        return ""
-    labels = [str(v).strip() for v in values if str(v).strip()]
-    if not labels:
-        return ""
-    return _clip(", ".join(labels[:max_items]), max_chars)
+from typing import Any
 
 
 def build_rag_context(
-    chart_text: str,
-    retriever,
-    config: OntologyConfig,
+    retrieved_docs: list[dict[str, Any]],
     *,
-    top_k: int = 3,
-    max_chars: int = 2000,
-    max_synonyms: int = 3,
-    max_definition_chars: int = 320,
-    max_hierarchy_items: int = 4,
+    max_chars: int = 2500,
+    max_definition_chars: int = 400,
 ) -> str:
-    """Build bounded RAG context.
-
-    The returned string is capped to `max_chars` to avoid giant prompts.
     """
+    Format a list of retrieved corpus records into a prompt context string.
+    
+    Prioritises:
+      1. finding_chunks with WHY/HOW content
+      2. diagnosis_chunks
+      3. domain_chunks
+    """
+    if not retrieved_docs:
+        return ""
 
-    retrieved: List[Dict] = retriever.retrieve(chart_text)
-    retrieved = list(retrieved)[:top_k]
+    parts = ["RELEVANT ONTOLOGY KNOWLEDGE:"]
 
-    context_header = format_template(config.rag_context_header, config)
-    parts: List[str] = [context_header]
+    for i, doc in enumerate(retrieved_docs, 1):
+        chunk_type = doc.get("chunk_type", "")
+        label = doc.get("label", "")
+        score = doc.get("retrieval_score", 0.0)
 
-    for i, doc in enumerate(retrieved, 1):
-        label = doc.get("label") or ""
-        parts.append(f"\n{i}. {label}")
+        parts.append(f"\n[{i}] {label} (relevance: {score:.3f})")
 
-        synonyms = doc.get("synonyms") or []
-        if synonyms:
-            syn = ", ".join([str(s) for s in synonyms[:max_synonyms] if s])
-            if syn:
-                parts.append(f"   Synonyms: {_clip(syn, 200)}")
+        if doc.get("synonyms"):
+            parts.append(f"    Synonyms: {', '.join(doc['synonyms'][:3])}")
 
-        definition = doc.get("definition") or ""
-        if definition:
-            parts.append(f"   Definition: {_clip(str(definition), max_definition_chars)}")
+        if doc.get("body_systems"):
+            parts.append(f"    Body system: {', '.join(doc['body_systems'])}")
 
-        parent_labels = doc.get("parent_labels") or []
-        if parent_labels:
-            parents = ", ".join([str(p) for p in parent_labels[:4] if p])
-            if parents:
-                parts.append(f"   Parents: {_clip(parents, 220)}")
+        if chunk_type == "finding_chunk":
+            why = doc.get("definition_why", "")
+            how = doc.get("definition_how", "")
+            definition = doc.get("definition", "")
 
-        ancestor_labels = _join_labels(
-            doc.get("ancestor_labels"),
-            max_items=max_hierarchy_items,
-            max_chars=220,
-        )
-        if ancestor_labels:
-            parts.append(f"   Broader classes: {ancestor_labels}")
+            if why:
+                clipped = why[:max_definition_chars]
+                if len(why) > max_definition_chars:
+                    clipped += "…"
+                parts.append(f"    Diagnostic relevance: {clipped}")
+            elif definition:
+                clipped = definition[:max_definition_chars]
+                if len(definition) > max_definition_chars:
+                    clipped += "…"
+                parts.append(f"    Description: {clipped}")
 
-        sibling_labels = _join_labels(
-            doc.get("sibling_labels"),
-            max_items=max_hierarchy_items,
-            max_chars=220,
-        )
-        if sibling_labels:
-            parts.append(f"   Sibling classes: {sibling_labels}")
+            if how:
+                clipped = how[:200]
+                if len(how) > 200:
+                    clipped += "…"
+                parts.append(f"    Assessment: {clipped}")
 
-        child_labels = _join_labels(
-            doc.get("child_labels"),
-            max_items=max_hierarchy_items,
-            max_chars=220,
-        )
-        if child_labels:
-            parts.append(f"   Child classes: {child_labels}")
+            if doc.get("diseases_mentioned"):
+                parts.append(f"    Linked diagnoses: {', '.join(doc['diseases_mentioned'])}")
+
+        elif chunk_type == "diagnosis_chunk":
+            text = doc.get("text", "")
+            # Show clinical keywords line if present
+            for line in text.split("\n"):
+                if line.strip().startswith("Clinical keywords:"):
+                    parts.append(f"    {line.strip()}")
+                    break
+            # Show associated findings if any
+            if "Associated clinical findings" in text:
+                findings_section = text.split("Associated clinical findings")[1]
+                clipped = findings_section[:max_definition_chars]
+                if len(findings_section) > max_definition_chars:
+                    clipped += "…"
+                parts.append(f"    Associated findings by system:{clipped}")
+
+        elif chunk_type == "domain_chunk":
+            if doc.get("child_labels"):
+                sample = doc["child_labels"][:8]
+                parts.append(f"    Findings in this domain: {', '.join(sample)}")
 
     context = "\n".join(parts).strip()
-    return _clip(context, max_chars)
+
+    # Hard cap
+    if len(context) > max_chars:
+        context = context[:max_chars - 1] + "…"
+
+    return context
