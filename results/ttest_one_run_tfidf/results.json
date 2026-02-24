@@ -1,0 +1,49 @@
+{
+  "run": {
+    "timestamp": "2026-02-24T01:19:51.102877+00:00",
+    "git_commit": "ecbab2312fe2e976add793c771085fca99131d6a",
+    "model_backend": "dry_run",
+    "model_name": "dry_run",
+    "k": 3,
+    "seed": 42,
+    "n_cases": 104,
+    "ontology_key": "tco",
+    "dataset_path": "data/synthetic_charts.csv",
+    "label_set_path": "data/label_set.json",
+    "corpus_path": "data/tco_corpus.jsonl",
+    "retriever_cache_dir": "data/retriever_cache",
+    "retriever_model_cache_dir": "data/retriever_cache/all-MiniLM-L6-v2",
+    "embedding_model": "all-MiniLM-L6-v2",
+    "retrieval_mode": "tfidf",
+    "excluded_gold_rows": 16,
+    "excluded_gold_label_counts": {
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_IVA_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8": 8,
+      "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_IV_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8": 8
+    }
+  },
+  "metrics": {
+    "agreement_no_rag": 43.26923076923077,
+    "agreement_rag": 42.30769230769231,
+    "n_cases": 104
+  },
+  "inferential": {
+    "paired_ttest_correctness": {
+      "available": true,
+      "method": "paired_ttest_on_binary_correctness",
+      "n_cases": 104,
+      "improved_cases": 0,
+      "worse_cases": 1,
+      "unchanged_cases": 103,
+      "mean_delta_correctness": -0.009615384615384616,
+      "mean_delta_agreement_points": -0.9615384615384616,
+      "degrees_freedom": 103,
+      "t_stat": -1.0,
+      "p_value": 0.3196540269793389,
+      "library": "scipy.stats.ttest_rel"
+    }
+  },
+  "coercions": {
+    "coerced_invalid_labels_no_rag": 0,
+    "coerced_invalid_labels_rag": 0
+  }
+}

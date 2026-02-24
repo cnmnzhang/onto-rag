@@ -17,6 +17,7 @@ from pathlib import Path
 
 import numpy as np
 
+
 class FaissRetriever:
     def __init__(
         self,
@@ -27,7 +28,7 @@ class FaissRetriever:
         cache_dir: Optional[str] = None,
         cache_key: Optional[str] = None,
     ):
-        import faiss
+        import faiss  # type: ignore
         from sentence_transformers import SentenceTransformer
 
         self.corpus = corpus
@@ -68,7 +69,7 @@ class FaissRetriever:
 
     def retrieve(self, query: str) -> List[Dict]:
         """Retrieve top-k most similar documents using FAISS."""
-        import faiss
+        import faiss  # type: ignore
 
         query_embedding = self.model.encode([query], convert_to_tensor=False).astype("float32")
         faiss.normalize_L2(query_embedding)
@@ -85,6 +86,7 @@ class FaissRetriever:
                 "similarity_score": float(score)
             })
         return results
+
 
 class EmbeddingRetriever:
     def __init__(
@@ -201,7 +203,7 @@ def create_retriever(
     cache_key = _corpus_fingerprint(corpus)
     if prefer_embeddings:
         try:
-            import faiss  # noqa: F401
+            import faiss  # type: ignore  # noqa: F401
             import sentence_transformers  # noqa: F401
             print("✓ Using FAISS + sentence-transformers for retrieval")
             return FaissRetriever(

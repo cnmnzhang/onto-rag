@@ -9,11 +9,11 @@ Example:
 
 from __future__ import annotations
 
-from corpus import OntoDoc
-from label_alias import LabelNormalizer
-from llm_interface import LLMInterface
-from onto_config import OntologyConfig
-from retrievers import EmbeddingRetriever, FaissRetriever, TFIDFRetriever
+from .corpus import OntoDoc
+from .label_alias import LabelNormalizer
+from .llm_interface import LLMInterface
+from .onto_config import OntologyConfig
+from .retrievers import EmbeddingRetriever, FaissRetriever, TFIDFRetriever
 
 __all__ = [
     "EmbeddingRetriever",

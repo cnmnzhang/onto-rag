@@ -17,7 +17,7 @@ You implement the RAG substrate: ontology → corpus → retriever → context b
 - docs/PROPOSAL.md
 - docs/SYNTHETIC_DATA_SCHEMA.md
 - data/label_set.json
-- existing src modules (llm_interface.py, onto_config.py, retrievers.py, rag_exp.py)
+- existing src modules (src/classes/llm_interface.py, src/classes/onto_config.py, src/classes/retrievers.py, rag_exp.py)
 
 ## Implementation targets (prefer extending current code)
 1) Ontology ingestion:

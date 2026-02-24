@@ -8,10 +8,10 @@ import json
 import hashlib
 from typing import Dict, List, Optional, TYPE_CHECKING
 
-from label_alias import LabelNormalizer
+from .label_alias import LabelNormalizer
 
 if TYPE_CHECKING:
-    from onto_config import OntologyConfig
+    from .onto_config import OntologyConfig
 
 
 class LLMInterface:
@@ -126,7 +126,7 @@ class LLMInterface:
             try:
                 with open(self.cache_file, "r") as f:
                     return json.load(f)
-            except:
+            except Exception:
                 return {}
         return {}
 
@@ -317,7 +317,6 @@ class LLMInterface:
             )
 
             # Try to parse JSON from response
-            # The model might wrap it in markdown or add text
             response_text = response_text.strip()
 
             # Extract JSON if wrapped in code blocks
@@ -343,17 +342,7 @@ class LLMInterface:
             return self._error_response(f"Error: {str(e)}")
 
     def predict(self, chart_text: str, rag_context: Optional[str] = None) -> Dict:
-        """
-        Generate prediction with optional RAG context.
-
-        Args:
-            chart_text: Patient chart text
-            rag_context: Optional retrieved ontology context
-
-        Returns:
-            Dict with predicted_label, optional ddx_top3, and optional evidence
-        """
-        # Build prompt
+        """Generate prediction with optional RAG context."""
         disease_name = self.config.disease_name if self.config else "disease"
 
         # Format allowed labels for clarity
@@ -369,26 +358,26 @@ ALLOWED LABELS (use EXACT string, including full IRI):
 
 CRITICAL RULES:
 1. Your predicted_label MUST be one of the exact labels listed above
-2. Use the FULL IRI starting with "http://" - do NOT shorten or modify it
-3. If uncertain, use "NONE" rather than inventing a label
+2. Use the FULL IRI starting with \"http://\" - do NOT shorten or modify it
+3. If uncertain, use \"NONE\" rather than inventing a label
 4. Output ONLY valid JSON with this schema:
 {{
-    "predicted_label": "<exact_label_or_NONE>",
-    "ddx_top3": [
-        {{"label": "<exact_label_or_NONE>", "rationale": "<short reason>"}},
-        {{"label": "<exact_label_or_NONE>", "rationale": "<short reason>"}},
-        {{"label": "<exact_label_or_NONE>", "rationale": "<short reason>"}}
+    \"predicted_label\": \"<exact_label_or_NONE>\",
+    \"ddx_top3\": [
+        {{\"label\": \"<exact_label_or_NONE>\", \"rationale\": \"<short reason>\"}},
+        {{\"label\": \"<exact_label_or_NONE>\", \"rationale\": \"<short reason>\"}},
+        {{\"label\": \"<exact_label_or_NONE>\", \"rationale\": \"<short reason>\"}}
     ],
-    "evidence": ["<retrieved_doc_id_if_available>"]
+    \"evidence\": [\"<retrieved_doc_id_if_available>\"]
 }}
 5. ddx_top3 is optional but if present it must contain at most 3 items.
 6. evidence is optional and should list retrieved doc identifiers only when available.
 
 Example valid output:
 {{
-    "predicted_label": "NONE",
-    "ddx_top3": [{{"label": "NONE", "rationale": "No clear {disease_name} indicators"}}],
-    "evidence": []
+    \"predicted_label\": \"NONE\",
+    \"ddx_top3\": [{{\"label\": \"NONE\", \"rationale\": \"No clear {disease_name} indicators\"}}],
+    \"evidence\": []
 }}"""
 
         user_prompt = f"Patient Chart:\n{chart_text}"

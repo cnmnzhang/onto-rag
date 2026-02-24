@@ -4,7 +4,7 @@ from typing import Dict, List
 import random
 
 import pandas as pd
-from onto_config import OntologyConfig, format_template
+from classes.onto_config import OntologyConfig, format_template
 
 
 def generate_disease_chart(

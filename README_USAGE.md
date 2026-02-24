@@ -116,7 +116,7 @@ python rag_exp.py
 
 ## LLM Interface Module
 
-The LLM logic is extracted to `llm_interface.py` for modularity. It provides:
+The LLM logic is extracted to `src/classes/llm_interface.py` for modularity. It provides:
 
 - **Automatic backend detection** (Hugging Face > OpenAI > Dry-run)
 - **Prompt caching** (saves all responses to `llm_cache.json`)
@@ -126,7 +126,7 @@ The LLM logic is extracted to `llm_interface.py` for modularity. It provides:
 ### Using the LLM Interface Standalone
 
 ```python
-from llm_interface import LLMInterface
+from classes.llm_interface import LLMInterface
 
 # Initialize with allowed TCO labels
 llm = LLMInterface(
@@ -225,7 +225,7 @@ export HF_MODEL="Qwen/Qwen2.5-0.5B-Instruct"
 ### Out of Memory (OOM) with Hugging Face
 
 ```python
-# Edit llm_interface.py and change:
+# Edit src/classes/llm_interface.py and change:
 torch_dtype=torch.float32  # Instead of float16
 ```
 
@@ -254,7 +254,7 @@ rag_exp.py
 ├── Connect to BioPortal TCO API
 ├── Build retrieval corpus (8 TCO classes)
 ├── Generate 120 synthetic charts
-├── Initialize LLM Interface ──> llm_interface.py
+├── Initialize LLM Interface ──> src/classes/llm_interface.py
 │   ├── Detect backend (HF/OpenAI/Dry-run)
 │   ├── Load model/client
 │   └── Setup caching
@@ -268,9 +268,9 @@ rag_exp.py
 
 To modify the LLM behavior:
 
-1. **Edit prompt:** Modify `_predict_openai()` or `_predict_huggingface()` in `llm_interface.py`
+1. **Edit prompt:** Modify `_predict_openai()` or `_predict_huggingface()` in `src/classes/llm_interface.py`
 2. **Add new backend:** Add new methods and update `_detect_backend()`
-3. **Change validation:** Edit `_validate_response()` in `llm_interface.py`
+3. **Change validation:** Edit `_validate_response()` in `src/classes/llm_interface.py`
 4. **Adjust caching:** Modify `_hash_prompt()` or `_save_cache()`
 
 To modify the evaluation:

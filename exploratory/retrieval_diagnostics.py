@@ -22,9 +22,9 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from onto_config import get_config  # noqa: E402
-from retrievers import create_retriever  # noqa: E402
-from corpus import ensure_corpus, load_corpus  # noqa: E402
+from classes.onto_config import get_config  # noqa: E402
+from classes.retrievers import create_retriever  # noqa: E402
+from classes.corpus import ensure_corpus, load_corpus  # noqa: E402
 
 
 def _sanitize_model_name_for_path(model_name: str) -> str:

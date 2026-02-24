@@ -32,11 +32,11 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
-from llm_interface import LLMInterface
-from onto_config import get_config
+from classes.llm_interface import LLMInterface
+from classes.onto_config import get_config
 from rag_context import build_rag_context
-from retrievers import create_retriever
-from corpus import ensure_corpus
+from classes.retrievers import create_retriever
+from classes.corpus import ensure_corpus
 
 
 DEFAULT_SEED = 42
@@ -48,6 +48,7 @@ class RunConfig:
     seed: int = DEFAULT_SEED
     top_k: int = DEFAULT_TOP_K
     max_context_chars: int = 1800
+    prefer_embeddings: bool = True
     ontology_key: str = "tco"
     label_set_path: Path = Path("data/label_set.json")
     dataset_path: Path = Path("data/synthetic_charts.csv")
@@ -91,6 +92,124 @@ def _coerce(pred: str, allowed: set[str], none_label: str) -> tuple[str, bool]:
     return none_label, True
 
 
+def _ensure_case_ids(df: pd.DataFrame) -> pd.DataFrame:
+    out = df.copy()
+    if "case_id" in out.columns:
+        out["case_id"] = out["case_id"].astype(str)
+    elif "chart_id" in out.columns:
+        out["case_id"] = out["chart_id"].apply(lambda x: f"chart-{int(x)}")
+    else:
+        out["case_id"] = [f"case-{i:04d}" for i in range(len(out))]
+    return out
+
+
+def _predict_case(
+    llm: LLMInterface,
+    *,
+    text: str,
+    rag_context: str | None,
+    allowed: set[str],
+    none_label: str,
+) -> tuple[str, str, str, int]:
+    out = llm.predict(text, rag_context=rag_context)
+    pred, did_coerce = _coerce(str(out.get("predicted_label", none_label)), allowed, none_label)
+    ddx = json.dumps(out.get("ddx_top3") or [], ensure_ascii=False)
+    evidence = json.dumps(out.get("evidence") or [], ensure_ascii=False)
+    return pred, ddx, evidence, int(did_coerce)
+
+
+def _paired_ttest_correctness(gold: list[str], pred_no_rag: list[str], pred_rag: list[str]) -> dict[str, Any]:
+    ok_no_rag = np.asarray([1.0 if g == p else 0.0 for g, p in zip(gold, pred_no_rag)], dtype=float)
+    ok_rag = np.asarray([1.0 if g == p else 0.0 for g, p in zip(gold, pred_rag)], dtype=float)
+    diff = ok_rag - ok_no_rag
+
+    n = int(diff.size)
+    mean_delta = float(np.mean(diff)) if n else 0.0
+    improved_cases = int(np.sum(diff > 0))
+    worse_cases = int(np.sum(diff < 0))
+    unchanged_cases = int(np.sum(diff == 0))
+
+    out: dict[str, Any] = {
+        "available": True,
+        "method": "paired_ttest_on_binary_correctness",
+        "n_cases": n,
+        "improved_cases": improved_cases,
+        "worse_cases": worse_cases,
+        "unchanged_cases": unchanged_cases,
+        "mean_delta_correctness": mean_delta,
+        "mean_delta_agreement_points": 100.0 * mean_delta,
+    }
+
+    if n < 2:
+        out.update(
+            {
+                "available": False,
+                "reason": "need_at_least_2_cases",
+                "degrees_freedom": 0,
+                "t_stat": None,
+                "p_value": None,
+            }
+        )
+        return out
+
+    # Degenerate case: all pairwise differences are identical.
+    if np.allclose(diff, diff[0]):
+        if float(diff[0]) == 0.0:
+            t_stat = 0.0
+            p_value = 1.0
+        else:
+            t_stat = float("inf") if diff[0] > 0 else float("-inf")
+            p_value = 0.0
+        out.update(
+            {
+                "degrees_freedom": int(n - 1),
+                "t_stat": t_stat,
+                "p_value": p_value,
+                "library": "degenerate_closed_form",
+            }
+        )
+        return out
+
+    try:
+        from scipy.stats import ttest_rel  # type: ignore
+
+        res = ttest_rel(ok_rag, ok_no_rag)
+        out.update(
+            {
+                "degrees_freedom": int(n - 1),
+                "t_stat": float(res.statistic),
+                "p_value": float(res.pvalue),
+                "library": "scipy.stats.ttest_rel",
+            }
+        )
+        return out
+    except Exception:
+        # Fallback keeps the statistic available even without SciPy.
+        std_diff = float(np.std(diff, ddof=1))
+        if std_diff <= 0.0:
+            out.update(
+                {
+                    "degrees_freedom": int(n - 1),
+                    "t_stat": None,
+                    "p_value": None,
+                    "library": "manual_no_scipy",
+                    "reason": "zero_variance_diff",
+                }
+            )
+            return out
+        se = std_diff / np.sqrt(n)
+        out.update(
+            {
+                "degrees_freedom": int(n - 1),
+                "t_stat": float(mean_delta / se),
+                "p_value": None,
+                "library": "manual_no_scipy",
+                "reason": "scipy_unavailable",
+            }
+        )
+        return out
+
+
 def _sanitize_model_name_for_path(model_name: str) -> str:
     safe = re.sub(r"[^A-Za-z0-9._-]+", "-", str(model_name).strip())
     return safe.strip("-") or "default"
@@ -116,7 +235,7 @@ def run_official_eval(cfg: RunConfig) -> dict[str, Any]:
     config = get_config(cfg.ontology_key)
     embedding_model = os.getenv("EMBEDDING_MODEL", cfg.embedding_model).strip() or "all-MiniLM-L6-v2"
 
-    # Corpus restricted to the allowed TCO labels.
+    # Corpus restricted to the configured allowed labels.
     corpus = ensure_corpus(
         config=config,
         label_ids=labels,
@@ -128,7 +247,7 @@ def run_official_eval(cfg: RunConfig) -> dict[str, Any]:
     retriever = create_retriever(
         corpus,
         top_k=cfg.top_k,
-        prefer_embeddings=True,
+        prefer_embeddings=cfg.prefer_embeddings,
         cache_dir=str(model_cache_dir),
         model_name=embedding_model,
     )
@@ -141,13 +260,7 @@ def run_official_eval(cfg: RunConfig) -> dict[str, Any]:
     if missing:
         raise ValueError(f"Dataset missing required columns: {sorted(missing)}")
 
-    # Create a stable case_id.
-    if "case_id" in df.columns:
-        df["case_id"] = df["case_id"].astype(str)
-    elif "chart_id" in df.columns:
-        df["case_id"] = df["chart_id"].apply(lambda x: f"chart-{int(x)}")
-    else:
-        df["case_id"] = [f"case-{i:04d}" for i in range(len(df))]
+    df = _ensure_case_ids(df)
 
     # Filter to compatible gold labels.
     is_valid_gold = df["gold_label"].astype(str).isin(allowed)
@@ -171,24 +284,36 @@ def run_official_eval(cfg: RunConfig) -> dict[str, Any]:
     for _, row in df.iterrows():
         text = str(row["chart_text"])
 
-        out0 = llm.predict(text, rag_context=None)
-        p0, did0 = _coerce(str(out0.get("predicted_label", none_label)), allowed, none_label)
-        coerced_no_rag += int(did0)
+        print()
+        p0, ddx0, evidence0, did0 = _predict_case(
+            llm,
+            text=text,
+            rag_context=None,
+            allowed=allowed,
+            none_label=none_label,
+        )
+        coerced_no_rag += did0
         preds_no_rag.append(p0)
-        ddx_no_rag.append(json.dumps(out0.get("ddx_top3") or [], ensure_ascii=False))
-        evidence_no_rag.append(json.dumps(out0.get("evidence") or [], ensure_ascii=False))
+        ddx_no_rag.append(ddx0)
+        evidence_no_rag.append(evidence0)
 
         ctx = build_rag_context(text, retriever, config, top_k=cfg.top_k, max_chars=cfg.max_context_chars)
-        out1 = llm.predict(text, rag_context=ctx)
-        p1, did1 = _coerce(str(out1.get("predicted_label", none_label)), allowed, none_label)
-        coerced_rag += int(did1)
+        p1, ddx1, evidence1, did1 = _predict_case(
+            llm,
+            text=text,
+            rag_context=ctx,
+            allowed=allowed,
+            none_label=none_label,
+        )
+        coerced_rag += did1
         preds_rag.append(p1)
-        ddx_rag.append(json.dumps(out1.get("ddx_top3") or [], ensure_ascii=False))
-        evidence_rag.append(json.dumps(out1.get("evidence") or [], ensure_ascii=False))
+        ddx_rag.append(ddx1)
+        evidence_rag.append(evidence1)
 
     gold = [str(x) for x in df["gold_label"].tolist()]
     agreement_no_rag = _exact_agreement(gold, preds_no_rag)
     agreement_rag = _exact_agreement(gold, preds_rag)
+    ttest = _paired_ttest_correctness(gold, preds_no_rag, preds_rag)
 
     cfg.results_dir.mkdir(parents=True, exist_ok=True)
 
@@ -223,11 +348,15 @@ def run_official_eval(cfg: RunConfig) -> dict[str, Any]:
             "retriever_cache_dir": str(cfg.retriever_cache_dir),
             "retriever_model_cache_dir": str(model_cache_dir),
             "embedding_model": embedding_model,
+            "retrieval_mode": "embeddings" if cfg.prefer_embeddings else "tfidf",
         },
         "metrics": {
             "agreement_no_rag": float(agreement_no_rag),
             "agreement_rag": float(agreement_rag),
             "n_cases": int(len(df)),
+        },
+        "inferential": {
+            "paired_ttest_correctness": ttest,
         },
         "coercions": {
             "coerced_invalid_labels_no_rag": int(coerced_no_rag),
@@ -258,6 +387,7 @@ def _render_summary(pred_df: pd.DataFrame, results: dict[str, Any]) -> str:
     backend = str(results["run"]["model_backend"])
     model_name = str(results["run"].get("model_name") or backend)
     embedding_model = str(results["run"].get("embedding_model") or "")
+    retrieval_mode = str(results["run"].get("retrieval_mode") or "")
     k = int(results["run"]["k"])
     ontology_key = str(results["run"].get("ontology_key") or "")
     dataset_path = str(results["run"].get("dataset_path") or "")
@@ -303,6 +433,21 @@ def _render_summary(pred_df: pd.DataFrame, results: dict[str, Any]) -> str:
     lines.append("|---|---:|---:|---:|---|")
     lines.append(f"| No-RAG | {a0:.1f}% | {n} | {k} | {backend} |")
     lines.append(f"| RAG({ontology_key or 'ontology'}) | {a1:.1f}% | {n} | {k} | {backend} |")
+    ttest = (results.get("inferential") or {}).get("paired_ttest_correctness") or {}
+    if ttest:
+        delta = float(ttest.get("mean_delta_agreement_points") or 0.0)
+        improved = int(ttest.get("improved_cases") or 0)
+        worse = int(ttest.get("worse_cases") or 0)
+        p_value = ttest.get("p_value")
+        p_str = f"{float(p_value):.4g}" if isinstance(p_value, (float, int)) else "N/A"
+        lines.append("")
+        lines.append("## Inferential (Paired t-test)")
+        lines.append("")
+        lines.append(f"- Mean agreement delta (RAG - No-RAG): {delta:.2f} points")
+        lines.append(f"- Improved / worse / unchanged: {improved} / {worse} / {int(ttest.get('unchanged_cases') or 0)}")
+        lines.append(f"- t-statistic: {ttest.get('t_stat')}")
+        lines.append(f"- p-value: {p_str}")
+        lines.append(f"- df: {ttest.get('degrees_freedom')}")
     lines.append("")
     lines.append("## Parameters")
     lines.append("")
@@ -314,6 +459,8 @@ def _render_summary(pred_df: pd.DataFrame, results: dict[str, Any]) -> str:
     lines.append(f"- Model: {model_name}")
     if embedding_model:
         lines.append(f"- Embedding model: {embedding_model}")
+    if retrieval_mode:
+        lines.append(f"- Retrieval mode: {retrieval_mode}")
     if results["run"].get("git_commit"):
         lines.append(f"- Git commit: {results['run']['git_commit']}")
     if results["run"].get("excluded_gold_rows"):
@@ -363,6 +510,12 @@ def main() -> None:
     p.add_argument("--k", type=int, default=DEFAULT_TOP_K)
     p.add_argument("--max-context-chars", type=int, default=1800)
     p.add_argument(
+        "--retrieval",
+        choices=["embeddings", "tfidf"],
+        default="embeddings",
+        help="Retriever backend. Use 'tfidf' for fully local/offline runs.",
+    )
+    p.add_argument(
         "--embedding-model",
         default=os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2"),
         help="Embedding model name for retrieval (or set EMBEDDING_MODEL)",
@@ -373,6 +526,7 @@ def main() -> None:
         seed=int(args.seed),
         top_k=int(args.k),
         max_context_chars=int(args.max_context_chars),
+        prefer_embeddings=str(args.retrieval) == "embeddings",
         ontology_key=str(args.ontology_key),
         label_set_path=Path(args.label_set),
         dataset_path=Path(args.dataset),

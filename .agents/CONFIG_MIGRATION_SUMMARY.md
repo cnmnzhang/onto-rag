@@ -2,11 +2,11 @@
 
 ## What Changed
 
-Successfully extracted all TCO-specific (thyroid cancer) constants into a reusable `onto_config.py` configuration system, making the framework truly disease-agnostic.
+Successfully extracted all TCO-specific (thyroid cancer) constants into a reusable `src/classes/onto_config.py` configuration system, making the framework truly disease-agnostic.
 
 ## Files Modified
 
-### 1. **NEW: onto_config.py** (654 lines)
+### 1. **NEW: src/classes/onto_config.py** (654 lines)
 - Created `OntologyConfig` dataclass with all disease-specific parameters
 - Pre-built configurations:
   - `TCO_CONFIG` - Thyroid Cancer Ontology (complete)
@@ -22,7 +22,7 @@ Successfully extracted all TCO-specific (thyroid cancer) constants into a reusab
 ### 2. **UPDATED: rag_exp.py**
 **Changes: ~23 locations**
 
-- **Imports:** Added `from onto_config import OntologyConfig, get_config, build_system_prompt, format_template`
+- **Imports:** Added `from classes.onto_config import OntologyConfig, get_config, build_system_prompt, format_template`
 - **Configuration:**
   ```python
   CONFIG = get_config("tco")  # One line to change disease!
@@ -43,13 +43,13 @@ Successfully extracted all TCO-specific (thyroid cancer) constants into a reusab
 **Changes: 4 major sections**
 
 - **Removed:** `DiseaseDomainSpec` class and `TCO_THYROID_DOMAIN` constant
-- **Imports:** Added `from onto_config import OntologyConfig, format_template`
+- **Imports:** Added `from classes.onto_config import OntologyConfig, format_template`
 - **Functions updated:**
   - `generate_disease_chart()` - Accepts `config` parameter, uses config templates
   - `generate_none_chart()` - Accepts `config` parameter, uses config templates
   - `generate_synthetic_dataset()` - Accepts `config` parameter instead of `domain`
 
-### 4. **UPDATED: llm_interface.py**
+### 4. **UPDATED: src/classes/llm_interface.py**
 **Changes: 3 sections**
 
 - **Imports:** Added `TYPE_CHECKING` and conditional `OntologyConfig` import
@@ -71,7 +71,7 @@ Demo script showing:
 To adapt to diabetes:
 - Edit `rag_exp.py`: Change acronym, keywords, corpus file, RAG header, print statements (~15 locations)
 - Edit `synthetic_data.py`: Change symptoms, exam templates, imaging, pathology, NONE templates (~8 locations)
-- Edit `llm_interface.py`: Change dry-run keywords, system prompt (~3 locations)
+- Edit `src/classes/llm_interface.py`: Change dry-run keywords, system prompt (~3 locations)
 - **Total: ~26 edits across 3 files, ~15 minutes**
 
 ### After (With Config System)
@@ -113,7 +113,7 @@ CONFIG = get_config("diabetes")
 ### Example 3: Create Custom Disease
 ```python
 # my_custom_config.py
-from onto_config import OntologyConfig, ONTOLOGY_CONFIGS
+from classes.onto_config import OntologyConfig, ONTOLOGY_CONFIGS
 
 BREAST_CANCER_CONFIG = OntologyConfig(
     acronym="NCIT",
@@ -260,7 +260,7 @@ echo $?  # Should be 0
 ## Impact
 
 **Lines of Code:**
-- Added: 654 lines (onto_config.py)
+- Added: 654 lines (src/classes/onto_config.py)
 - Modified: ~50 lines across 3 files
 - Net impact: Configuration is now centralized and reusable
 

@@ -306,7 +306,7 @@ Here's a minimal working example for Colab:
 
 # Option B: Upload files manually
 # from google.colab import files
-# uploaded = files.upload()  # Upload PROPOSAL.md, llm_interface.py, etc.
+# uploaded = files.upload()  # Upload PROPOSAL.md, src/classes/llm_interface.py, etc.
 
 # === CELLS 3+: Run Normal Notebook ===
 # [Rest of notebook cells from tco_rag_comparison.ipynb]

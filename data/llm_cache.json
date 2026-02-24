@@ -2626,5 +2626,3199 @@
       "NONE"
     ],
     "rationale": "The patient's chief concern is episodic swelling of wrists with dry eyes, which could be related to either polymyalgia rheumatica or psoriatic arthritis. However, the absence of specific signs like joint erosions on imaging and the normal ESR suggest that these conditions may not be the primary diagnoses. The presence of sicca symptoms further complicates the assessment but does not clearly point towards any single condition."
+  },
+  "bcded8d6cc635279e37470936246f58e": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Gastroesophageal reflux disease does not typically cause neck swelling."
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Highly_Invasive_Papillary_Thyroid_Cancer",
+        "rationale": "Prolonged speaking may lead to vocal cord damage, which could be mistaken for papillary thyroid carcinoma."
+      }
+    ],
+    "evidence": []
+  },
+  "3c8e128c3ed6d1b45191d412c6daf75b": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "The patient has no symptoms suggestive of papillary thyroid carcinoma, such as neck swelling or difficulty swallowing."
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_I_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "The patient's age and other factors suggest they may have stage I disease, which typically involves localized disease without metastasis."
+      }
+    ],
+    "evidence": []
+  },
+  "7de79a8770178550390eeab2369b8131": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "The patient's symptoms align well with vocal cord strain, which can cause neck pain and laryngeal inflammation."
+      },
+      {
+        "label": "NONE",
+        "rationale": "The presence of a recent upper respiratory infection supports an infectious etiology for the laryngeal inflammation."
+      }
+    ],
+    "evidence": []
+  },
+  "a680637233d0cc48253e3027771cb2ea": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "The patient has symptoms consistent with papillary thyroid carcinoma, which can cause neck pain and laryngeal inflammation."
+      },
+      {
+        "label": "NONE",
+        "rationale": "This classification aligns with the patient's age and presentation, as classical papillary thyroid carcinoma is the most common type among younger patients."
+      }
+    ],
+    "evidence": []
+  },
+  "db2e4ce663a04f13956f72cb10e94cf0": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Highly_Invasive_Papillary_Thyroid_Cancer",
+        "rationale": "Solid thyroid mass with increased vascularity suggests aggressive papillary carcinoma"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Mild fatigue could indicate systemic involvement in advanced stages"
+      }
+    ],
+    "evidence": []
+  },
+  "44dcef898ce9334764627661d50faf60": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "The patient has a 2-month history of an anterior neck mass, which is consistent with a papillary carcinoma."
+      },
+      {
+        "label": "NONE",
+        "rationale": "The presence of tall malignant follicular cells suggests a variant of papillary carcinoma."
+      }
+    ],
+    "evidence": []
+  },
+  "48f645cc4f4a0a83a3b6866bf84a8616": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "The patient has been diagnosed with a benign thyroid nodule based on physical examination and laryngoscopic findings."
+      },
+      {
+        "label": "NONE",
+        "rationale": "The patient's symptoms and physical findings suggest vocal cord inflammation rather than thyroid cancer."
+      }
+    ],
+    "evidence": []
+  },
+  "5c29fcadd93178c3648656e7f52be559": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "d6d9f1c7425e63516d48c449636b3ed0": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "945306719709d06cba50458d8ca28c0d": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "7ae48a0d7500b57c314c8bfe0c99421e": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "b9a26bbf71ae899e8560fe046941ab9f": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "fcc734ab993b839b51d058b62a0cb7b2": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "2890fc1dd8a29c84a39fb85e1ba05b3c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "fa7f49099906766f01afbada282af6b1": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "34922f5db804fba47a5d34b4142eecdf": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "48692be51ab8ab861916e2735389d98c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "c3c19d1c7d6a214102c99d3cda63048d": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "fd0e907e1afc621c8f3f0124cd11c19f": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "8a94bbb8759225cdbbdb1608787ff32b": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "20bda3eeaa3f49c46026da5fe37af0b4": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "12ef728a270a892ee94c43bebbbf44fc": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "2282e4fd0a461ca3910a03c49e0a22ce": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "f3d8f3254179391feb186c7a87d77764": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "285e9107718e374e816ae7faa278e06f": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "66b7401628792ad3b7715dfaaf93c6e2": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "e8323f7d3bcbc6a1941b3d70d152f994": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "14291a14f32dfc038569403b383d19f1": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "955d26200cc58ca69e1a2b984f463028": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "b38972bfaf5f7144e7f8d99c0c78b1a1": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "d8139ce7ff248544930f3ac29dd9932a": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "39b07a1a84ebc6f3f8d43a0c06ae70bb": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "9685a8a8aeb008c7dc79ad529290c151": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "72d01216f49988a827e644257f63aaed": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "ed89b491f307b4702ac4153a0b7101a9": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "7ab5a497583d3a91f6ed9e7cf449a7dc": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "0bd3a4894f35fc4b111f6950f696f4ec": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "b1ae6f2ba02ecbc0feca959a4ceb8c0c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "0cba849204b221731c46cf8e0b0f1ef7": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "0092b22c20cedebb15dab7109b8e0c4a": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "15c6a67e4e6989b4a9f46a4536bd988b": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "aafcb3e29e485c360cd539864a03220f": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "775e6ae6d0c829820b85befb51a5278d": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "c2cf7e8a20492c7cd7d0dfc1bb470b59": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "19f47c021cbc64d46ede8cd7c106bfff": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "be2a7ffa8c29914d209cb2cfd454b7ce": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "a6835915dfb24aef4a63d31b921a726c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "4805c92a75c2f6e69cc79a5054ba783d": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "6be880823e4aaea40de37423abb099aa": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "d4775ca711cf09bea004769e9a99b355": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "508dbd14ed1c7e835e9e6f5355801ac9": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "42eb798d27374a2f39f43d5f70f46c69": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "9597c87ce02e8da583a83c15205c6c2e": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "b8f9f1810511d3e7d3d01179e060b241": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "893554ca756b9e1f6fd669647bd45388": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "1b5b3ade3b5b7bfc5b6c9667bb4df121": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "2a171d850e0b8c16911f085822915b86": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "364617a0337a60cf482d6558399cfb50": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "ad52d58a7495904a6be07dfbd769b930": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "15aaf8736c87b305820f349a448d1cc3": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "c982b309660e0a61a5558abf75a4cdc6": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "f05e9f0f14b4d912afc3e154c02fb7db": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "74219b9ccb4d303c26176a8161404f6b": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "4d908262fe8a3d6fa5e18e405d3fa8c7": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "1f7bc6096ee69f69d9d323dc262535fd": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "1739d5b9f5e7e4b8b31f56fc4f648f91": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "dfc41a2f39ce7c37184176bde711904e": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "4ef6cf4c062f4c61b031509fa629250d": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "e1869415d796a443e9abd33921bfe637": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "80d943f7a288c73cab5d5a3f5243ebd7": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "62371ce11b57234a029e707b74f708be": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "4c4226dd21fe68312c17404c71a33251": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "27cd60f84808015ce50211fb0f9c03f2": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "43300e5498725feef680aa65af55d663": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "34f9eb2aecbc1a22ebc056c7470f6954": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "0e5493953b9e3563ca0445e4a82af0b4": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "0db67444cbeccf0341c000d52da73b02": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "fff7db6d95ee84ee2f3de9f381d55ba5": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "878e9c25f8e32cb0da57a1e0eb4b34cd": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "a20745c0394b1ca7ac38f54cdc7747d5": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "28654efdfeaa6a66c3afae02854615e3": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "45d830f54d35fb3716e8d97092ed6103": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "0b433c730a79216683053b6dbc4a2b2d": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "aae65f57daa68914f6b079e5dcfe8e3f": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "77e3c730aa12814467c5307f97bbd531": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "fc23e5ff6cdbe670ae18a5998e106fde": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "d996a68f7f914df6c3d43d3d09d8e7b1": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "51ba7782a91cb19a50ef890e993b140e": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "c9e26106c9937789ea5599af46623e3b": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "b88ca2cd0c2b17aef3ccc493412226de": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "1b11cac79c1941fb9e1e5ff0f4ebe74f": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "f7d2d61ac48ba9f4d3454fdb7ecfb24b": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "e61c2cbfa305fa27bedd56acfc0180ee": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "1409b7903db221520b04e1b63bc39e09": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "4ec64a1af70b1e253acacf111e653335": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "adbc2af2f34a26f80b62f54ee7eebb00": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "0fbbda180b6285ed9f4fba53121f1ba5": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "aa57420edae0ee832bef3d236b9332c4": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "5ab16a57eb6b9e5e724db57571277647": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "dd7562ebb5e4839ad9abf3ff3cdfae12": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      }
+    ],
+    "evidence": []
+  },
+  "3ce8190f120f7f5fa3a4bfb5ee1fd52c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      }
+    ],
+    "evidence": []
+  },
+  "7e976cc026eabc46a1668855b755f243": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "517e754917b70a3a462056604a575a71": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "8d99e3eaade5940ad3867dce7e8370dd": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "7b3b4e44880defdc4ac6b89870ca5c6e": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "12c4a25809b9fb27de83ce553bf3fc6e": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "cd4fe71a5f737b11a623ccd5eb2b07ea": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "7f02f62e6df142ecf61f0f39a900ab13": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "10b31ec447a90f4995a4d71a001c5b85": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "70c9c8284ae64f2a60307272c2aa9b55": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "1af7a65354291c7941832f1b97b6ca6e": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "ad858d0b13fc0ef68ac110c18c31179d": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "5944f43ecf49dfbef22096f1cc4d69c6": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "f2c52572f8a0a99b9272f6c75e9e71d7": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "69802b285d6bacc8cae0c3ffc2ef7b55": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "32793c06ac34a9254d034236600a924e": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "ab6fc4f67f94409b7a0a2ac93197eb7f": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "17a802410a3c1fe3d1d488d7e1488dec": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "e3f1fa0962638c3fece6c15efe381639": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "6c9d77ea49a3d8df5b64cb446aab8a2a": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      }
+    ],
+    "evidence": []
+  },
+  "380b0ff0e189e3a3dd4611348fd1321a": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      }
+    ],
+    "evidence": []
+  },
+  "90a79b008d6112a588604fef18e2fdf0": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "fae6e78db6368dfce9078945ac4bf48c": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "c0c884c3c9529150b06e4f4f04c63558": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "159d20d2a5ba1f42c30f0913b2ad2311": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "98cf1a4143693bbb645d14d7b6e0b41f": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "8eb9dd70c6c8c634c43b1eb4b1bee4a4": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "b384ff0921e03bda7f8662958a86a310": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "ffa0670d9f006a4063491f623c2d6f0c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "1acbd7ef62c5fc7a241a6c96986462d7": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "8a0b83f58bbb0b9a9d3a41f4a231fd4c": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "6a0a328b09fbac974477a02ae7df5d02": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "c2581227be291c1043300877c77c85e4": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "2c053e77d8984eed781a0621f883ea8f": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "bdd2da0365059bc6342e0db3c489cd03": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "4ccb1b5e3f9d14fd944e1b484e72bfbc": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "9de17badfa1e8772f6885e89e1743350": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "2922ad0dd7352dd83d6e1b6797429ad0": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "432d8af1bb409cbfe9e18531569a0b7c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "1d0e5d47ffcb7f6821e66ef87ee248f3": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "52df213805ff4d37e08bec63ba67ca76": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "9eb785a35e9edad9848ccfa8e74aeca2": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "15007b603c10f00fb775b432f67f2202": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "809eb4797d4b6cd46fb600fd447f4363": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "06ba5d504077c4a2d9089a7b721d6b19": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "e6e695d7c261221f1e5512bb41e28323": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "63f96e7e230c5a6f5dc17b79af4549b5": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "7aded780db5ec53e61668a70989c38ae": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "a706b950fd5b83969893620ae63d46bf": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "dcbcbd8ab9cc2a16d1cd5d864b59db71": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "41d161b508e0320236488f5b8cc14087": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "21503b19ca90f3ad1780d5225ad14fbd": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "f9bd405fc41703e16d2ade6fbae500fa": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "b6f41a720ede5f5a21b4871eae6e67d0": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      }
+    ],
+    "evidence": []
+  },
+  "b853a02e448192bf8c153acbba2219e8": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      }
+    ],
+    "evidence": []
+  },
+  "a1fd472e329c05552c63f6221f6bc531": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "e9c3d3f0e908a03f436d6312c3e85cf3": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "c27a51ab818e866e611989eb151bdd6e": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "8cb344bd4035357fe9452aca325683ce": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "5437d91670190884316f08375f45145d": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "cbca4efc386c3b01c40e7dff822ee8cc": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "99a46343257fef32af306dc76c34e5a5": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "7a051ca966b4c4d4c11e01446f7c23e3": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "215dcde9eda6a3f48bbeb01cf46fee64": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "e605f01f7c376b7bc36807dac328072c": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "2e93dd7bb10c4c5ed3d019710a0c7bf6": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "0aaa838b5534d79fd3990f2d53f690d3": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "9325df7444b76938e5e1ffbd867e2639": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "1af88d59b3948d8951f3d6441c392328": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "1118d9c65bb630b1464169a14c77c25a": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "acd10db6d7de7914f0da5f9ffa441a35": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "e7b8e9742f2543dabce1d283e4fa7645": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "d6d243ff3dc353fcc963311c26cda4dd": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "4380464a2f2734190637ef62d2adeb77": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "33bfeaec142d10fb98255b84e8e8bac6": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "450e6f56f8c3ccd9287d36e1ea4a9ea0": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "ec10d299703443764b1488b208d12849": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "1c7f98249f54b6bf651214f73dea78d3": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "95e5aa1e6d975c2e23a6daba98a9c2bb": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "160944a7ed61398d3da34fb0234a700a": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "d901e60101ae188ecb8ef195dc247f20": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "9a6ae2fa8216d1ac6e66a9a72c68dccf": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "c88941b737267e15f589831fab903e77": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "a5b3503ad44a062dd17cfa0625772cd9": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "2bc31b419427bc3b0374079bfc1362ca": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "a89a009cb72f5fa0505faf5fb5983d13": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "800e560ee7aa28c11ab9bfb5b2fd509d": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "11894d9c5595f3c80fbff37de6819dc5": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "d9f306c575364e3799c7ad98f6cec56e": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "a90ede4f8593b634d583002850b6f21a": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "96996b8ba21b67808aa35f6c63861332": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "85ea254bcc037c7e2fd289525fcfeaa0": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "910d59ed17df318f53bde3328609c733": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "d60bb98d383e3510292582aa79aa7494": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "91bdfc08ca4a1005cd67811227485e79": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "4cfe7a5f6253fa72ac39466b11821598": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "da92853fa7172a789bbf9e4d025782b9": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "3da86174e4da62f411c90a21fc32e997": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "eed8379e919a2cb2ff10ccf551442500": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "b8c953bb7264fff53d9288bf0451b278": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "8ef3ebe52ceff1089def76d1e1eb86d7": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "19ebf2c06f53510dab938090b5385ab2": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "192e1c4513086ed8f71c6dbc5d6f3942": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "db33abc26a6f42e562ed77f0a2e28bf2": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "a0b30139378bc1924794def8aa8b4c42": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on possible thyroid cancer indicators"
+      }
+    ],
+    "evidence": []
+  },
+  "314547b8ffa384316d6a41d4de74c0b3": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "7c18a63cde908456d6decdfb4ab01b34": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "95d373b0b42dff3d5c2178d2e8870795": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "aa7f202b07b16a3f01a5e9ea33b02c7b": {
+    "predicted_label": "NONE",
+    "ddx_top3": [
+      {
+        "label": "NONE",
+        "rationale": "Heuristic: normal/benign findings"
+      }
+    ],
+    "evidence": []
+  },
+  "bf1f671e20a6b790663a2568c418a4a9": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      }
+    ],
+    "evidence": []
+  },
+  "ad8075a3153de2f80f93cf93aa2a09b6": {
+    "predicted_label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+    "ddx_top3": [
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Tall_Cell_Variant_Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Thyroid_Gland_Papillary_Carcinoma",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      },
+      {
+        "label": "http://www.semanticweb.org/hx-jta/ontologies/thyroid_cancer_ontology#Stage_III_Thyroid_Gland_Papillary_Carcinoma_AJCC_v8",
+        "rationale": "Heuristic candidate based on thyroid cancer keywords"
+      }
+    ],
+    "evidence": []
   }
 }

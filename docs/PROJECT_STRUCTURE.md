@@ -7,10 +7,14 @@ bime/550/
 ├── src/                          # Source code
 │   ├── __init__.py              # Package init
 │   ├── rag_exp.py               # Main experiment script
-│   ├── llm_interface.py         # LLM backend abstraction
-│   ├── onto_config.py           # Ontology configurations
+│   ├── classes/                 # Core modules/classes
+│   │   ├── __init__.py          # Convenience re-exports
+│   │   ├── llm_interface.py     # LLM backend abstraction
+│   │   ├── onto_config.py       # Ontology configurations
+│   │   ├── retrievers.py        # Retrieval implementations
+│   │   ├── corpus.py            # BioPortal fetch + corpus normalization
+│   │   └── label_alias.py       # Label normalization helpers
 │   ├── synthetic_data.py        # Chart generation
-│   ├── retrievers.py            # Retrieval implementations
 │   ├── colab_setup.py           # Colab utilities
 │   ├── demo_config_swap.py      # Config demo script
 │   └── test_quick.py            # Quick test script
@@ -68,9 +72,9 @@ TEST_MODE = False  # 120 charts for full run
 
 All source files are in `src/` and import from each other directly:
 ```python
-from llm_interface import LLMInterface
-from onto_config import get_config
-from retrievers import create_retriever
+from classes.llm_interface import LLMInterface
+from classes.onto_config import get_config
+from classes.retrievers import create_retriever
 ```
 
 All data files are written to `../data/` relative to `src/`:

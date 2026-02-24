@@ -244,9 +244,9 @@ predict the most likely {disease_name} diagnosis from the allowed label set.
 ALLOWED LABELS: {allowed_labels}, NONE
 
 Output valid JSON only:
-{{"predicted_label": "<label>", "top3_labels": ["<label1>", "<label2>", "<label3>"], "rationale": "<brief explanation>"}}
+{{\"predicted_label\": \"<label>\", \"top3_labels\": [\"<label1>\", \"<label2>\", \"<label3>\"], \"rationale\": \"<brief explanation>\"}}
 
-If no {disease_name} is evident, return "NONE" as the predicted_label.
+If no {disease_name} is evident, return \"NONE\" as the predicted_label.
 Use the full IRI (http://...) for {disease_name} labels, not just the short name.""",
 
     # RAG Context
@@ -366,9 +366,9 @@ predict the most likely {disease_name} diagnosis from the allowed label set.
 ALLOWED LABELS: {allowed_labels}, NONE
 
 Output valid JSON only:
-{{"predicted_label": "<label>", "top3_labels": ["<label1>", "<label2>", "<label3>"], "rationale": "<brief explanation>"}}
+{{\"predicted_label\": \"<label>\", \"top3_labels\": [\"<label1>\", \"<label2>\", \"<label3>\"], \"rationale\": \"<brief explanation>\"}}
 
-If no {disease_name} is evident, return "NONE" as the predicted_label.""",
+If no {disease_name} is evident, return \"NONE\" as the predicted_label.""",
 
     # RAG Context
     rag_context_header="Relevant diabetes classifications from DOID:",
@@ -479,9 +479,9 @@ predict the most likely {disease_name} diagnosis from the allowed label set.
 ALLOWED LABELS: {allowed_labels}, NONE
 
 Output valid JSON only:
-{{"predicted_label": "<label>", "top3_labels": ["<label1>", "<label2>", "<label3>"], "rationale": "<brief explanation>"}}
+{{\"predicted_label\": \"<label>\", \"top3_labels\": [\"<label1>\", \"<label2>\", \"<label3>\"], \"rationale\": \"<brief explanation>\"}}
 
-If no {disease_name} is evident, return "NONE" as the predicted_label.""",
+If no {disease_name} is evident, return \"NONE\" as the predicted_label.""",
 
     # RAG Context
     rag_context_header="Relevant lung cancer classifications from NCIT:",
@@ -645,16 +645,7 @@ def build_system_prompt(config: OntologyConfig, allowed_labels: List[str]) -> st
 
 
 def list_configs() -> None:
-    """
-    Print available configurations.
-
-    Example:
-        >>> list_configs()
-        Available ontology configurations:
-          - tco: Thyroid Cancer Ontology (TCO)
-          - diabetes: Disease Ontology (DOID)
-          - lung_cancer: National Cancer Institute Thesaurus (NCIT)
-    """
+    """Print available configurations."""
     print("Available ontology configurations:")
     for key, config in ONTOLOGY_CONFIGS.items():
         print(f"  - {key}: {config.name} ({config.acronym})")

@@ -27,7 +27,7 @@ except Exception:  # pragma: no cover
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from corpus import ensure_corpus  # noqa: E402
+from classes.corpus import ensure_corpus  # noqa: E402
 
 
 LABEL_SET_PATH = Path("data/ai_rheum_label_set.json")

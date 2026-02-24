@@ -18,7 +18,7 @@ You implement mechanical evaluation and reporting. You may refactor small pieces
 - docs/SYNTHETIC_DATA_SCHEMA.md
 - data/synthetic_charts.csv
 - data/label_set.json
-- src/llm_interface.py and cache policy (data/llm_cache.json)
+- src/classes/llm_interface.py and cache policy (data/llm_cache.json)
 
 ## Deliverables
 1) results/results.json

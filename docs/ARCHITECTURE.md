@@ -52,14 +52,14 @@ Done criteria:
 Purpose: fetch ontology class metadata for a small, explicit set of AI‑RHEUM IDs (labels, synonyms, definitions, parents) and write an indexable JSONL corpus.
 
 Where it lives:
-- Ontology configuration registry: [src/onto_config.py](../src/onto_config.py)
-- BioPortal fetch + JSONL normalization/caching: [src/corpus.py](../src/corpus.py)
+- Ontology configuration registry: [src/classes/onto_config.py](../src/classes/onto_config.py)
+- BioPortal fetch + JSONL normalization/caching: [src/classes/corpus.py](../src/classes/corpus.py)
 
 Notes (legacy naming):
-- The ingest module is named [src/corpus.py](../src/corpus.py). In the AI‑RHEUM-only setup it is treated as the generic BioPortal corpus builder, and the ontology-specific artifact is [data/ai_rheum_corpus.jsonl](../data/ai_rheum_corpus.jsonl).
+- The ingest module is named [src/classes/corpus.py](../src/classes/corpus.py). In the AI‑RHEUM-only setup it is treated as the generic BioPortal corpus builder, and the ontology-specific artifact is [data/ai_rheum_corpus.jsonl](../data/ai_rheum_corpus.jsonl).
 
 Done criteria:
-- [ ] AI‑RHEUM config exists in [src/onto_config.py](../src/onto_config.py) (acronym matches BioPortal)
+- [ ] AI‑RHEUM config exists in [src/classes/onto_config.py](../src/classes/onto_config.py) (acronym matches BioPortal)
 - [ ] Building the corpus succeeds online (or falls back to an existing JSONL offline)
 - [ ] Corpus records include stable fields used by retrievers (next section)
 
@@ -70,7 +70,7 @@ Done criteria:
 Purpose: store one “document” per allowed AI‑RHEUM ID for retrieval.
 
 Where it lives:
-- Corpus writer/loader + record normalization: [src/corpus.py](../src/corpus.py)
+- Corpus writer/loader + record normalization: [src/classes/corpus.py](../src/classes/corpus.py)
 
 Artifact:
 - [data/ai_rheum_corpus.jsonl](../data/ai_rheum_corpus.jsonl)
@@ -103,7 +103,7 @@ Done criteria:
 Purpose: given chart text, retrieve top-k ontology documents to inject into the RAG prompt.
 
 Where it lives:
-- Retriever implementations + caching: [src/retrievers.py](../src/retrievers.py)
+- Retriever implementations + caching: [src/classes/retrievers.py](../src/classes/retrievers.py)
 
 Behavior:
 - Preferred: sentence-transformers embeddings (optionally FAISS) with cache under [data/retriever_cache/ai_rheum/](../data/retriever_cache/)
@@ -137,7 +137,7 @@ Done criteria:
 Purpose: produce structured JSON predictions while enforcing the constrained label set.
 
 Where it lives:
-- LLM backend abstraction + caching + validation: [src/llm_interface.py](../src/llm_interface.py)
+- LLM backend abstraction + caching + validation: [src/classes/llm_interface.py](../src/classes/llm_interface.py)
 
 Enforcement:
 - Output must be within allowed AI‑RHEUM IDs ∪ NONE

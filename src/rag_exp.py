@@ -16,13 +16,13 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from onto_config import get_config
-from retrievers import create_retriever
+from classes.onto_config import get_config
+from classes.retrievers import create_retriever
 from rag_context import build_rag_context as _build_rag_context
-from corpus import ensure_corpus
+from classes.corpus import ensure_corpus
 
 
-_CONFIG = get_config("tco")
+_CONFIG = get_config("ai_rheum")
 _RETRIEVER = None
 
 
