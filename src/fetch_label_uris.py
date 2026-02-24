@@ -22,6 +22,19 @@ from typing import Any
 
 import requests
 
+# Script-mode import bootstrapping.
+if __package__ is None or __package__ == "":  # pragma: no cover
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    from src.bootstrap import ensure_repo_on_sys_path  # type: ignore
+else:  # pragma: no cover
+    from .bootstrap import ensure_repo_on_sys_path
+
+ensure_repo_on_sys_path()
+
+from config.constants import DEFAULT_ONTOLOGY
+from config.paths import AI_RHEUM_LABEL_SET_PATH
+from schemas import LabelSet
+
 try:
     from dotenv import load_dotenv  # type: ignore
 except Exception:  # pragma: no cover
@@ -29,7 +42,6 @@ except Exception:  # pragma: no cover
 
 
 BASE = "https://data.bioontology.org"
-DEFAULT_ONTOLOGY = "AI-RHEUM"
 DEFAULT_NONE_LABEL = "NONE"
 
 # Curated disease concepts for AI-RHEUM label-set generation.
@@ -137,7 +149,7 @@ def _pick_primary_ai_rheum(concept: str, hits: list[dict[str, Any]]) -> dict[str
 
 
 def pick_primary(concept: str, hits: list[dict[str, Any]], *, ontology: str) -> dict[str, Any] | None:
-    if ontology.upper() == "AI-RHEUM":
+    if ontology.upper() == DEFAULT_ONTOLOGY:
         return _pick_primary_ai_rheum(concept, hits)
     return hits[0] if hits else None
 
@@ -153,8 +165,8 @@ def _fmt(hit: dict[str, Any]) -> dict[str, Any]:
 
 
 def _default_output_path(ontology: str) -> Path:
-    if ontology.upper() == "AI-RHEUM":
-        return Path("data/ai_rheum_label_set.json")
+    if ontology.upper() == DEFAULT_ONTOLOGY:
+        return AI_RHEUM_LABEL_SET_PATH
     return Path("data/label_set.json")
 
 
@@ -176,10 +188,10 @@ def main() -> int:
     none_label = str(args.none_label).strip() or DEFAULT_NONE_LABEL
     output_path = Path(args.output) if args.output else _default_output_path(ontology)
 
-    if ontology.upper() != "AI-RHEUM":
+    if ontology.upper() != DEFAULT_ONTOLOGY:
         print(
             f"Unsupported ontology for this curated script: {ontology}. "
-            f"Supported: AI-RHEUM.",
+            f"Supported: {DEFAULT_ONTOLOGY}.",
             file=sys.stderr,
         )
         return 2
@@ -211,13 +223,18 @@ def main() -> int:
         results.append(row)
         label_ids.append(uri)
 
-    payload = {
-        "labels": label_ids,
-        "none_label": none_label,
-    }
+    label_set = LabelSet.from_dict(
+        {
+            "labels": label_ids,
+            "none_label": none_label,
+        }
+    )
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    output_path.write_text(
+        json.dumps(label_set.to_dict(), indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
 
     print(json.dumps({"ontology": ontology, "output": str(output_path), "results": results}, indent=2, ensure_ascii=False))
     print(f"\nWrote label set: {output_path} ({len(label_ids)} labels)")

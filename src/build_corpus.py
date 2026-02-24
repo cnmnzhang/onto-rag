@@ -14,7 +14,6 @@ Env:
 
 from __future__ import annotations
 
-import json
 import sys
 from pathlib import Path
 
@@ -23,16 +22,24 @@ try:
 except Exception:  # pragma: no cover
     load_dotenv = None
 
-# Ensure we can import from src/ when run from repo root.
-REPO_ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(REPO_ROOT / "src"))
+# Script-mode import bootstrapping.
+if __package__ is None or __package__ == "":  # pragma: no cover
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    from src.bootstrap import ensure_repo_on_sys_path  # type: ignore
+else:  # pragma: no cover
+    from .bootstrap import ensure_repo_on_sys_path
+
+ensure_repo_on_sys_path()
 
 from classes.corpus import ensure_corpus  # noqa: E402
+from config.constants import DEFAULT_ONTOLOGY  # noqa: E402
+from config.paths import AI_RHEUM_CORPUS_PATH, AI_RHEUM_LABEL_SET_PATH  # noqa: E402
+from schemas import LabelSet  # noqa: E402
 
 
-LABEL_SET_PATH = Path("data/ai_rheum_label_set.json")
-OUTPUT_PATH = Path("data/ai_rheum_corpus.jsonl")
-ACRONYM = "AI-RHEUM"
+LABEL_SET_PATH = AI_RHEUM_LABEL_SET_PATH
+OUTPUT_PATH = AI_RHEUM_CORPUS_PATH
+ACRONYM = DEFAULT_ONTOLOGY
 
 
 def main() -> int:
@@ -43,8 +50,8 @@ def main() -> int:
         print(f"Missing label set: {LABEL_SET_PATH}", file=sys.stderr)
         return 2
 
-    raw = json.loads(LABEL_SET_PATH.read_text(encoding="utf-8"))
-    label_ids = list(raw.get("labels") or [])
+    label_set = LabelSet.from_path(LABEL_SET_PATH)
+    label_ids = list(label_set.labels)
 
     if not label_ids:
         print(f"No labels found in {LABEL_SET_PATH}", file=sys.stderr)

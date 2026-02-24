@@ -20,7 +20,11 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(REPO_ROOT / "src"))
+sys.path.insert(0, str(REPO_ROOT))
+
+from src.bootstrap import ensure_repo_on_sys_path  # noqa: E402
+
+ensure_repo_on_sys_path()
 
 from classes.onto_config import get_config  # noqa: E402
 from classes.retrievers import create_retriever  # noqa: E402
