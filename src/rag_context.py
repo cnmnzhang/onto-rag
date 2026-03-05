@@ -51,11 +51,14 @@ def build_rag_context(
                 if len(why) > max_definition_chars:
                     clipped += "…"
                 parts.append(f"    Diagnostic relevance: {clipped}")
-            elif definition:
-                clipped = definition[:max_definition_chars]
-                if len(definition) > max_definition_chars:
-                    clipped += "…"
-                parts.append(f"    Description: {clipped}")
+            else:
+                # v3 corpus: fall back to definition_what (no top-level 'definition' field)
+                what = doc.get("definition_what", "")
+                if what:
+                    clipped = what[:max_definition_chars]
+                    if len(what) > max_definition_chars:
+                        clipped += "…"
+                    parts.append(f"    Description: {clipped}")
 
             if how:
                 clipped = how[:200]
@@ -63,8 +66,8 @@ def build_rag_context(
                     clipped += "…"
                 parts.append(f"    Assessment: {clipped}")
 
-            if doc.get("diseases_mentioned"):
-                parts.append(f"    Linked diagnoses: {', '.join(doc['diseases_mentioned'])}")
+            if doc.get("linked_dx_codes"):
+                parts.append(f"    Linked diagnoses: {', '.join(doc['linked_dx_codes'])}")
 
         elif chunk_type == "diagnosis_chunk":
             text = doc.get("text", "")

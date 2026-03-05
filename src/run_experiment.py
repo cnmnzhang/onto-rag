@@ -72,7 +72,8 @@ def _ensure_corpus(ttl_path: Path, corpus_path: Path) -> list[dict]:
     return records
 
 
-def _build_retriever(corpus: list[dict], model_key: str, top_k: int) -> Retriever:
+def _build_retriever(corpus: list[dict], model_key: str, top_k: int,
+                     filter_eval_only: bool = True) -> Retriever:
     model_name = MODELS[model_key]
     print(f"[Retriever] Initialising {model_key} ({model_name}) ...")
     return Retriever(
@@ -80,6 +81,7 @@ def _build_retriever(corpus: list[dict], model_key: str, top_k: int) -> Retrieve
         model_name=model_name,
         top_k=top_k,
         cache_dir=f"data/retriever_cache/{model_key}",
+        filter_eval_only=filter_eval_only,
     )
 
 
@@ -136,14 +138,14 @@ def run_experiment(
             gold_label = str(case.get("gold_label", "UNKNOWN"))
             category = str(case.get("category", ""))
             notes = str(case.get("notes", ""))
+            support = str(case.get("ontology_support_level", "unknown"))
 
             print(f"\n  Case {case_id} | {notes[:50]}")
 
-            # --- Retrieve context ---
+            # --- Retrieve context once per case per model ---
             retrieved_docs = retriever.retrieve(chart_text, top_k=top_k)
             rag_ctx = build_rag_context(retrieved_docs)
 
-            # Save retrieved context
             context_rows.append({
                 "case_id": case_id,
                 "model_key": model_key,
@@ -157,27 +159,26 @@ def run_experiment(
                 ),
             })
 
-            # --- Condition: No RAG ---
-            print(f"    Generating No-RAG response...", end="", flush=True)
-            resp_no_rag = llm.generate(chart_text, rag_context=None)
-            print(" done")
-
-            # --- Condition: RAG ---
-            print(f"    Generating RAG response...", end="", flush=True)
-            resp_rag = llm.generate(chart_text, rag_context=rag_ctx)
-            print(" done")
+            # --- 4 calls: explainability + teaching × no_rag + rag ---
+            responses: dict[str, str] = {}
+            for task in ["explainability", "teaching"]:
+                for rag_on, ctx in [("no_rag", None), ("rag", rag_ctx)]:
+                    col = f"{task}_{rag_on}"
+                    print(f"    [{col}]...", end="", flush=True)
+                    responses[col] = llm.generate(chart_text, rag_context=ctx, task=task)
+                    print(" done")
 
             row = {
-                "case_id": case_id,
-                "model_key": model_key,
-                "model_name": model_name,
-                "gold_label": gold_label,
-                "category": category,
-                "notes": notes,
-                "chart_text": chart_text,
-                "response_no_rag": resp_no_rag,
-                "response_rag": resp_rag,
-                "rag_context_chars": len(rag_ctx),
+                "case_id":                  case_id,
+                "model_key":                model_key,
+                "model_name":               model_name,
+                "gold_label":               gold_label,
+                "category":                 category,
+                "notes":                    notes,
+                "ontology_support_level":   support,
+                "chart_text":               chart_text,
+                "rag_context_chars":        len(rag_ctx),
+                **responses,  # explainability_no_rag, explainability_rag, teaching_no_rag, teaching_rag
             }
             response_rows.append(row)
             all_response_rows.append(row)
@@ -228,9 +229,9 @@ def run_experiment(
 
 def main() -> None:
     p = argparse.ArgumentParser(description="Run RAG vs No-RAG rheumatology experiment")
-    p.add_argument("--cases", default="data/test_cases.csv", help="Test cases CSV")
+    p.add_argument("--cases", default="data/test_cases_v2.csv", help="Test cases CSV")
     p.add_argument("--ttl", default="data/AI-RHEUM.ttl", help="AI-RHEUM TTL ontology file")
-    p.add_argument("--corpus", default="data/ai_rheum_corpus_rich.jsonl", help="Corpus JSONL (built from TTL)")
+    p.add_argument("--corpus", default="data/ai_rheum_corpus_v3.jsonl", help="Corpus JSONL")
     p.add_argument("--results-dir", default="results", help="Output directory")
     p.add_argument("--models", default="minilm,bge", help="Comma-separated model keys: minilm,bge")
     p.add_argument("--top-k", type=int, default=5, help="Number of chunks to retrieve")

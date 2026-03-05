@@ -1,0 +1,187 @@
+{
+  "seed": 42,
+  "model_key": "minilm",
+  "task": "explainability",
+  "assignments": {
+    "gen-001": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-002": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-003": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-004": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-005": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-006": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-007": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-008": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-009": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-010": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-011": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-012": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-013": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-014": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-015": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-016": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-017": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-018": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-019": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-020": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-021": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-022": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-023": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-024": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-025": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-026": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-027": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-028": {
+      "A": "no_rag",
+      "B": "rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-029": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    },
+    "gen-030": {
+      "A": "rag",
+      "B": "no_rag",
+      "model_key": "minilm",
+      "task": "explainability"
+    }
+  }
+}

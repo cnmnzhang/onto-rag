@@ -29,6 +29,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import html as _html
 import json
 import random
 import sys
@@ -43,7 +44,8 @@ RATING_CRITERIA = [
     ("accuracy", "Diagnostic Accuracy", "Is the primary diagnosis correct or clinically reasonable?"),
     ("completeness", "Differential Completeness", "Does the differential cover the key alternatives appropriately?"),
     ("reasoning", "Reasoning Quality", "Is the clinical reasoning explicit, evidence-based, and sound?"),
-    ("explainability", "Explainability", "Can you trace WHY each diagnosis is included — are specific findings, criteria, or thresholds cited rather than just asserted?"),
+    ("reasoning_transparency", "Reasoning Transparency", "Can you follow the logical chain from finding to diagnosis? Are specific lab values, exam findings, and timecourses cited by name — or are conclusions just asserted?"),
+    ("calibration", "Calibration", "Does the expressed confidence match the actual strength of the evidence? Does the response acknowledge uncertainty where the case is genuinely ambiguous?"),
     ("utility", "Clinical Utility", "Would this response meaningfully guide clinical management?"),
 ]
 
@@ -55,11 +57,17 @@ h3 { color: #2c5f8a; }
 .case-block { background: white; border: 1px solid #ccd; border-radius: 8px; margin: 30px 0; padding: 24px; box-shadow: 0 2px 6px rgba(0,0,0,0.07); }
 .case-header { background: #1a3a5c; color: white; padding: 12px 18px; border-radius: 6px 6px 0 0; margin: -24px -24px 20px -24px; }
 .case-header h2 { color: white; margin: 0; font-size: 1.1em; }
-.vignette { background: #f0f4f8; border-left: 4px solid #2c5f8a; padding: 14px 18px; margin: 16px 0; border-radius: 0 6px 6px 0; font-size: 0.97em; line-height: 1.6; white-space: pre-wrap; }
+.vignette { background: #f0f4f8; border-left: 4px solid #2c5f8a; padding: 14px 18px; margin: 16px 0; border-radius: 0 6px 6px 0; font-size: 0.97em; line-height: 1.6; }
+.vignette p, .response-text p { margin: 0.4em 0; }
+.vignette strong, .response-text strong { font-weight: 700; }
+.vignette h1, .vignette h2, .vignette h3,
+.response-text h1, .response-text h2, .response-text h3 { margin: 0.6em 0 0.3em; font-size: 1em; color: #1a3a5c; }
+.response-text ul, .response-text ol, .vignette ul, .vignette ol { padding-left: 1.4em; margin: 0.4em 0; }
+.response-text hr, .vignette hr { border: none; border-top: 1px solid #ddd; margin: 10px 0; }
 .response-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
 .response-box { border: 1px solid #bbb; border-radius: 6px; padding: 16px; background: #fff; }
 .response-box h4 { margin-top: 0; color: #1a3a5c; font-size: 1.05em; border-bottom: 1px solid #ddd; padding-bottom: 8px; }
-.response-text { font-size: 0.88em; line-height: 1.65; white-space: pre-wrap; color: #333; max-height: 380px; overflow-y: auto; border: 1px solid #e8e8e8; padding: 10px; border-radius: 4px; background: #fdfdfd; }
+.response-text { font-size: 0.88em; line-height: 1.65; color: #333; border: 1px solid #e8e8e8; padding: 10px; border-radius: 4px; background: #fdfdfd; }
 .rating-section { margin-top: 14px; }
 .rating-row { margin: 10px 0; }
 .rating-row label { display: block; font-size: 0.88em; font-weight: bold; color: #333; margin-bottom: 4px; }
@@ -94,7 +102,7 @@ function collectRatings() {
         const caseData = { case_id: caseId, responses: {} };
         ['A', 'B'].forEach(resp => {
             caseData.responses[resp] = { ratings: {}, comment: '' };
-            ['accuracy','completeness','reasoning','utility'].forEach(dim => {
+            ['accuracy','completeness','reasoning','reasoning_transparency','calibration','utility'].forEach(dim => {
                 const name = `${caseId}_${resp}_${dim}`;
                 const checked = block.querySelector(`input[name="${name}"]:checked`);
                 caseData.responses[resp].ratings[dim] = checked ? parseInt(checked.value) : null;
@@ -135,6 +143,14 @@ function downloadResults() {
 
 // Star rating interaction fix
 document.addEventListener('DOMContentLoaded', function() {
+    // Render markdown in all response and vignette divs
+    if (typeof marked !== 'undefined') {
+        marked.setOptions({ breaks: true });
+        document.querySelectorAll('[data-markdown]').forEach(el => {
+            el.innerHTML = marked.parse(el.getAttribute('data-markdown'));
+        });
+    }
+
     document.querySelectorAll('.star-row').forEach(row => {
         const labels = row.querySelectorAll('label.star');
         labels.forEach((label, i) => {
@@ -183,7 +199,7 @@ def _response_block_html(case_id: str, letter: str, response_text: str) -> str:
     return f"""
     <div class="response-box">
       <h4>Response {letter}</h4>
-      <div class="response-text">{response_text}</div>
+      <div class="response-text" data-markdown="{_html.escape(response_text)}"></div>
       <div class="rating-section">
         <strong style="font-size:0.9em; color:#555;">Rate Response {letter}:</strong>
         {ratings_html}
@@ -215,11 +231,12 @@ def generate_review_sheet(
     output_dir: Path,
     model_key: str = "minilm",
     seed: int = 42,
+    task: str = "explainability",
 ) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     random.seed(seed)
 
-    df = pd.read_csv(responses_path)
+    df = pd.read_csv(responses_path, quoting=0, on_bad_lines="warn")
 
     # If combined file, filter to one model
     if "model_key" in df.columns:
@@ -229,6 +246,19 @@ def generate_review_sheet(
             print(f"[Review] model_key not found, using: {model_key}")
         df = df[df["model_key"] == model_key].copy()
 
+    # Select task-specific response columns
+    no_rag_col = f"{task}_no_rag"
+    rag_col = f"{task}_rag"
+    # Fall back to legacy column names if task-specific ones don't exist
+    if no_rag_col not in df.columns:
+        if "response_no_rag" in df.columns:
+            no_rag_col, rag_col = "response_no_rag", "response_rag"
+            print(f"[Review] Falling back to legacy columns: {no_rag_col} / {rag_col}")
+        else:
+            raise ValueError(f"Cannot find columns '{no_rag_col}' or 'response_no_rag' in {responses_path}")
+
+    task_label = "Explainability" if task == "explainability" else "Teaching"
+    print(f"[Review] Task: {task_label} | Columns: {no_rag_col} / {rag_col}")
     print(f"[Review] Generating review sheet for {len(df)} cases (model: {model_key})")
 
     # Build blinded assignment: randomly assign no_rag -> A or B per case
@@ -237,15 +267,14 @@ def generate_review_sheet(
 
     for _, row in df.iterrows():
         case_id = str(row["case_id"])
-        # Randomly decide if no_rag = A or B
         if random.random() < 0.5:
-            resp_a_text = str(row["response_no_rag"])
-            resp_b_text = str(row["response_rag"])
+            resp_a_text = str(row[no_rag_col])
+            resp_b_text = str(row[rag_col])
             resp_a_condition = "no_rag"
             resp_b_condition = "rag"
         else:
-            resp_a_text = str(row["response_rag"])
-            resp_b_text = str(row["response_no_rag"])
+            resp_a_text = str(row[rag_col])
+            resp_b_text = str(row[no_rag_col])
             resp_a_condition = "rag"
             resp_b_condition = "no_rag"
 
@@ -253,6 +282,7 @@ def generate_review_sheet(
             "A": resp_a_condition,
             "B": resp_b_condition,
             "model_key": model_key,
+            "task": task,
         }
 
         blinded_rows.append({
@@ -265,13 +295,12 @@ def generate_review_sheet(
         })
 
     # Save key (keep hidden from reviewer)
-    key_path = output_dir / "review_key.json"
-    key_path.write_text(json.dumps({"seed": seed, "model_key": model_key, "assignments": key_map}, indent=2))
+    key_path = output_dir / f"review_key_{task}.json"
+    key_path.write_text(json.dumps({"seed": seed, "model_key": model_key, "task": task, "assignments": key_map}, indent=2))
     print(f"[Review] Saved key (DO NOT SHARE WITH REVIEWER): {key_path}")
 
-    # Save blinded CSV
     blinded_df = pd.DataFrame(blinded_rows)
-    blinded_csv_path = output_dir / "review_sheet.csv"
+    blinded_csv_path = output_dir / f"review_sheet_{task}.csv"
     blinded_df[["case_id", "chart_text", "response_A", "response_B"]].to_csv(blinded_csv_path, index=False)
     print(f"[Review] Saved blinded CSV: {blinded_csv_path}")
 
@@ -289,7 +318,7 @@ def generate_review_sheet(
       </div>
       <p class="progress-note">Case {i}/{len(blinded_rows)}</p>
       <h3>Patient Vignette</h3>
-      <div class="vignette">{chart_text}</div>
+      <div class="vignette" data-markdown="{_html.escape(chart_text)}"></div>
       <h3>Evaluate the Two Responses</h3>
       <p style="font-size:0.88em; color:#555;">Read both responses, then rate each independently using the 1–5 star scales below.</p>
       <div class="response-grid">
@@ -314,7 +343,7 @@ def generate_review_sheet(
   <h3>Instructions for the Reviewer</h3>
   <p><strong>What you are evaluating:</strong> For each patient case, you will see two AI-generated diagnostic responses (Response A and Response B). 
   The responses were generated under different conditions, but you do not know which is which. Please evaluate them independently and blindly.</p>
-  <p><strong>How to rate:</strong> Use the 1–5 star scales for each dimension. Rate each response on its own merits before comparing.</p>
+  <p><strong>How to rate:</strong> Use the 1–5 star scales for each dimension. Rate each response on its own merits before comparing. <em>Reasoning Transparency</em> asks whether you can trace the logic step by step. <em>Calibration</em> asks whether the stated confidence matches how strong the evidence actually is.</p>
   <ul>
     <li><strong>1 star</strong> = Poor / unacceptable</li>
     <li><strong>2 stars</strong> = Below average</li>
@@ -328,25 +357,19 @@ def generate_review_sheet(
 
 {case_blocks_html}
 
-<div class="overall-section">
-  <h3>Overall Comments</h3>
-  <p style="font-size:0.9em; color:#555;">Any general observations about the AI responses, patterns you noticed, or feedback for the research team:</p>
-  <textarea id="overall_comments" class="comment-box" style="min-height:100px; width:100%;" 
-            placeholder="General comments..."></textarea>
-</div>
-
 <div class="submit-section">
   <h2>Submit Your Ratings</h2>
   <p>When you have rated all cases, click below to download your ratings file.</p>
   <button class="submit-btn" onclick="downloadResults()">⬇ Download Ratings (clinician_ratings.json)</button>
-  <p style="font-size:0.85em; margin-top:12px; opacity:0.8;">Send this file to the study team. Your ratings are stored locally — nothing is sent automatically.</p>
+
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
 <script>{JS}</script>
 </body>
 </html>"""
 
-    html_path = output_dir / "review_sheet.html"
+    html_path = output_dir / f"review_sheet_{task}.html"
     html_path.write_text(html, encoding="utf-8")
     print(f"[Review] Saved HTML review sheet: {html_path}")
     print(f"\nNext step:")
@@ -362,6 +385,8 @@ def main() -> None:
     p.add_argument("--output-dir", default="results", help="Output directory")
     p.add_argument("--model", default="minilm", help="Which model's responses to use (minilm or bge)")
     p.add_argument("--seed", type=int, default=42, help="Random seed for A/B assignment")
+    p.add_argument("--task", default="explainability", choices=["explainability", "teaching"],
+                   help="Which task to generate review sheet for")
     args = p.parse_args()
 
     generate_review_sheet(
@@ -369,6 +394,7 @@ def main() -> None:
         output_dir=Path(args.output_dir),
         model_key=args.model,
         seed=args.seed,
+        task=args.task,
     )
 
 

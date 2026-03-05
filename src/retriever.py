@@ -50,14 +50,23 @@ class Retriever:
         top_k: int = 5,
         cache_dir: str | None = "data/retriever_cache",
         field: str = "text",
+        filter_eval_only: bool = False,
     ) -> None:
-        # self.corpus = corpus
-
         # Filter to only finding and diagnosis chunks — domain chunks are too generic
-        self.corpus = [
-            r for r in corpus
-            if r.get("chunk_type") != "domain_chunk"
-        ]
+        filtered = [r for r in corpus if r.get("chunk_type") != "domain_chunk"]
+
+        # Optionally restrict to findings linked to eval-target diagnoses.
+        # Suppresses the ~375 unlinked findings (scleroderma, septic arthritis, etc.)
+        # that would otherwise pollute retrieval with irrelevant chunks.
+        # Diagnosis chunks are always kept regardless of this flag.
+        if filter_eval_only:
+            filtered = [
+                r for r in filtered
+                if r.get("chunk_type") == "diagnosis_chunk" or r.get("relevant_to_eval", False)
+            ]
+            print(f"  [Retriever] filter_eval_only=True: {len(filtered)} chunks retained")
+
+        self.corpus = filtered
 
         self.model_name = SUPPORTED_MODELS.get(model_name, model_name)
         self.top_k = top_k
@@ -142,6 +151,8 @@ def create_retriever(
     model_name: str = "all-MiniLM-L6-v2",
     top_k: int = 5,
     cache_dir: str = "data/retriever_cache",
+    filter_eval_only: bool = False,
 ) -> Retriever:
     """Factory function matching existing codebase interface."""
-    return Retriever(corpus, model_name=model_name, top_k=top_k, cache_dir=cache_dir)
+    return Retriever(corpus, model_name=model_name, top_k=top_k, cache_dir=cache_dir,
+                     filter_eval_only=filter_eval_only)

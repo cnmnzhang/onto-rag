@@ -25,40 +25,70 @@ SYSTEM_PROMPT = """You are an expert rheumatologist providing differential diagn
 You have deep knowledge of rheumatic diseases, their clinical presentations, laboratory findings, 
 imaging features, and pathognomonic signs. Provide clinically rigorous, evidence-based reasoning."""
 
-DDX_PROMPT_TEMPLATE = """{rag_section}
-Patient Case:
+# ── Explainability task ────────────────────────────────────────────────────
+# Goal: grounded, traceable reasoning. Each finding cited with its diagnostic why.
+DDX_PROMPT_TEMPLATE = """{rag_section}Patient Case:
 {chart_text}
 
 Provide a structured differential diagnosis in exactly this format:
 
 PRIMARY DIAGNOSIS: [diagnosis name]
-Supporting evidence: [2-3 sentences citing specific findings from the case]
-Ontology grounding: [ONLY if RAG context provided above: name the specific ontology concept(s) that support this diagnosis, e.g. "Per ontology: Sm antibody fulfills a diagnostic criterion for SLE"]
 Confidence: [High / Medium / Low]
+Supporting findings: [2-3 specific findings from the case that most strongly support this]
+Findings against: [1-2 findings that argue against this diagnosis, or "None identified"]
 
 DIFFERENTIAL DIAGNOSIS:
-1. [Diagnosis] ([probability]%) — [what supports it] | [what argues against it]
-2. [Diagnosis] ([probability]%) — [what supports it] | [what argues against it]
-3. [Diagnosis] ([probability]%) — [what supports it] | [what argues against it]
+1. [Diagnosis] ([probability]%) — for: [specific finding] | against: [specific finding]
+2. [Diagnosis] ([probability]%) — for: [specific finding] | against: [specific finding]
+3. [Diagnosis] ([probability]%) — for: [specific finding] | against: [specific finding]
 
-KEY DISTINGUISHING FEATURES: [what test or finding would most help confirm or exclude the primary diagnosis]
+REASONING:
+[3-5 sentences. Walk through the clinical logic: which findings narrow the differential,
+which are most discriminating, and why the primary diagnosis ranks above the alternatives.
+Be specific — cite lab values, timecourses, and examination findings by name.]
 
-REASONING CHAIN:
-- Finding → [specific finding from case]
-- Ontology class → [relevant ontology category, e.g. "Inflammatory Polyarthritis"]
-- Supports → [diagnosis name] because [one sentence]"""
+NEXT STEP: [The single investigation or result that would most change or confirm this
+diagnosis, and what you expect it to show.]"""
 
-RAG_SECTION_TEMPLATE = """The following structured ontology knowledge may be relevant to this case:
+# ── Teaching task ──────────────────────────────────────────────────────────
+# Goal: pedagogical completeness. Covers WHAT each finding is, WHY it matters, HOW to assess.
+TEACHING_PROMPT_TEMPLATE = """{rag_section}Patient Case:
+{chart_text}
+
+You are a rheumatology attending teaching a medical student about this case.
+
+Identify the most likely diagnosis and teach the student about this presentation.
+For each key clinical finding in the vignette:
+  1. WHAT it is — define it clearly for a student
+  2. WHY it matters — what diseases does it point toward or away from, and why
+  3. HOW to assess it — how a clinician evaluates this in practice
+
+Then briefly note one or two findings that could suggest an alternative diagnosis,
+and explain why you favour your primary diagnosis over that alternative.
+
+Structure your response as:
+
+PRIMARY DIAGNOSIS: [diagnosis name]
+
+TEACHING POINTS:
+Finding: [finding name]
+  What: [definition/description]
+  Why it matters: [diagnostic significance]
+  How to assess: [clinical assessment method]
+[Repeat for each key finding]
+
+DIFFERENTIAL TEACHING:
+[1-2 paragraphs on the main alternative diagnosis and the distinguishing features]"""
+
+RAG_SECTION_TEMPLATE = """Relevant clinical knowledge for this case:
 
 {context}
-
-Use the above ontology information where relevant to inform your reasoning.
 
 """
 
 
-def _hash_key(chart_text: str, rag_context: str | None, model: str) -> str:
-    payload = f"{model}||{rag_context or ''}||{chart_text}"
+def _hash_key(chart_text: str, rag_context: str | None, model: str, task: str = "explainability") -> str:
+    payload = f"{model}||{task}||{rag_context or ''}||{chart_text}"
     return hashlib.md5(payload.encode()).hexdigest()
 
 
@@ -133,19 +163,19 @@ def _call_gemini(prompt: str, model: str) -> str:
 
 
 def _call_dry_run(prompt: str, _model: str) -> str:
-    # Deterministic placeholder for testing pipeline without API keys
     return (
         "PRIMARY DIAGNOSIS: [DRY RUN - No API key detected]\n"
-        "Supporting evidence: This is a placeholder response. Set ANTHROPIC_API_KEY, "
-        "OPENAI_API_KEY, or GEMINI_API_KEY to get real responses.\n"
-        "Confidence: N/A\n\n"
+        "Confidence: N/A\n"
+        "Supporting findings: Set ANTHROPIC_API_KEY, OPENAI_API_KEY, or GEMINI_API_KEY "
+        "to get real responses.\n"
+        "Findings against: N/A\n\n"
         "DIFFERENTIAL DIAGNOSIS:\n"
-        "1. Placeholder diagnosis A (33%) — No real analysis performed.\n"
-        "2. Placeholder diagnosis B (33%) — No real analysis performed.\n"
-        "3. Placeholder diagnosis C (34%) — No real analysis performed.\n\n"
-        "KEY DISTINGUISHING FEATURES: Set an API key to enable real LLM responses."
+        "1. Placeholder diagnosis A (33%) — for: N/A | against: N/A\n"
+        "2. Placeholder diagnosis B (33%) — for: N/A | against: N/A\n"
+        "3. Placeholder diagnosis C (34%) — for: N/A | against: N/A\n\n"
+        "REASONING: No real analysis performed. Set an API key to enable real LLM responses.\n\n"
+        "NEXT STEP: Set an API key to enable real LLM responses."
     )
-
 
 class LLMClient:
     """
@@ -180,22 +210,32 @@ class LLMClient:
         self.max_retries = max_retries
         print(f"  [LLM] Backend: {self.backend} | Model: {self.model}")
 
-    def generate(self, chart_text: str, rag_context: str | None = None) -> str:
-        """Generate a DDx response, using cache if available."""
-        cache_key = _hash_key(chart_text, rag_context, self.model)
+    def generate(self, chart_text: str, rag_context: str | None = None, task: str = "explainability") -> str:
+        """Generate a response, using cache if available.
+
+        task: "explainability" (structured DDx) or "teaching" (pedagogical walkthrough)
+        """
+        cache_key = _hash_key(chart_text, rag_context, self.model, task)
         cached = self.cache.get(cache_key)
         if cached:
             return cached
 
-        # Build prompt
+        # Build RAG section (shared across both prompts)
         rag_section = ""
         if rag_context and rag_context.strip():
             rag_section = RAG_SECTION_TEMPLATE.format(context=rag_context.strip())
 
-        prompt = DDX_PROMPT_TEMPLATE.format(
-            rag_section=rag_section,
-            chart_text=chart_text.strip(),
-        )
+        # Select prompt template by task
+        if task == "teaching":
+            prompt = TEACHING_PROMPT_TEMPLATE.format(
+                rag_section=rag_section,
+                chart_text=chart_text.strip(),
+            )
+        else:
+            prompt = DDX_PROMPT_TEMPLATE.format(
+                rag_section=rag_section,
+                chart_text=chart_text.strip(),
+            )
 
         # Call with retry
         response = ""

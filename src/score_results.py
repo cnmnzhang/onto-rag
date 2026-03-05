@@ -27,12 +27,13 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-DIMENSIONS = ["accuracy", "completeness", "reasoning", "explainability", "utility"]
+DIMENSIONS = ["accuracy", "completeness", "reasoning", "reasoning_transparency", "calibration", "utility"]
 DIM_LABELS = {
     "accuracy": "Diagnostic Accuracy",
     "completeness": "Differential Completeness", 
     "reasoning": "Reasoning Quality",
-    "explainability": "Explainability / Traceability",
+    "reasoning_transparency": "Reasoning Transparency",
+    "calibration": "Calibration",
     "utility": "Clinical Utility",
 }
 
@@ -233,13 +234,21 @@ def render_summary(scored_df: pd.DataFrame, analysis: dict, key: dict) -> str:
 
     return "\n".join(lines)
 
-def auto_explainability_score(responses_path: Path) -> pd.DataFrame:
+def auto_explainability_score(responses_path: Path, task: str = "explainability") -> pd.DataFrame:
     """
     Count how many ontology concepts are explicitly cited per response.
-    Proxy for automated explainability measurement.
+    Proxy for automated explainability measurement. Only meaningful for the explainability task.
     """
     import re
     df = pd.read_csv(responses_path)
+
+    no_rag_col = f"{task}_no_rag"
+    rag_col = f"{task}_rag"
+
+    # Fall back to legacy column names if task-specific ones don't exist
+    if rag_col not in df.columns and "response_rag" in df.columns:
+        rag_col, no_rag_col = "response_rag", "response_no_rag"
+        print(f"  [AutoScore] Using legacy column names (response_rag / response_no_rag)")
     
     ontology_markers = [
         r"per ontology",
@@ -257,8 +266,8 @@ def auto_explainability_score(responses_path: Path) -> pd.DataFrame:
     
     rows = []
     for _, row in df.iterrows():
-        rag_hits = len(pattern.findall(str(row["response_rag"])))
-        no_rag_hits = len(pattern.findall(str(row["response_no_rag"])))
+        rag_hits = len(pattern.findall(str(row[rag_col])))
+        no_rag_hits = len(pattern.findall(str(row[no_rag_col])))
         rows.append({
             "case_id": row["case_id"],
             "model_key": row.get("model_key", ""),
@@ -374,6 +383,8 @@ def main() -> None:
     p.add_argument("--ratings", default="results/clinician_ratings.json")
     p.add_argument("--key", default="results/review_key.json")
     p.add_argument("--output-dir", default="results")
+    p.add_argument("--task", default="explainability", choices=["explainability", "teaching"],
+                   help="Which task's ratings to score (affects output filenames and auto-score)")
     args = p.parse_args()
 
     ratings_path = Path(args.ratings)
@@ -395,19 +406,19 @@ def main() -> None:
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    scored_csv = output_dir / "scored_results.csv"
+    scored_csv = output_dir / f"scored_results_{args.task}.csv"
     scored_df.to_csv(scored_csv, index=False)
     print(f"[Score] Saved: {scored_csv}")
 
     analysis = analyse(scored_df)
 
     summary_md = render_summary(scored_df, analysis, key)
-    summary_path = output_dir / "analysis_summary.md"
+    summary_path = output_dir / f"analysis_summary_{args.task}.md"
     summary_path.write_text(summary_md, encoding="utf-8")
     print(f"[Score] Saved: {summary_path}")
 
     charts_html = render_html_charts(scored_df, analysis)
-    charts_path = output_dir / "analysis_figures.html"
+    charts_path = output_dir / f"analysis_figures_{args.task}.html"
     charts_path.write_text(charts_html, encoding="utf-8")
     print(f"[Score] Saved: {charts_path}")
 
@@ -426,8 +437,8 @@ def main() -> None:
     print(f"\n  Overall preference: RAG={pref.get('n_prefer_rag',0)}, "
           f"Equal={pref.get('n_equal',0)}, No-RAG={pref.get('n_prefer_no_rag',0)}")
     
-    auto_df = auto_explainability_score(Path("results/all_responses.csv"))
-    auto_df.to_csv(output_dir / "explainability_auto.csv", index=False)
+    auto_df = auto_explainability_score(Path("results/all_responses.csv"), task=args.task)
+    auto_df.to_csv(output_dir / f"explainability_auto_{args.task}.csv", index=False)
 
 
 if __name__ == "__main__":

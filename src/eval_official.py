@@ -12,7 +12,7 @@ Writes:
 Rules:
 - Primary metric: exact percent agreement (predicted_label == gold_label)
 - Predictions must be in allowed label set or NONE; otherwise coerce to NONE
-- Keep LLM calls cached via data/llm_cache.json (LLMInterface)
+- Keep LLM calls cached via data/llm_cache.json (LLMClient)
 
 This is intentionally minimal and deterministic.
 """
@@ -32,11 +32,10 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
-from classes.llm_interface import LLMInterface
-from classes.onto_config import get_config
+from corpus_builder import load_corpus, build_rich_corpus, save_corpus
+from retriever import Retriever
+from llm_client import LLMClient
 from rag_context import build_rag_context
-from classes.retrievers import create_retriever
-from classes.corpus import ensure_corpus
 
 
 DEFAULT_SEED = 42
@@ -49,7 +48,6 @@ class RunConfig:
     top_k: int = DEFAULT_TOP_K
     max_context_chars: int = 1800
     prefer_embeddings: bool = True
-    ontology_key: str = "ai_rheum"
     label_set_path: Path = Path("data/ai_rheum_label_set.json")
     dataset_path: Path = Path("data/seed_cases_ai_rheum.csv")
     llm_cache_path: Path = Path("data/llm_cache.json")
@@ -78,10 +76,32 @@ def _load_label_set(path: Path) -> tuple[list[str], str]:
     return labels, none_label
 
 
-def _exact_agreement(gold: list[str], pred: list[str]) -> float:
+def _extract_label(response: str, allowed: set[str], none_label: str) -> str:
+    """Pull the first allowed label URI found in the response text."""
+    for token in response.split():
+        token = token.strip(".,\"'")
+        if token in allowed:
+            return token
+    return none_label
+
+
+def _is_correct(gold: str, pred: str, none_label: str) -> bool:
+    """Handle both single and pipe-separated ambiguous gold labels.
+
+    Ambiguous cases (e.g. 'AIR/DXRA|AIR/DXPSO') are correct if pred matches
+    any of the pipe-split elements, or if both gold and pred are none_label.
+    """
+    if gold == pred:
+        return True
+    if "|" in gold:
+        return pred in set(gold.split("|"))
+    return False
+
+
+def _exact_agreement(gold: list[str], pred: list[str], none_label: str = "NONE") -> float:
     if not gold:
         return 0.0
-    correct = sum(1 for g, p in zip(gold, pred) if g == p)
+    correct = sum(1 for g, p in zip(gold, pred) if _is_correct(g, p, none_label))
     return 100.0 * correct / len(gold)
 
 
@@ -101,21 +121,6 @@ def _ensure_case_ids(df: pd.DataFrame) -> pd.DataFrame:
     else:
         out["case_id"] = [f"case-{i:04d}" for i in range(len(out))]
     return out
-
-
-def _predict_case(
-    llm: LLMInterface,
-    *,
-    text: str,
-    rag_context: str | None,
-    allowed: set[str],
-    none_label: str,
-) -> tuple[str, str, str, int]:
-    out = llm.predict(text, rag_context=rag_context)
-    pred, did_coerce = _coerce(str(out.get("predicted_label", none_label)), allowed, none_label)
-    ddx = json.dumps(out.get("ddx_top3") or [], ensure_ascii=False)
-    evidence = json.dumps(out.get("evidence") or [], ensure_ascii=False)
-    return pred, ddx, evidence, int(did_coerce)
 
 
 def _paired_ttest_correctness(gold: list[str], pred_no_rag: list[str], pred_rag: list[str]) -> dict[str, Any]:
@@ -215,14 +220,8 @@ def _sanitize_model_name_for_path(model_name: str) -> str:
     return safe.strip("-") or "default"
 
 
-def _model_name_for_backend(llm: LLMInterface) -> str:
-    if llm.backend == "gemini":
-        return os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
-    if llm.backend == "huggingface":
-        return os.getenv("HF_MODEL", "Qwen/Qwen2.5-1.5B-Instruct")
-    if llm.backend == "openai":
-        return "gpt-3.5-turbo"
-    return "dry_run"
+def _model_name_for_backend(llm: LLMClient) -> str:
+    return llm.model
 
 
 def run_official_eval(cfg: RunConfig) -> dict[str, Any]:
@@ -230,29 +229,38 @@ def run_official_eval(cfg: RunConfig) -> dict[str, Any]:
     np.random.seed(cfg.seed)
 
     labels, none_label = _load_label_set(cfg.label_set_path)
-    allowed = set(labels) | {none_label}
+    # Expand allowed to include individual URIs from any pipe-separated ambiguous labels.
+    # This ensures ambiguous cases (gold = "A|B") pass the valid-gold filter.
+    base_allowed = set(labels) | {none_label}
+    allowed = set()
+    for lbl in base_allowed:
+        for part in lbl.split("|"):
+            allowed.add(part.strip())
 
-    config = get_config(cfg.ontology_key)
     embedding_model = os.getenv("EMBEDDING_MODEL", cfg.embedding_model).strip() or "all-MiniLM-L6-v2"
 
     # Corpus restricted to the configured allowed labels.
-    corpus = ensure_corpus(
-        config=config,
-        label_ids=labels,
-        output_path=cfg.corpus_path,
-        prefer_bioportal=True,
-    )
+    if cfg.corpus_path.exists():
+        corpus = load_corpus(cfg.corpus_path)
+    else:
+        if not Path("data/AI-RHEUM.ttl").exists():
+            raise FileNotFoundError(
+                "Corpus not found and no TTL to build from. "
+                "Run: python scripts/build_corpus.py"
+            )
+        corpus = build_rich_corpus("data/AI-RHEUM.ttl")
+        save_corpus(corpus, cfg.corpus_path)
+
 
     model_cache_dir = cfg.retriever_cache_dir / _sanitize_model_name_for_path(embedding_model)
-    retriever = create_retriever(
+    retriever = Retriever(
         corpus,
-        top_k=cfg.top_k,
-        prefer_embeddings=cfg.prefer_embeddings,
-        cache_dir=str(model_cache_dir),
         model_name=embedding_model,
+        top_k=cfg.top_k,
+        cache_dir=str(model_cache_dir),
     )
 
-    llm = LLMInterface(labels, cache_file=str(cfg.llm_cache_path), config=config)
+    llm = LLMClient(cache_path=cfg.llm_cache_path)
 
     df = pd.read_csv(cfg.dataset_path)
     required = {"chart_text", "gold_label"}
@@ -263,7 +271,13 @@ def run_official_eval(cfg: RunConfig) -> dict[str, Any]:
     df = _ensure_case_ids(df)
 
     # Filter to compatible gold labels.
-    is_valid_gold = df["gold_label"].astype(str).isin(allowed)
+    # A row is valid if its gold label is in allowed, OR if it's pipe-separated
+    # and all parts are in allowed (ambiguous cases like DXRA|DXPSO).
+    def _gold_is_valid(g: str) -> bool:
+        parts = [p.strip() for p in str(g).split("|")]
+        return all(p in allowed for p in parts)
+
+    is_valid_gold = df["gold_label"].astype(str).apply(_gold_is_valid)
     excluded_df = df.loc[~is_valid_gold, ["case_id", "gold_label"]]
     df = df.loc[is_valid_gold].copy()
     if df.empty:
@@ -283,36 +297,30 @@ def run_official_eval(cfg: RunConfig) -> dict[str, Any]:
 
     for _, row in df.iterrows():
         text = str(row["chart_text"])
-
         print()
-        p0, ddx0, evidence0, did0 = _predict_case(
-            llm,
-            text=text,
-            rag_context=None,
-            allowed=allowed,
-            none_label=none_label,
-        )
+
+        # No-RAG
+        resp0 = llm.generate(text, rag_context=None)
+        p0, did0 = _coerce(_extract_label(resp0, allowed, none_label), allowed, none_label)
         coerced_no_rag += did0
         preds_no_rag.append(p0)
-        ddx_no_rag.append(ddx0)
-        evidence_no_rag.append(evidence0)
+        ddx_no_rag.append(resp0)
+        evidence_no_rag.append("")
 
-        ctx = build_rag_context(text, retriever, config, top_k=cfg.top_k, max_chars=cfg.max_context_chars)
-        p1, ddx1, evidence1, did1 = _predict_case(
-            llm,
-            text=text,
-            rag_context=ctx,
-            allowed=allowed,
-            none_label=none_label,
-        )
+        # RAG
+        retrieved = retriever.retrieve(text, top_k=cfg.top_k)
+        ctx = build_rag_context(retrieved, max_chars=cfg.max_context_chars)
+        resp1 = llm.generate(text, rag_context=ctx)
+        p1, did1 = _coerce(_extract_label(resp1, allowed, none_label), allowed, none_label)
         coerced_rag += did1
         preds_rag.append(p1)
-        ddx_rag.append(ddx1)
-        evidence_rag.append(evidence1)
+        ddx_rag.append(resp1)
+        evidence_rag.append("")
+
 
     gold = [str(x) for x in df["gold_label"].tolist()]
-    agreement_no_rag = _exact_agreement(gold, preds_no_rag)
-    agreement_rag = _exact_agreement(gold, preds_rag)
+    agreement_no_rag = _exact_agreement(gold, preds_no_rag, none_label)
+    agreement_rag = _exact_agreement(gold, preds_rag, none_label)
     ttest = _paired_ttest_correctness(gold, preds_no_rag, preds_rag)
 
     cfg.results_dir.mkdir(parents=True, exist_ok=True)
@@ -341,7 +349,6 @@ def run_official_eval(cfg: RunConfig) -> dict[str, Any]:
             "k": cfg.top_k,
             "seed": cfg.seed,
             "n_cases": int(len(df)),
-            "ontology_key": cfg.ontology_key,
             "dataset_path": str(cfg.dataset_path),
             "label_set_path": str(cfg.label_set_path),
             "corpus_path": str(cfg.corpus_path),
@@ -389,7 +396,6 @@ def _render_summary(pred_df: pd.DataFrame, results: dict[str, Any]) -> str:
     embedding_model = str(results["run"].get("embedding_model") or "")
     retrieval_mode = str(results["run"].get("retrieval_mode") or "")
     k = int(results["run"]["k"])
-    ontology_key = str(results["run"].get("ontology_key") or "")
     dataset_path = str(results["run"].get("dataset_path") or "")
 
     pred_df = pred_df.copy()
@@ -432,7 +438,6 @@ def _render_summary(pred_df: pd.DataFrame, results: dict[str, Any]) -> str:
     lines.append("| Condition | Exact agreement | N | k | Backend |")
     lines.append("|---|---:|---:|---:|---|")
     lines.append(f"| No-RAG | {a0:.1f}% | {n} | {k} | {backend} |")
-    lines.append(f"| RAG({ontology_key or 'ontology'}) | {a1:.1f}% | {n} | {k} | {backend} |")
     ttest = (results.get("inferential") or {}).get("paired_ttest_correctness") or {}
     if ttest:
         delta = float(ttest.get("mean_delta_agreement_points") or 0.0)
@@ -451,8 +456,6 @@ def _render_summary(pred_df: pd.DataFrame, results: dict[str, Any]) -> str:
     lines.append("")
     lines.append("## Parameters")
     lines.append("")
-    if ontology_key:
-        lines.append(f"- Ontology: {ontology_key}")
     if dataset_path:
         lines.append(f"- Dataset: {dataset_path}")
     lines.append(f"- Seed: {results['run']['seed']}")
@@ -500,10 +503,9 @@ def main() -> None:
         pass
 
     p = argparse.ArgumentParser(description="Official evaluation runner (exact agreement)")
-    p.add_argument("--ontology-key", default="ai_rheum", help="Key for onto_config.get_config (e.g., ai_rheum)")
     p.add_argument("--label-set", default="data/ai_rheum_label_set.json", help="Path to label set JSON")
-    p.add_argument("--dataset", default="data/seed_cases_ai_rheum.csv", help="Path to dataset CSV")
-    p.add_argument("--corpus", default="data/ai_rheum_corpus.jsonl", help="Path to corpus JSONL")
+    p.add_argument("--dataset", default="data/test_cases_v2.csv", help="Path to dataset CSV")
+    p.add_argument("--corpus", default="data/ai_rheum_corpus_v3.jsonl", help="Path to corpus JSONL")
     p.add_argument("--retriever-cache-dir", default="data/retriever_cache/ai_rheum", help="Retriever cache dir")
     p.add_argument("--results-dir", default="results", help="Results output directory")
     p.add_argument("--seed", type=int, default=DEFAULT_SEED)
@@ -527,7 +529,6 @@ def main() -> None:
         top_k=int(args.k),
         max_context_chars=int(args.max_context_chars),
         prefer_embeddings=str(args.retrieval) == "embeddings",
-        ontology_key=str(args.ontology_key),
         label_set_path=Path(args.label_set),
         dataset_path=Path(args.dataset),
         corpus_path=Path(args.corpus),

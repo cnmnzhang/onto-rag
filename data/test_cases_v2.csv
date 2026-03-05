@@ -1,0 +1,826 @@
+case_id,chart_text,gold_label,category,notes,ontology_support_level
+gen-001,"# PATIENT VIGNETTE
+
+**Chief Complaint:** Hand pain and morning stiffness for 8 weeks
+
+**History of Present Illness:**
+A 52-year-old woman presents with progressive symmetric polyarticular pain affecting her hands, wrists, and knees over the past 8 weeks. She reports severe morning stiffness lasting 90 minutes that gradually improves with activity throughout the day. She describes the joint pain as a deep ache with associated swelling. The patient denies any recent infections, tick exposure, or travel. She has experienced mild fatigue but denies fever, weight loss, or constitutional symptoms. She works as a school teacher and notes her symptoms are interfering with her ability to write and hold classroom materials.
+
+**Physical Examination:**
+Vital signs stable. General: well-appearing, no acute distress. Hands: warm, tender, and visibly swollen at the PIP joints (bilaterally, 2nd-5th digits) and MCP joints (bilaterally, 2nd-5th digits). Wrists swollen, warm, and tender to palpation. Knees: bilateral soft tissue swelling, warmth, and effusions palpable. No erythema over joints. No subcutaneous nodules. No skin rash. No oral ulcers. Cardiovascular and pulmonary exams unremarkable.
+
+**Laboratory Data:**
+- ESR: 48 mm/hr (normal <20)
+- CRP: 23 mg/L (normal <10)
+- RF: 78 IU/mL (normal <14)
+- Anti-CCP: 156 units/mL (normal <20)
+- ANA: Negative
+- CBC: Mild normocytic anemia (Hgb 10.8 g/dL)
+- Liver and renal function: normal
+- TSH: normal
+
+**Imaging:**
+Plain radiographs of hands and wrists: mild soft tissue swelling, no erosions or joint space narrowing at this time.
+
+**Assessment and Plan:**
+Symmetric polyarticular inflammatory arthritis with morning stiffness and laboratory evidence of inflammation. Starting DMARD therapy and low-dose corticosteroid bridge. Baseline hand X-rays obtained. Follow-up rh",http://purl.bioontology.org/ontology/AIR/DXRA,classic,Classic seropositive RA,rich
+gen-002,"**Chief Complaint:** ""My hands have been swelling on and off for about 8 months now, and I'm having trouble with my grip strength.""
+
+**History of Present Illness:**
+A 52-year-old woman presents with an 8-month history of intermittent swelling in her hands. She describes involvement of the PIP joints of both hands, with particular prominence in digits 2-4. She denies morning stiffness lasting longer than 20 minutes. Pain is moderate (5/10) and worse with gripping activities. She reports good functional capacity with ability to perform all ADLs without modification.
+
+The patient describes her symptoms as ""coming and going""—notably better on some weeks, worse on others, with no clear pattern. She denies any systemic symptoms, rashes, or photosensitivity. No recent infections or tick exposures. She works as a librarian and attributes some symptoms to her occupation.
+
+**Past Medical History:**
+Type 2 diabetes mellitus (HbA1c 7.1%), hypertension, hyperlipidemia. No prior autoimmune disease.
+
+**Medications:**
+Lisinopril 10 mg daily, metformin 1000 mg daily, atorvastatin 20 mg daily
+
+**Physical Examination:**
+Vital signs: BP 138/82, HR 74, RR 16, afebrile
+General: Alert, well-appearing
+Hands: Mild soft tissue swelling over bilateral PIP joints; no erythema or warmth appreciated; full active ROM with mild pain on flexion; grip strength 28 kg bilaterally (age-predicted ~35 kg)
+Wrists: Full painless ROM bilaterally
+Shoulders, elbows, knees, ankles: No synovitis
+Skin: No rashes, nodules, or other stigmata
+
+**Laboratory Investigations:**
+ESR: 18 mm/hr (normal <20)
+CRP: 4.2 mg/L (normal <3)
+RF (rheumatoid factor): 42 IU/mL (positive; normal <15)
+Anti-CCP: 78 units/mL (positive; normal <20)
+ANA: Negative
+Anti-d",http://purl.bioontology.org/ontology/AIR/DXRA,atypical,"Seronegative RA, atypical presentation",rich
+gen-003,"# Chief Complaint
+""My hands have been hurting and swelling for about 3 weeks now, especially in the mornings.""
+
+## History of Present Illness
+A 38-year-old woman presents with a 3-week history of progressive polyarticular joint pain and swelling. Symptoms began insidiously in her right index and middle fingers, followed within days by involvement of the left hand in a similar distribution. She describes marked morning stiffness lasting approximately 45 minutes that improves with activity. Pain is worse with gripping and fine motor tasks. She denies any recent infections, travel, or tick exposures. No preceding rash or systemic symptoms. She works as a nurse and attributes some symptoms to occupational strain, though she notes the symmetry is unusual for her previous repetitive strain injuries.
+
+## Physical Examination
+- General: Well-appearing, no fever
+- Hands: Symmetric soft tissue swelling over PIP and MCP joints bilaterally (right worse than left). Mild warmth noted on palpation of right MCP joints. No erythema. Mild pain with passive flexion. Unable to make tight fists bilaterally due to stiffness and discomfort.
+- Wrists: Mild effusion palpable bilaterally, tender to ulnar deviation
+- Other joints: Knees appear normal; no effusion appreciated. Feet without visible swelling. Shoulders, hips, spine without abnormality.
+- Skin: No rashes, nodules, or other lesions
+- Systemic: Lungs clear; normal heart sounds; no hepatosplenomegaly
+
+## Laboratory Results
+- ESR: 34 mm/hr (elevated)
+- CRP: 8.2 mg/L (mildly elevated)
+- RF: 12 IU/mL (negative; lab cutoff 14)
+- Anti-CCP: 8 units (negative; lab cutoff 20)
+- ANA: Negative
+- CBC: Normal
+- Comprehensive metabolic panel: Normal
+- Thyroid function: Normal
+
+## Imaging
+- X-rays of hands and wrists: No erosions, no juxta-articular osteopenia. Soft tissue swelling noted around MCPs and wrists. No findings to",http://purl.bioontology.org/ontology/AIR/DXRA,early,Early undifferentiated — may be RA,rich
+gen-004,"**PATIENT VIGNETTE**
+
+**Chief Complaint:** ""My hands are swollen and I've had a rash on my face for the past month""
+
+**History of Present Illness:**
+A 28-year-old woman presents with a 6-week history of progressive polyarticular joint pain and swelling. She reports symmetrical involvement of both hands, wrists, and knees. The arthritis is worse in the mornings, with stiffness lasting approximately 90 minutes. Two weeks into her symptoms, she developed a malar erythema that worsens with sun exposure. She also reports a painful ulcer in her hard palate that has persisted for 3 weeks. Additionally, she has experienced photosensitivity, with a pruritic eruption appearing on her forearms and dorsal hands after brief sun exposure.
+
+She reports constitutional symptoms including fatigue, low-grade fevers (maximum 38.4°C), and unintentional weight loss of 4 kg over 6 weeks. She notes hair loss over the past month, particularly from the frontal and temporal regions. She denies recent infections, sick contacts, or recent medication changes.
+
+**Past Medical History:**
+Unremarkable. No prior episodes of joint pain, rash, or systemic symptoms.
+
+**Social History:**
+Works as a graphic designer (indoor work). Non-smoker. Denies alcohol use. No recent travel.
+
+**Review of Systems:**
+Positive for: photosensitivity, oral ulcers, myalgias, malaise, occasional dyspnea on exertion. Denies chest pain, hemoptysis, or orthopnea.
+
+**Physical Examination:**
+- Vitals: BP 118/76, HR 88, RR 16, Temp 37.8°C
+- General: Alert, well-appearing woman with visible alopecia
+- Skin: Sharply demarcated erythema over malar eminences bilaterally, sparing the nasolabial folds; erythematous papules and plaques on dorsal forearms and hands; no scaling or follicular plugging noted
+- Mouth: Single 0.5 cm painful ulcer on hard palate; otherwise unremarkable
+- Joints: Soft tissue swelling",http://purl.bioontology.org/ontology/AIR/DXSLE,classic,Classic multi-system SLE,rich
+gen-005,"**PATIENT VIGNETTE**
+
+**Chief Complaint:** Recurrent fever and joint pain
+
+**History of Present Illness:**
+38-year-old African American woman presents with a 14-month history of intermittent polyarthralgia involving bilateral wrists, knees, and ankles. She describes the joint pain as migratory, typically lasting 3-5 days before resolving spontaneously, then recurring in different joints. She denies morning stiffness. Over the past 8 months, she has experienced recurrent low-grade fevers (37.8-38.5°C) occurring 2-3 times weekly, often accompanied by profound fatigue and unintentional weight loss of 8 kg. Three months ago, she developed a maculopapular rash across her cheeks and bridge of nose that worsens in sunlight. She reports a history of two miscarriages at 12 and 16 weeks gestation over the past 2 years with no identifiable obstetric causes.
+
+She denies oral ulcers, photosensitivity-induced skin lesions elsewhere, or Raynaud's phenomenon. No recent infections, sick contacts, or travel history. She takes ibuprofen as needed.
+
+**Physical Examination:**
+- Vital signs: Temperature 38.2°C, BP 128/82, HR 94, RR 16
+- General: Well-appearing, no acute distress
+- Skin: Symmetric erythematous maculopapular rash across malar regions and nasal bridge; no other rashes noted
+- Musculoskeletal: No joint swelling, warmth, or effusion on examination; full range of motion bilaterally
+- Cardiovascular: Regular rate and rhythm, no murmurs
+- Lungs: Clear to auscultation bilaterally
+- Neurologic: Alert and oriented, no focal deficits
+- Remainder: Unremarkable
+
+**Laboratory Results:**
+- ESR: 48 mm/hr
+- CRP: 2.1 mg/dL
+- CBC: WBC 3,200/μL (normal differential), Hgb 10.8 g/dL, Platelets 156,000/μL",http://purl.bioontology.org/ontology/AIR/DXSLE,atypical,SLE without typical rash,rich
+gen-006,"**PATIENT VIGNETTE**
+
+**Chief Complaint:** Joint pain and rash
+
+**History of Present Illness:**
+A 28-year-old woman presents with a 6-week history of polyarticular joint pain, primarily affecting her hands, wrists, and knees. She describes morning stiffness lasting approximately 45 minutes. She also reports a photosensitive rash that appeared 4 weeks ago on her cheeks and across the bridge of her nose after sun exposure at the beach, which partially improved with sunscreen use.
+
+She denies any recent infections, though she does report some fatigue and mild low-grade fevers (99.5-100.2°F) over the past 3 weeks. She has also noticed some hair loss when brushing over the last 2 weeks. She denies oral ulcers, chest pain, or shortness of breath.
+
+**Pertinent Negatives:**
+No Raynaud's phenomenon. No dry eyes or dry mouth. No photophobia.
+
+**Physical Examination:**
+- Vital signs: BP 118/76, HR 82, Temp 99.1°F
+- Skin: Erythematous, blanching macular rash across bilateral cheeks and nasal bridge; no other skin lesions
+- MSK: Swelling and tenderness over bilateral wrist joints, 2nd and 3rd MCPs, and bilateral knees; no synovitis in feet; full range of motion preserved in all joints
+- Cardiopulmonary: Regular rate and rhythm, lungs clear
+- Neurological: Grossly intact
+- No lymphadenopathy or splenomegaly
+
+**Laboratory Results:**
+- ESR: 32 mm/hr
+- CRP: 6.2 mg/L
+- RF: negative
+- Anti-CCP: negative
+- ANA: 1:160, homogeneous pattern
+- Anti-dsDNA: negative (pending repeat)
+- Anti-Smith: negative
+- C3: 98 mg/dL (normal 90-180)
+- C4: 21 mg/dL (normal 20-40)
+- CBC: Hgb 12.1 g/dL, WBC 6.2",http://purl.bioontology.org/ontology/AIR/DXSLE,early,Early incomplete SLE criteria,rich
+gen-007,"# CASE VIGNETTE
+
+**PRESENTING COMPLAINT:** ""My big toe is killing me – I can't even put a shoe on.""
+
+**HISTORY OF PRESENTING ILLNESS:**
+
+A 52-year-old male presents to the rheumatology clinic with a 4-day history of acute onset left first metatarsophalangeal (MTP) joint pain and swelling. He reports going to bed feeling completely well and waking at 3 AM with severe pain in the left big toe, described as ""the worst pain I've ever felt."" The joint has progressively worsened despite taking paracetamol. He denies any preceding trauma or injury.
+
+The patient reports a similar episode 18 months ago affecting the same joint, which resolved spontaneously over 7-10 days. He has had no intervening joint symptoms. He is not on any regular medications. He works as a financial advisor and is largely sedentary. He reports consuming 4-5 pints of beer on most evenings and admits to a heavy meal of red meat and shellfish the evening before symptom onset.
+
+**PHYSICAL EXAMINATION:**
+
+General: Alert, visibly uncomfortable, limping
+Vital signs: BP 148/92, HR 82 bpm, Temp 37.8°C
+Left foot: Marked erythema, swelling, and warmth over the first MTP joint. The joint is notably tender to palpation with severe pain on any passive or active movement. Skin over the joint appears shiny. No tophi palpated. No other joints affected.
+Remainder of musculoskeletal examination: Normal
+General examination: Obese (BMI 32). No stigmata of chronic liver disease. No nodules.
+
+**INVESTIGATIONS:**
+
+Serum uric acid: 8.2 mg/dL (normal <6.0)
+WBC: 13,200/μL
+CRP: 18 mg/L
+ESR: 28 mm/hr
+Renal function: Creatinine 1.1 mg/dL (eGFR 72), normal electrolytes
+LFTs: Normal, no evidence of hepatic dysfunction
+Synovial fluid analysis (joint aspiration): 42,000 WBC/",http://purl.bioontology.org/ontology/AIR/DXGT,classic,Classic acute podagra,rich
+gen-008,"**PATIENT VIGNETTE**
+
+**Chief Complaint:** Right knee swelling and stiffness for 3 days
+
+**History of Present Illness:**
+A 68-year-old male presents with a 3-day history of progressive swelling and pain in the right knee. He reports the onset was subacute, beginning with mild discomfort that gradually worsened over 72 hours rather than the sudden onset he experienced with previous acute episodes. The pain is now 7/10 at rest and 8/10 with weight-bearing. He denies fever or chills. He reports a 15-year history of similar episodes, predominantly affecting the first metatarsophalangeal joint, but notes this current presentation is unusual as it only involves the large joint without any concurrent podagra.
+
+**Past Medical History:**
+Hypertension (on amlodipine), type 2 diabetes (on metformin), chronic kidney disease stage 3b (baseline creatinine 1.8 mg/dL). Previous episodes treated with colchicine and NSAIDs with good response. Never started on uric acid-lowering therapy. Last acute episode was 18 months ago.
+
+**Physical Examination:**
+Temperature 37.1°C. Right knee examination reveals significant effusion (ballottement positive), erythema over the patella region, and severe limitation of range of motion (flexion to 60 degrees). No warmth appreciated on palpation. No other joints involved. Remainder of musculoskeletal exam unremarkable.
+
+**Laboratory Results:**
+Serum uric acid: 4.2 mg/dL (normal range 3.5-7.2)
+WBC: 11,200/μL
+CRP: 18 mg/L (normal <10)
+ESR: 22 mm/hr
+Creatinine: 1.9 mg/dL
+Synovial fluid analysis pending
+
+**Imaging:**
+Right knee X-ray: Small joint effusion, no chondrocalcinosis, no acute fracture.
+
+**Clinical Question:**
+What is your differential diagnosis and what would you do next?",http://purl.bioontology.org/ontology/AIR/DXGT,atypical,Gout in atypical joint,rich
+gen-009,"**CHIEF COMPLAINT**
+Left big toe pain for 2 days
+
+**HISTORY OF PRESENT ILLNESS**
+47-year-old male presents with acute-onset pain and swelling of the left first metatarsophalangeal joint beginning 2 days ago. He describes the pain as severe, 8/10, worse with walking and any pressure to the joint. He denies recent trauma but recalls eating a large seafood dinner 3 days ago. No fever, chills, or systemic symptoms. He has not experienced similar episodes previously. He took ibuprofen 400mg yesterday which provided minimal relief.
+
+**PAST MEDICAL HISTORY**
+Hypertension (on lisinopril 10mg daily), hyperlipidemia (on atorvastatin 20mg daily), obesity (BMI 31)
+
+**SOCIAL HISTORY**
+Works in finance, sedentary job. Drinks alcohol 5-6 units weekly. No recent travel.
+
+**EXAMINATION**
+Left first MTP joint: marked erythema, warmth, and tender swelling. Range of motion limited by pain. No other joints involved at this time. No tophi, nodules, or other skin findings. No significant lymphadenopathy. Temperature 37.1°C.
+
+**INVESTIGATIONS**
+- WBC: 11.2 × 10⁹/L
+- CRP: 34 mg/L
+- ESR: 18 mm/hr
+- Serum urate: 5.8 mg/dL (348 μmol/L)
+- Creatinine: 0.95 mg/dL
+- Joint aspiration not yet performed
+
+**ASSESSMENT**
+47-year-old male with acute monoarticular arthritis of the left first MTP joint. Differential diagnosis includes crystal arthropathy versus early reactive arthritis. Serum urate level currently normal. Awaiting synovial fluid analysis.",http://purl.bioontology.org/ontology/AIR/DXGT,early,"First episode, uric acid borderline",rich
+gen-010,"**PATIENT VIGNETTE**
+
+**Chief Complaint:** ""My hands and feet have been swelling and hurting for the past 4 months, and my skin has gotten worse.""
+
+**History of Present Illness:**
+A 42-year-old male presents with a 4-month history of progressive polyarticular joint pain and swelling. He reports onset in the third and fourth digits of both hands, with subsequent involvement of the feet, knees, and lower back. The pattern was asymmetric initially but has become more symmetric. Morning stiffness lasts approximately 90 minutes. He describes the joints as warm, swollen, and tender, with difficulty gripping and walking. Pain is worse in the mornings and improves somewhat with activity.
+
+Notably, the patient reports a long-standing history of psoriasis, initially presenting 8 years ago as scalp involvement, with recent progression to involve the extensor surfaces of both elbows and knees. He denies recent psoriasis flare, though he notes his skin lesions remain active.
+
+He denies photosensitivity, oral ulcers, dry eyes, or dry mouth. No recent infections. No chest pain or shortness of breath.
+
+**Physical Examination:**
+- General: Well-appearing, no distress
+- Skin: Erythematous, scaly plaques on scalp, bilateral elbows, and knees. No nail pitting or onycholysis noted
+- MSK: Swelling and tenderness over PIP joints (bilateral 2nd-4th digits), MCP joints (bilateral), wrists (bilateral), and both knees. Mild swelling of bilateral ankles. Reduced spinal flexion. **Dactylitis noted in the left third digit.** No joint deformities. Normal hand grip strength bilaterally
+- Remainder of exam unremarkable
+
+**Laboratory Findings:**
+- ESR: 38 mm/hr
+- CRP: 12.4 mg/L
+- RF: negative
+- Anti-CCP: negative
+- ANA: negative
+- HLA-B27: positive
+- CBC: Normal
+- Comprehensive metabolic panel: Normal
+
+**Imaging:**
+Hand radiographs show soft tissue swelling without erosions or juxta-articular osteop",http://purl.bioontology.org/ontology/AIR/DXPSO,classic,Classic PsA with skin disease,rich
+gen-011,"# PATIENT VIGNETTE
+
+**Chief Complaint:** Progressive joint pain and stiffness
+
+**History of Present Illness:**
+54-year-old female presents with an 8-month history of polyarticular joint pain and morning stiffness. Symptoms began insidiously in her hands and have progressively involved her knees, ankles, and shoulders. Morning stiffness lasts approximately 45 minutes. She reports significant functional impairment with difficulty opening jars and climbing stairs. She denies fever, weight loss, or constitutional symptoms.
+
+Notably, the patient has a 20-year history of well-controlled plaque psoriasis affecting her elbows and knees, for which she uses topical corticosteroids. However, she has experienced no recent exacerbation of skin disease, and her dermatologist notes the psoriatic plaques remain stable. She denies nail changes, oral ulcers, and eye symptoms.
+
+**Physical Examination:**
+Vital signs stable. Bilateral hand examination reveals swelling and tenderness of the PIP joints (index and middle fingers bilaterally) and wrist joints. No swelling of MCPs. Knees show effusions bilaterally with mild warmth. Ankles are swollen and tender. Notably, there is subtle dactylitis of the fourth toe on the right foot. No other skin lesions are appreciated on current exam. No nail pitting, onycholysis, or psoriasiform changes noted.
+
+**Laboratory Results:**
+- ESR: 32 mm/hr
+- CRP: 8.2 mg/L
+- RF: negative
+- Anti-CCP: negative
+- ANA: negative
+- HLA-B27: negative
+- CBC, renal function, liver function: within normal limits
+
+**Imaging:**
+Hand X-rays: mild periarticular osteopenia, no erosions. Knee X-rays: small bilateral effusions, no erosive changes.
+
+**Assessment:**
+Patient with polyarticular inflammatory arthritis affecting PIPs, wrists, knees, and ankles with morning stiffness and mild acute phase response. Seronegative. History of psoriasis present but currently quiescent without obvious cutaneous flare.",http://purl.bioontology.org/ontology/AIR/DXPSO,atypical,PsA without visible psoriasis,rich
+gen-012,"# Chief Complaint
+""Pain in my fingers and knees for the past 3 weeks""
+
+# History of Present Illness
+34-year-old woman presents with a 3-week history of symmetric pain and swelling affecting the second and third proximal interphalangeal joints of both hands, with morning stiffness lasting approximately 45 minutes. She reports associated swelling of both knees and pain on ambulation. Symptom onset was gradual, beginning in the right hand and progressing to bilateral involvement over 10 days. She denies fever, weight loss, or systemic symptoms. She notes occasional joint pain had been present intermittently for 2-3 months prior to this acute exacerbation. No recent viral illness that she recalls.
+
+# Past Medical History
+Generally healthy. No significant past medical history. Does not recall any prior joint complaints.
+
+# Family History
+Mother with osteoarthritis (age of onset unknown). No family history of autoimmune disease.
+
+# Social History
+Works as a receptionist. Denies smoking. Occasional alcohol use.
+
+# Review of Systems
+Denies rash, eye symptoms, mouth ulcers, or mucosal involvement. No GI symptoms. Denies constitutional symptoms.
+
+# Physical Examination
+- General: Well-appearing, no acute distress
+- Hands: Soft tissue swelling at PIPs bilaterally (right > left); no erythema or warmth appreciated on palpation
+- Knees: Mild effusion noted bilaterally; no erythema; mild pain with range of motion
+- Skin: No visible psoriasis, but patient notes she has had occasional dry patches on her elbows ""for years""—denies active skin disease
+- Nails: No pitting, onycholysis, or other abnormality noted on examination
+- Remainder of examination unremarkable
+
+# Investigations
+- ESR: 22 mm/hr (normal <20)
+- CRP: 8.2 mg/L (normal <3)
+- RF: Negative
+- Anti-CCP: Negative
+- ANA: Negative
+- CBC: Normal
+- Renal function: Normal
+- LFTs: Normal
+- Urinalysis: Normal
+
+# Assessment
+34-year-old",http://purl.bioontology.org/ontology/AIR/DXPSO,early,"Inflammatory arthritis, psoriasis family history only",rich
+gen-013,"# Chief Complaint
+""My back has been stiff and sore for the past 3 years, especially in the mornings.""
+
+## History of Present Illness
+28-year-old male presents with a 3-year history of progressive lower back pain and stiffness. Symptoms began insidiously in his mid-20s with morning stiffness lasting 45–60 minutes that improves with activity and a warm shower. Pain is predominantly in the lumbosacral region and buttocks, occasionally radiating to the lateral thigh but not below the knee. He reports significant morning stiffness that has gradually worsened over the past year. He notes improvement with NSAIDs (ibuprofen 800 mg three times daily) and with exercise, but stiffness recurs with prolonged inactivity or sitting. He denies night pain that wakes him from sleep, though he reports discomfort if he lies still for extended periods.
+
+Over the past 6 months, he has developed mild pain and swelling in both knees, worse after playing football. He also reports recent onset of mild anterior eye discomfort with photophobia occurring intermittently over the past 2 months, for which he has not yet sought ophthalmology evaluation.
+
+He denies fever, weight loss, or constitutional symptoms. No history of inflammatory bowel disease, psoriasis, or oral ulcers.
+
+## Past Medical History
+Unremarkable. No prior significant injuries or surgeries.
+
+## Family History
+Father diagnosed with ""chronic back problems"" at age 35, requiring ongoing management; specifics unknown to patient.
+
+## Social History
+Works as an accountant (sedentary job). Active in recreational sports (football 2–3 times weekly until recent months). Denies tobacco, alcohol use is moderate.
+
+## Review of Systems
+Denies rash, diarrhea, urethritis, or genital lesions. No oral ulcers. Denies chest pain or dyspnea.
+
+## Physical Examination
+- **Vital signs:** BP 118/76, HR 78, afebrile
+- **General:** Well-appearing young man, appropriate affect
+- **Musculoskeletal examination:**
+  - Cervical spine: full range of motion
+  - Lumbar spine: mark",http://purl.bioontology.org/ontology/AIR/DXANK,classic,Classic AS with sacroiliitis,rich
+gen-014,"**CHIEF COMPLAINT**
+Lower back stiffness and right knee swelling for 8 months
+
+**HISTORY OF PRESENT ILLNESS**
+42-year-old male presents with progressive lower back stiffness that is worse in the mornings, typically lasting 45-60 minutes and improving with activity. He reports that ibuprofen provides modest relief. Over the past 3 months, he has developed right knee swelling with pain on weight-bearing, though he denies any history of trauma. He notes occasional mild heel discomfort bilaterally but no other joint involvement. 
+
+Patient reports no preceding gastrointestinal or genitourinary symptoms. He has not had any documented uveitis or inflammatory eye symptoms. Denies psoriatic rashes or family history of psoriasis. Reports his father had ""arthritis of the spine"" but details are limited.
+
+**PAST MEDICAL HISTORY**
+Mild hypertension (controlled on lisinopril). No prior inflammatory arthropathy diagnoses.
+
+**SOCIAL HISTORY**
+Sedentary occupation as accountant. Non-smoker. Occasional alcohol use.
+
+**PHYSICAL EXAMINATION**
+- Vital signs: BP 138/84, HR 78, afebrile
+- Spine: Limited lumbar flexion (Schober test 4 cm, normal >5 cm). Cervical range of motion preserved. No costovertebral angle tenderness.
+- Joints: Right knee effusion present, mild warmth, range of motion 0-110 degrees (limited by pain). No other joints visibly swollen or tender.
+- Skin: No psoriatic lesions noted
+- Eyes: No conjunctival injection or anterior uveitis on gross inspection
+- Gastrointestinal: No oral ulcers appreciated
+
+**INVESTIGATIONS**
+- ESR: 22 mm/hr (normal <20)
+- CRP: 8.2 mg/L (normal <5)
+- HLA-B27: Positive
+- Rheumatoid factor: Negative
+- Anti-CCP: Negative
+- ANA: Negative
+- CBC: Normal
+- Comprehensive metabolic panel: Normal
+- Lumbar spine radiographs: Early bilateral sacroiliitis (grade",http://purl.bioontology.org/ontology/AIR/DXANK,atypical,AS presenting with peripheral arthritis,rich
+gen-015,"**PATIENT VIGNETTE**
+
+**Chief Complaint:** Lower back pain for 3 months
+
+**History of Present Illness:**
+A 24-year-old male presents with a 3-month history of progressive lower back pain and morning stiffness. The pain is localized to the lumbar spine and sacroiliac region, worse in the early morning (stiffness lasting approximately 45 minutes), and improves somewhat with activity and NSAIDs. He denies current joint swelling but reports mild discomfort in both knees intermittently over the past 6 weeks. He has no history of psoriasis, inflammatory bowel disease, or recent gastrointestinal symptoms. There is no documented history of uveitis, though he reports occasional eye discomfort attributed to allergies.
+
+**Family History:**
+Father with chronic back pain (onset age 32); no other family history of autoimmune or rheumatologic conditions documented.
+
+**Examination Findings:**
+- Vital signs stable, no fever
+- Spine: reduced lumbar flexion (fingertips 12 cm from floor on forward bend); bilateral sacroiliac tenderness elicited
+- Knees: no effusions, full range of motion, mild discomfort with palpation of joint lines
+- Peripheral joints: no swelling or warmth
+- Skin and nails: normal, no psoriatic plaques
+- Eyes: clear, no conjunctival injection
+
+**Investigations:**
+- ESR: 18 mm/hr (normal <10)
+- CRP: 7.2 mg/L (normal <3.0)
+- RF and anti-CCP: negative
+- ANA: negative
+- Complete blood count: normal
+- Comprehensive metabolic panel: normal
+- HLA-B27: positive
+- Sacroiliac radiographs: equivocal—possible early bilateral changes, but radiologist notes findings are not definitively diagnostic of inflammatory change
+
+**Assessment:**
+24-year-old man with 3 months of inflammatory back pain, sacroiliac tenderness, and mild elevated inflammatory markers. HLA-B27 positive. Imaging findings currently inconclusive. Differential diagnosis remains broad at this stage.",http://purl.bioontology.org/ontology/AIR/DXANK,early,"Early axial SpA, MRI not yet diagnostic",rich
+gen-016,"**CLINICAL VIGNETTE**
+
+**Chief Complaint:** ""I can barely get out of bed in the morning""
+
+**History of Present Illness:**
+A 68-year-old woman presents with a 6-week history of severe bilateral shoulder and hip pain with prominent morning stiffness. She reports that stiffness lasts approximately 90 minutes each morning, during which time she struggles to raise her arms to wash her hair or climb stairs. The pain is described as a deep ache rather than sharp, and is accompanied by significant functional limitation. She denies joint swelling but notes diffuse muscle tenderness over the shoulders and hip girdles. She reports concurrent low-grade fever (37.8°C) and unintentional weight loss of 3 kg over this period. She denies headache, scalp tenderness, or vision changes. Symptoms began acutely approximately 2 weeks after a viral upper respiratory infection.
+
+**Past Medical History:** 
+Hypertension (controlled on lisinopril), hyperlipidemia, osteoporosis
+
+**Medications:** 
+Lisinopril, atorvastatin, alendronate
+
+**Review of Systems:** 
+Denies jaw claudication, diplopia, or constitutional symptoms beyond fever and weight loss. Denies rash. No recent malignancy screening.
+
+**Physical Examination:**
+- General: Mild distress, moves slowly
+- Vitals: BP 142/88, HR 88, T 37.6°C
+- MSK: No synovitis on examination. Severe limitation of shoulder abduction and external rotation bilaterally. Hip flexion and abduction limited by pain. Marked tenderness to palpation over deltoids, supraspinatus, and gluteal musculature bilaterally. Cervical spine range of motion preserved.
+- Neurologic: Strength 5/5 throughout upper and lower extremities; reflexes intact and symmetric
+- Temporal arteries: Non-tender, normal pulsations bilaterally
+
+**Laboratory Studies:**
+- ESR: 54 mm/hr
+- CRP: 8.2 mg/dL (normal <0.3)
+- Hemoglobin: 10.8 g/dL (mild normocytic an",http://purl.bioontology.org/ontology/AIR/DXPMR,classic,Classic PMR with steroid response,rich
+gen-017,"# Chief Complaint
+""Stiffness and aching in my shoulders and hips""
+
+# History of Present Illness
+A 71-year-old woman presented to rheumatology clinic with a 6-week history of bilateral shoulder and hip pain with significant morning stiffness lasting 90 minutes. She reports progressive difficulty with overhead activities and rising from a chair. She denies any recent infections, malignancy screening was up to date, and she has no constitutional symptoms aside from mild fatigue. Notably, she has preserved grip strength bilaterally and denies any hand or wrist involvement.
+
+Her primary care physician initiated prednisone 15 mg daily two weeks ago with incomplete symptomatic improvement—she notes about 40% reduction in stiffness but ongoing hip discomfort, which is somewhat atypical for the expected dramatic response.
+
+# Past Medical History
+Hypertension (well-controlled on amlodipine), hyperlipidemia, osteoporosis diagnosed 3 years ago
+
+# Medications
+Amlodipine, atorvastatin, prednisone 15 mg daily, calcium/vitamin D supplementation
+
+# Physical Examination
+- General: Well-appearing, no acute distress
+- Vital signs: BP 138/82, HR 78, afebrile
+- Musculoskeletal: Pain with passive abduction of shoulders bilaterally; pain with hip flexion and internal rotation; no synovitis noted; full elbow and wrist range of motion without pain
+- Neurologic: 5/5 strength throughout, normal reflexes, no focal deficits
+
+# Laboratory Results
+- ESR: 48 mm/hr (reference <20)
+- CRP: 2.1 mg/dL (reference <0.3)
+- Complete metabolic panel: Normal
+- CBC: Mild normocytic anemia (Hgb 11.8 g/dL)
+- Rheumatoid factor: Negative
+- Anti-CCP antibodies: Negative
+- ANA: Negative
+- TSH: 2.1 mIU/L
+
+# Imaging
+Shoulder radiographs: Mild glenohumeral osteoarthritis bilaterally
+
+# Assessment
+71-year",http://purl.bioontology.org/ontology/AIR/DXPMR,atypical,PMR with normal ESR,rich
+gen-018,"**CHIEF COMPLAINT**
+""Stiffness and aching in my shoulders and hips for the past 3 weeks""
+
+**HISTORY OF PRESENT ILLNESS**
+A 67-year-old woman presents with a 3-week history of bilateral shoulder and hip pain with prominent morning stiffness. She reports the stiffness lasts approximately 45 minutes to an hour upon waking, gradually improving as she moves around. Pain is described as a deep ache rather than sharp. She has noticed difficulty combing her hair and rising from a seated position. No specific triggering injury recalled. She reports mild fatigue but denies fever, night sweats, or weight loss. Has been taking over-the-counter ibuprofen 400mg twice daily with modest benefit.
+
+**REVIEW OF SYSTEMS**
+Denies headache, visual disturbances, jaw claudication, or scalp tenderness. Denies polyarticular joint swelling. No respiratory or GI symptoms. Normal appetite. Sleep disrupted only by pain.
+
+**PAST MEDICAL HISTORY**
+Hypertension (well-controlled on lisinopril), hypothyroidism (on levothyroxine with TSH 2.1 mIU/L one month ago), osteoporosis diagnosed 2 years ago.
+
+**PHYSICAL EXAMINATION**
+Vital signs stable. General: well-appearing woman in no acute distress. 
+
+Musculoskeletal: Bilateral shoulder abduction limited to 110 degrees due to pain; internal rotation preserved. Hip flexion and external rotation mildly restricted bilaterally, painful at endpoints. No joint swelling, erythema, or warmth detected. Strength 5/5 throughout. Pain with resisted shoulder abduction bilaterally. Grip strength 28 kg left, 26 kg right (age-appropriate).
+
+Neurological: Normal.
+
+No temporal artery tenderness or scalp tenderness elicited.
+
+**INVESTIGATIONS**
+- ESR (Westergren): 42 mm/hr [normal <20]
+- CRP: 18 mg/L [normal <10]
+- CBC: Hemoglobin 12.8 g/dL, WBC 7.2 × 10⁹/L",http://purl.bioontology.org/ontology/AIR/DXPMR,early,"Proximal stiffness, workup incomplete",rich
+gen-019,"# Patient Vignette
+
+**Chief Complaint:** Acute right knee swelling and severe pain
+
+**History of Present Illness:**
+67-year-old male presented to the emergency department with a 36-hour history of acute onset right knee pain and swelling. He reports the pain began suddenly while he was watching television in the evening, with no preceding trauma. Pain is severe (8/10), worst with any knee movement, and partially responsive to ibuprofen. He denies recent travel, new medications, or dietary changes. He had a similar episode in his left knee 8 months ago that resolved over 5-7 days with NSAIDs, though he did not seek medical evaluation at that time.
+
+**Past Medical History:**
+Type 2 diabetes mellitus (on metformin), hypertension (on lisinopril), mild osteoarthritis of both knees noted on imaging 3 years ago.
+
+**Physical Examination:**
+- Vital signs stable, afebrile
+- Right knee: marked effusion, warmth, erythema, and severe tenderness to palpation; range of motion severely limited
+- Left knee: mild swelling, full passive range of motion, non-tender
+- Hands: bony enlargement at PIP and DIP joints bilaterally, consistent with osteoarthritis; no acute inflammation
+- No tophi, no gouty nodules noted
+
+**Laboratory Results:**
+- Serum uric acid: 5.2 mg/dL (normal: 3.5–7.2)
+- Serum creatinine: 1.1 mg/dL
+- WBC: 9,200/µL
+- CRP: 8.2 mg/dL (normal <3.0)
+- ESR: 14 mm/hr (normal <20)
+
+**Synovial Fluid Analysis (right knee arthrocentesis):**
+- WBC: 18,500/µL (polymorphonuclear predominance)
+- Glucose: 52 mg/dL (serum 118 mg/dL)
+- Protein: 4.8 g/dL
+- Crystals: rhomboid, positively birefringent intracellular crystals identified
+-",NONE,mimicker,Pseudogout — not gout despite acute monoarthritis,none
+gen-020,"**PATIENT VIGNETTE**
+
+**Patient:** 28-year-old male
+
+**Chief Complaint:** Progressive lower back pain and knee swelling over the past 6 weeks
+
+**History of Present Illness:**
+The patient presents with a 6-week history of insidious-onset lower back pain that he describes as worst in the morning, improving somewhat with activity. He reports morning stiffness lasting approximately 45 minutes. Three weeks into his back symptoms, he developed bilateral knee swelling and pain, worse on the right. He denies any preceding joint trauma. He reports that his symptoms have been progressively worsening and are significantly impacting his ability to work as a carpenter.
+
+When specifically questioned about preceding illness, the patient mentions he had a self-limited episode of diarrhea approximately 8 weeks ago that lasted 5 days. He recalls it was watery in character but denies bloody stools, fever, or sick contacts. He did not seek medical care at the time. He denies any urethral symptoms, uveitis, or oral ulcers.
+
+**Physical Examination:**
+- General: Alert, appears frustrated with symptoms
+- Musculoskeletal: Positive Schober test (3.5 cm excursion from baseline 25 cm); reduced lumbar flexion with fingertip-to-floor distance of 18 inches. Bilateral knee effusions, more prominent on the right (approximately 2 cm quadriceps circumference difference). No warmth or erythema. Knee flexion and extension are mildly limited by pain. No other peripheral joints involved.
+- Spine: Lumbar lordosis preserved; no costovertebral angle tenderness
+- Remainder of examination: Normal
+
+**Laboratory Findings:**
+- ESR: 34 mm/hr (reference <20)
+- CRP: 18 mg/L (reference <10)
+- HLA-B27: Positive
+- Rheumatoid Factor: Negative
+- Anti-CCP: Negative
+- ANA: Negative
+- Complete blood count: Mild leukocytosis at 11,200/μL; hemoglobin 14.2 g/dL
+- Comprehensive metabolic panel: Normal
+
+**Imaging:**
+- Lumbar",NONE,mimicker,Reactive arthritis — not in 6-label set,none
+gen-021,"# Patient Vignette
+
+**HPI:**
+A 52-year-old woman presents with a 6-week history of polyarthralgias and a new malar rash. She reports symmetric joint pain affecting bilateral wrists, MCPs, and knees, worse in the mornings with approximately 45 minutes of stiffness. Three weeks ago she developed a confluent erythematous rash across her cheeks and nose that worsens with sun exposure. She denies oral ulcers, photosensitivity prior to the rash, or Raynaud's phenomenon.
+
+**PMHx:**
+Hypertension for 8 years, recently treated with hydralazine 50 mg twice daily for approximately 3 months after amlodipine monotherapy proved insufficient. No prior autoimmune disease.
+
+**ROS:**
+Denies fever, weight loss, hair loss, or sicca symptoms. No pleurisy or dyspnea. Mild generalized malaise.
+
+**PE:**
+BP 142/88. Malar rash as described, non-blanching. Soft tissue swelling over bilateral wrist joints and MCPs. No oral ulcers. No lymphadenopathy. Lungs clear bilaterally. No signs of serositis.
+
+**Labs:**
+- ANA: 1:320, homogeneous pattern
+- Anti-dsDNA: Negative
+- Anti-Smith: Negative
+- Anti-histone: Pending
+- Anti-Ro/SSA, Anti-La/SSB: Negative
+- C3, C4: Normal
+- CBC: WBC 7.2, Hgb 12.8, Plt 245
+- CRP: 18 mg/L
+- ESR: 42 mm/hr
+- Comprehensive metabolic panel: Normal
+- Urinalysis: Negative for proteinuria and hematuria
+- Anti-CCP: Negative
+- RF: Negative
+
+**Imaging:**
+Hand radiographs: No erosions.
+
+**Assessment:**
+6-week-old presentation of polyarthritis with malar rash, positive ANA, and negative anti-dsDNA and anti-Smith antibodies.",NONE,mimicker,Drug-induced lupus — not true SLE,none
+gen-022,"**PATIENT VIGNETTE**
+
+**Chief Complaint:** ""My hands have been stiff and swollen for the past 8 months.""
+
+**History of Present Illness:**
+
+A 62-year-old woman presents with an 8-month history of progressive joint pain and swelling affecting her hands bilaterally. She reports that symptoms are worst in the morning, lasting approximately 45 minutes to 1 hour before gradually improving with activity throughout the day. She describes pain as aching in character, worse with repetitive gripping and fine motor tasks. Over the past 2 months, she has noticed visible swelling in several finger joints, particularly affecting the distal interphalangeal (DIP) joints of both hands, with some involvement of the proximal interphalangeal (PIP) joints.
+
+She denies systemic symptoms including fever, weight loss, or fatigue. She reports no skin rashes, dry eyes, or dry mouth. Symptoms have been gradually worsening with periods of relative stability.
+
+**Past Medical History:**
+
+Type 2 diabetes (well-controlled on metformin), hypertension, osteoporosis diagnosed 3 years ago. She had a right knee meniscectomy 15 years ago and reports chronic right knee pain with activity.
+
+**Social History:**
+
+Retired schoolteacher, lives with husband, denies smoking, minimal alcohol use. Reports hand-heavy hobbies including gardening and knitting.
+
+**Physical Examination:**
+
+- Vital signs stable, afebrile
+- General: Well-appearing, no distress
+- Hands: Bony enlargement and mild erythema noted at DIP joints bilaterally; swelling also present at PIP joints and first carpometacarpal (CMC) joints bilaterally. No palmar erythema. Grip strength 35 kg bilaterally (diminished but symmetric)
+- Joint count: Swelling and tenderness in 8 joints (bilateral DIP 2-5, bilateral PIP 2-3, bilateral first CMC)
+- Knees: Right knee with mild effusion, crepitus on range of motion; left knee unremarkable
+- No nodules on extensor surfaces
+- No synovitis noted in wrists or ankles
+- Remainder of exam unremarkable",NONE,mimicker,OA — mechanical not inflammatory,none
+gen-023,"**Chief Complaint:** ""I've had a fever and rash on and off for three months, and my joints have been really painful.""
+
+**History of Present Illness:**
+A 34-year-old woman presents with a three-month history of intermittent high fevers (documented up to 39.8°C), predominantly in late afternoons and evenings, often accompanied by an evanescent salmon-pink maculopapular rash on her trunk and proximal extremities. The rash appears during febrile episodes and resolves as fever subsides. She reports generalized arthralgia with objective swelling in her wrists, MCPs, PIPs, knees, and ankles bilaterally—approximately 12 joints involved. Morning stiffness lasts 45 minutes. She also describes severe fatigue, intermittent sore throat, and mild dyspnea on exertion. She denies photosensitivity, oral ulcers, or sicca symptoms.
+
+**Physical Examination:**
+Temperature 38.1°C. Symmetric swelling and warmth in wrist joints and PIP joints bilaterally. A faint pink maculopapular rash visible on shoulders and upper back. Soft, tender hepatomegaly palpated 2 cm below costal margin. Mild splenomegaly appreciated. No lymphadenopathy. Lungs clear to auscultation.
+
+**Laboratory Results:**
+WBC 14,200 (elevated), Hemoglobin 10.8 g/dL, Platelets 385,000 (elevated), ESR 68 mm/hr, CRP 12.5 mg/dL. AST 112 U/L, ALT 128 U/L. ANA negative. RF negative, anti-CCP negative. Complement levels normal. Ferritin 680 ng/mL. CBC differential shows neutrophil predominance at 78%.
+
+**Imaging:**
+X-rays of hands and feet show no erosions or joint space narrowing.",NONE,mimicker,Still's disease — not in label set,none
+gen-024,"**CHIEF COMPLAINT**
+""I'm exhausted all the time and my whole body aches.""
+
+**HISTORY OF PRESENT ILLNESS**
+45-year-old woman presents with an 8-month history of widespread musculoskeletal pain and severe fatigue. Symptoms began insidiously without preceding illness or trauma. Pain is diffuse, affecting shoulders, hips, knees, lower back, and neck. She describes it as a constant dull ache with superimposed sharp pain with movement. Morning stiffness lasts approximately 15–20 minutes and improves with activity. Sleep is severely disrupted; she reports waking 4–5 times nightly and feeling unrefreshed despite 8 hours in bed.
+
+The fatigue is profound, often requiring her to rest for 2–3 hours in the afternoon. She has difficulty concentrating at work and reports memory lapses. Over the past two months, she's experienced recurrent headaches (2–3 weekly) and has developed symptoms of low mood with anhedonia, though she denies suicidal ideation.
+
+Temperature control is problematic—she experiences night sweats several nights weekly, drenching her sheets, and reports frequent flushing. No recent weight loss or fever during daytime hours.
+
+**PAST MEDICAL HISTORY**
+Seasonal allergies. No prior psychiatric history. Menarche age 12; regular cycles until 6 months ago when they became irregular.
+
+**MEDICATIONS**
+Cetirizine as needed.
+
+**PHYSICAL EXAMINATION**
+Alert, appears fatigued. Vital signs: BP 128/82, HR 82, RR 16, Temp 37.0°C. No rashes. 
+
+Musculoskeletal exam: Full painless range of motion in all joints. No joint swelling, erythema, or warmth. Palpation of bilateral occiput, trapezius, supraspinatus, lateral epicondyles, gluteal muscles, and medial knee fat pads all reproducibly tender. No tender swelling in proximal interphalangeal joints or metacarpophalangeal joints. Grip strength 28 kg bilaterally (normal for her age/sex). Detailed neurological exam unremarkable including normal reflexes and gait.",NONE,none,Fibromyalgia — no inflammatory arthritis,none
+gen-025,"**CLINICAL VIGNETTE**
+
+**HPI:**
+A 52-year-old African American woman presents with a 3-week history of progressive bilateral knee and ankle pain, associated with mild morning stiffness lasting approximately 45 minutes. She denies recent trauma, fever, or systemic symptoms. She reports a new nonproductive cough for the past 2 weeks and occasional dyspnea on exertion, which she attributes to her sedentary lifestyle. She has noticed some facial flushing but denies night sweats or weight loss.
+
+**ROS:**
+Denies photosensitivity, oral ulcers, or dry eyes. No recent infections or sick contacts. Reports mild fatigue but attributes this to poor sleep from joint pain.
+
+**PMHx:**
+Hypertension (controlled on lisinopril). No prior arthralgias or arthritis. Denies autoimmune disease.
+
+**Physical Exam:**
+BP 138/82, HR 88, RR 18, afebrile. General: well-appearing. HEENT: no erythema nodosum noted. Lungs: clear to auscultation bilaterally. Cardiovascular: regular rate and rhythm. MSK: bilateral knee swelling and warmth (2+ effusions palpated), bilateral ankle joint line tenderness without significant swelling, 8/28 joints with evidence of inflammation. No tophi, nodules, or rashes noted.
+
+**Labs:**
+ESR 34 mm/hr, CRP 2.8 mg/dL. CBC, CMP, LFTs all normal. RF negative, ANA negative. Serum calcium 10.8 mg/dL. Chest X-ray ordered pending.
+
+**Assessment:**
+Polyarticular arthritis of knees and ankles with systemic features requiring evaluation for underlying etiology.",NONE,none,Sarcoidosis — not in label set,none
+gen-026,"**VIGNETTE**
+
+**Patient:** 67-year-old male
+
+**Chief Complaint:** Acute right knee swelling and inability to bear weight
+
+**History of Present Illness:**
+Mr. K. presented to the emergency department with a 36-hour history of acute right knee pain and swelling. He reports the onset was sudden while gardening, without preceding trauma. He denies recent travel, tick exposure, or constitutional symptoms. However, he does recall a small cut on his right shin sustained 5 days ago while working in the garden, which he treated with soap and water. He has not experienced fever, chills, or night sweats. He describes the pain as severe, 9/10, with inability to ambulate or flex the knee beyond 15 degrees.
+
+**Past Medical History:** Hypertension (controlled on lisinopril), type 2 diabetes (HbA1c 7.2%), osteoarthritis of both knees
+
+**Medications:** Lisinopril 10mg daily, metformin 1000mg twice daily
+
+**Physical Examination:**
+Vital signs: Temperature 37.1°C, HR 92, BP 148/82, RR 18
+Right knee: Significant effusion with ballottement present, erythema overlying the patella, warmth throughout joint, severe pain on passive range of motion, unable to tolerate full flexion or extension. No skin breakdown currently visible. Right shin: Small healing abrasion with slight surrounding erythema.
+Remainder of exam: No other joint involvement noted. No rash. Heart, lungs, abdomen unremarkable.
+
+**Laboratory Investigations:**
+WBC 11.4 (reference 4.5-11.0) K/µL
+CRP 8.2 mg/dL
+ESR 34 mm/hr
+Serum glucose 248 mg/dL
+
+**Imaging:**
+X-ray right knee: Large effusion, no fracture, no obvious joint space narrowing
+
+**Synovial Fluid Analysis (arthrocentesis):**
+Volume: 85 mL (straw-coloured)
+WBC: 18,500 cells/µL (92% neutrophils, 6% lymphocytes, 2% monoc",NONE,none,Bacterial arthritis — not in label set,none
+gen-027,"**PATIENT VIGNETTE**
+
+**Chief Complaint:** ""My hands have been swollen and stiff for about 3 weeks now.""
+
+**History of Present Illness:**
+A 42-year-old woman presents to rheumatology clinic with a 3-week history of symmetric swelling and morning stiffness in her hands. She reports the symptoms began acutely after a upper respiratory tract infection. Initially the small joints of both hands were affected, but over the past 10 days she has noticed swelling in both wrists and mild discomfort in her left knee.
+
+Morning stiffness lasts approximately 45 minutes. Pain is worse in the mornings and improves somewhat with activity and NSAIDs. She denies fever, recent weight loss, or constitutional symptoms. No history of recent travel, tick exposure, or sick contacts beyond the URI. She has no prior history of joint disease and takes no regular medications.
+
+**Physical Examination:**
+- General: Well-appearing, no fever (36.8°C)
+- Hands: Soft tissue swelling over the PIP and MCP joints bilaterally; notable swelling of wrists bilaterally
+- Knees: Left knee with mild effusion, no warmth
+- No rash, oral ulcers, or other mucosal involvement
+- Remainder of examination unremarkable
+
+**Investigations:**
+- ESR: 34 mm/hr (normal <20)
+- CRP: 18 mg/L (normal <10)
+- Rheumatoid factor: negative
+- Anti-CCP antibodies: negative
+- ANA: negative
+- Comprehensive metabolic panel: normal
+- Complete blood count: normal
+- ASO titer: 480 IU/mL (elevated; patient notes sore throat 4 weeks prior)
+
+**Assessment:**
+Patient with acute-onset symmetric polyarthritis involving small joints of the hands, wrists, and left knee with prominent morning stiffness and elevated acute phase reactants. Serologic markers for rheumatoid disease are negative. Timeline and presentation compatible with recent viral infection, though clinical picture of symmetric polyarthritis with prolonged morning stiffness warrants consideration of early inflammatory arthropathy. ASO elevation may represent recent streptococcal infection or incidental finding.",NONE,none,Genuinely ambiguous early presentation,none
+gen-028,"**CHIEF COMPLAINT**
+""My hands have been swollen and stiff for the past 8 weeks""
+
+**HISTORY OF PRESENT ILLNESS**
+A 52-year-old woman presents with an 8-week history of progressive polyarticular joint pain and swelling. Onset was insidious over 2-3 weeks affecting both hands symmetrically. She reports morning stiffness lasting approximately 45 minutes daily. Pain is worse with activity and improves modestly with rest and ibuprofen.
+
+Currently affected joints include bilateral PIP joints (2nd-5th digits), MCP joints (2nd-5th digits), and wrists. She also reports episodic swelling at the left DIP joint (index finger) for the past 3 weeks, which is tender to palpation. No involvement of knees, hips, or feet reported to date, though she notes mild ankle stiffness occasionally.
+
+She denies fever, weight loss, or constitutional symptoms. No current skin lesions, nail changes, or ocular symptoms.
+
+**PAST MEDICAL HISTORY**
+Hypertension (well-controlled on lisinopril)
+
+**FAMILY HISTORY**
+Mother with psoriasis diagnosed at age 48; maternal uncle with ""arthritis""
+
+**MEDICATIONS**
+Lisinopril 10 mg daily; ibuprofen 400 mg PRN
+
+**PHYSICAL EXAMINATION**
+- General: Well-appearing, no acute distress
+- Hands: Bilateral symmetric soft tissue swelling of PIP joints (2nd-5th digits) and MCP joints (2nd-5th digits), bilaterally tender to palpation. Left index DIP joint mildly swollen and tender. No erythema or warmth. No visible psoriatic plaques or nail pitting on inspection of nails and skin.
+- Wrists: Mild bilateral swelling and tenderness, particularly on dorsal aspect. No subluxation or deformity.
+- Other joints: No synovitis in knees, ankles, or feet on examination
+- Skin and nails: No psoriatic plaques, patches, or nail dystrophy visible
+- Remainder of examination: Unremarkable
+
+**LABORATORY FINDINGS**
+- ESR: 32",http://purl.bioontology.org/ontology/AIR/DXRA|http://purl.bioontology.org/ontology/AIR/DXPSO,ambiguous,"RA vs PSA — shared features, DIP and family Hx favour PSA but serology pending",rich
+gen-029,"**CASE VIGNETTE**
+
+**History of Present Illness:**
+
+Mrs. Eleanor Davies is a 68-year-old retired schoolteacher presenting with an 8-week history of bilateral shoulder and hip pain. She reports severe stiffness upon waking, lasting approximately 90 minutes, which gradually improves with movement throughout the morning. She describes the discomfort as a deep aching in both shoulders and buttocks, making it difficult to rise from a chair and reach overhead. She denies joint swelling but notes generalized fatigue and has lost 4 pounds unintentionally over the past two months. No recent infections, malignancy history, or constitutional symptoms beyond fatigue.
+
+**Past Medical History:**
+
+Hypertension (controlled on lisinopril), hypothyroidism, osteoporosis on alendronate.
+
+**Physical Examination:**
+
+Vital signs stable. General: alert, no distress. Musculoskeletal exam reveals symmetric limitation of shoulder abduction and hip flexion bilaterally, with pain at extremes of motion. No warmth, swelling, or erythema appreciated in shoulders, hips, or hands. No synovitis of small joints. Grip strength 5/5 bilaterally. Normal neurological exam.
+
+**Laboratory Studies:**
+
+ESR: 44 mm/hr (normal <20)
+CRP: 8.2 mg/L (normal <3)
+Rheumatoid factor: 1:40 (weak positive; normal negative)
+Anti-CCP: negative
+CBC: mild normocytic anemia (Hgb 11.4 g/dL)
+Comprehensive metabolic panel: normal
+TSH: 2.1 mIU/L (on current levothyroxine dose)
+
+**Imaging:**
+
+Shoulder radiographs: no erosions, joint space preservation.
+
+**Clinical Assessment:**
+
+68-year-old woman with bilateral proximal muscle girdle pain, prominent morning stiffness, elevated inflammatory markers, and mild anemia. Weak rheumatoid factor positivity noted. Clinical examination does not demonstrate synovitis. Diagnostic uncertainty exists regarding the underlying etiology.",http://purl.bioontology.org/ontology/AIR/DXPMR|http://purl.bioontology.org/ontology/AIR/DXRA,ambiguous,PMR vs RA — proximal stiffness and weak RF; key distinguisher is synovitis pattern,rich
+gen-030,"**PATIENT VIGNETTE**
+
+**Chief Complaint:** ""I've been aching all over for the past 4 months and I'm exhausted.""
+
+**History of Present Illness:**
+A 65-year-old woman presents with a 4-month history of progressive bilateral shoulder and hip pain, described as a deep aching and stiffness. She reports particular difficulty with overhead activities and rising from a chair. The pain is accompanied by profound fatigue that limits her usual activities. She denies joint swelling but notes morning stiffness lasting approximately 30-45 minutes in the shoulders and hips.
+
+She also describes widespread musculoskeletal discomfort affecting her neck, low back, and bilateral thighs. Sleep is significantly disturbed; she reports waking multiple times nightly and difficulty falling back asleep. She has noticed occasional night sweats but denies fever, weight loss, or constitutional symptoms. No recent infections or new medications.
+
+**Physical Examination:**
+- Vital signs stable, afebrile
+- No synovitis, erythema, or warmth in any joints
+- Shoulder abduction and hip flexion mildly limited by patient report of pain, but full passive range of motion preserved
+- Tender points elicited across the trapezius, supraspinatus, lateral epicondyles, and greater trochanters bilaterally
+- No focal muscle atrophy or weakness
+- Remainder of examination unremarkable
+
+**Laboratory Findings:**
+- ESR: 18 mm/hour (normal <20)
+- CRP: 4 mg/L (normal <10)
+- Complete blood count: normal
+- Comprehensive metabolic panel: normal
+- Thyroid-stimulating hormone: normal
+- Rheumatoid factor and anti-CCP: negative
+- Antinuclear antibody: negative
+
+**Assessment:**
+65-year-old woman with 4-month history of bilateral shoulder and hip girdle pain with fatigue and sleep disturbance. Inflammatory markers only mildly elevated or borderline normal. No clinical evidence of synovitis. Widespread tender points noted on examination. Differential diagnosis remains broad given overlapping clinical features.",http://purl.bioontology.org/ontology/AIR/DXPMR|NONE,ambiguous,PMR vs fibromyalgia — normal ESR makes PMR uncertain; critical teaching case,rich
