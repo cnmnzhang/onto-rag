@@ -1,8 +1,3 @@
-"""
-TCO RAG Comparison - Source Package
-
-This package contains the implementation of ontology-grounded RAG
-for medical differential diagnosis.
-"""
+"""Source package for ontology-grounded RAG evaluation tooling."""
 
 __version__ = "1.0.0"

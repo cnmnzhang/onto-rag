@@ -1,0 +1,43 @@
+{
+  "run": {
+    "timestamp": "2026-03-11T08:16:38.701724+00:00",
+    "git_commit": "010a0da91de9c2c0bc75028390f054050b91c465",
+    "model_backend": "anthropic",
+    "model_name": "claude-haiku-4-5-20251001",
+    "k": 5,
+    "seed": 42,
+    "n_cases": 30,
+    "dataset_path": "data/test_cases_v2.csv",
+    "label_set_path": "data/ai_rheum_label_set.json",
+    "corpus_path": "data/ai_rheum_corpus_v3.jsonl",
+    "retriever_cache_dir": "data/retriever_cache/ai_rheum",
+    "retriever_model_cache_dir": "data/retriever_cache/ai_rheum/BAAI-bge-small-en-v1.5",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "retrieval_mode": "embeddings"
+  },
+  "metrics": {
+    "agreement_no_rag": 33.333333333333336,
+    "agreement_rag": 33.333333333333336,
+    "n_cases": 30
+  },
+  "inferential": {
+    "paired_ttest_correctness": {
+      "available": true,
+      "method": "paired_ttest_on_binary_correctness",
+      "n_cases": 30,
+      "improved_cases": 0,
+      "worse_cases": 0,
+      "unchanged_cases": 30,
+      "mean_delta_correctness": 0.0,
+      "mean_delta_agreement_points": 0.0,
+      "degrees_freedom": 29,
+      "t_stat": 0.0,
+      "p_value": 1.0,
+      "library": "degenerate_closed_form"
+    }
+  },
+  "coercions": {
+    "coerced_invalid_labels_no_rag": 0,
+    "coerced_invalid_labels_rag": 0
+  }
+}

@@ -1,0 +1,845 @@
+{
+  "timestamp": "2026-03-06T01:08:30.477Z",
+  "cases": [
+    {
+      "case_id": "gen-001",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": 5,
+            "completeness": 5,
+            "reasoning": 5,
+            "reasoning_transparency": 5,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": 5,
+            "completeness": 1,
+            "reasoning": 5,
+            "reasoning_transparency": 5,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "A"
+    },
+    {
+      "case_id": "gen-002",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 4,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 3,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "A_slight"
+    },
+    {
+      "case_id": "gen-003",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 3,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 3,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "B_slight"
+    },
+    {
+      "case_id": "gen-004",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 4,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 2,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "A"
+    },
+    {
+      "case_id": "gen-005",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 3,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 4,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "B_slight"
+    },
+    {
+      "case_id": "gen-006",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 4,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 4,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "equal"
+    },
+    {
+      "case_id": "gen-007",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 2,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "A"
+    },
+    {
+      "case_id": "gen-008",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 2,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "A"
+    },
+    {
+      "case_id": "gen-009",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "equal"
+    },
+    {
+      "case_id": "gen-010",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 4,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "B_slight"
+    },
+    {
+      "case_id": "gen-011",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 4,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 4,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "equal"
+    },
+    {
+      "case_id": "gen-012",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "equal"
+    },
+    {
+      "case_id": "gen-013",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 4,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "A"
+    },
+    {
+      "case_id": "gen-014",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "equal"
+    },
+    {
+      "case_id": "gen-015",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 3,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 2,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "equal"
+    },
+    {
+      "case_id": "gen-016",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 3,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "B"
+    },
+    {
+      "case_id": "gen-017",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 3,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 4,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "B"
+    },
+    {
+      "case_id": "gen-018",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 3,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "B"
+    },
+    {
+      "case_id": "gen-019",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "equal"
+    },
+    {
+      "case_id": "gen-020",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 4,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 2,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "A"
+    },
+    {
+      "case_id": "gen-021",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 4,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 4,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "equal"
+    },
+    {
+      "case_id": "gen-022",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "B_slight"
+    },
+    {
+      "case_id": "gen-023",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "equal"
+    },
+    {
+      "case_id": "gen-024",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "A_slight"
+    },
+    {
+      "case_id": "gen-025",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 3,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "A"
+    },
+    {
+      "case_id": "gen-026",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 3,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 3,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "equal"
+    },
+    {
+      "case_id": "gen-027",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 4,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "B"
+    },
+    {
+      "case_id": "gen-028",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": null,
+            "reasoning": 4,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": null,
+            "reasoning": 4,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "A_slight"
+    },
+    {
+      "case_id": "gen-029",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "A_slight"
+    },
+    {
+      "case_id": "gen-030",
+      "responses": {
+        "A": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        },
+        "B": {
+          "ratings": {
+            "accuracy": null,
+            "completeness": 5,
+            "reasoning": null,
+            "reasoning_transparency": null,
+            "calibration": null,
+            "utility": null
+          },
+          "comment": ""
+        }
+      },
+      "preference": "A_slight"
+    }
+  ]
+}

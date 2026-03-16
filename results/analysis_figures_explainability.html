@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rheumatology RAG Evaluation — Completeness</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+body { font-family: sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; background:#fafafa; }
+h1 { color: #1a3a5c; }
+h2 { color: #2c5f8a; margin-top: 30px; }
+.chart-container { background: white; border-radius: 8px; padding: 20px; margin: 20px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+.summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 20px 0; }
+.metric-card { background: white; border-radius: 8px; padding: 16px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+.metric-card .value { font-size: 2em; font-weight: bold; color: #1a3a5c; }
+.metric-card .label { font-size: 0.85em; color: #666; margin-top: 4px; }
+.delta-pos { color: #27ae60; }
+.delta-neg { color: #e74c3c; }
+</style>
+</head>
+<body>
+<h1>🩺 RAG vs No-RAG — Differential Completeness</h1>
+
+<h2>Completeness Score Comparison</h2>
+<div class="chart-container">
+  <canvas id="dimChart" height="80"></canvas>
+</div>
+
+<h2>Completeness Delta (RAG − No-RAG)</h2>
+<div class="chart-container">
+  <canvas id="deltaChart" height="60"></canvas>
+</div>
+
+<h2>Overall Preference</h2>
+<div class="summary-grid">
+  <div class="metric-card"><div class="value delta-pos">9</div><div class="label">Prefer RAG</div></div>
+  <div class="metric-card"><div class="value">10</div><div class="label">Equal</div></div>
+  <div class="metric-card"><div class="value delta-neg">11</div><div class="label">Prefer No-RAG</div></div>
+  <div class="metric-card"><div class="value">-0.05</div><div class="label">Mean RAG Pref Score</div></div>
+</div>
+
+<script>
+const dims = ["Differential Completeness"];
+const ragMeans = [4.0344827586206895];
+const noRagMeans = [4.068965517241379];
+const deltas = ragMeans.map((v, i) => +(v - noRagMeans[i]).toFixed(3));
+
+new Chart(document.getElementById('dimChart'), {
+  type: 'bar',
+  data: {
+    labels: dims,
+    datasets: [
+      { label: 'RAG', data: ragMeans, backgroundColor: '#2c5f8a', borderRadius: 4 },
+      { label: 'No-RAG', data: noRagMeans, backgroundColor: '#a8c5df', borderRadius: 4 },
+    ]
+  },
+  options: {
+    plugins: { legend: { position: 'top' } },
+    scales: {
+      y: { min: 0, max: 5, title: { display: true, text: 'Mean Rating (1–5)' } },
+    }
+  }
+});
+
+new Chart(document.getElementById('deltaChart'), {
+  type: 'bar',
+  data: {
+    labels: dims,
+    datasets: [{
+      label: 'Delta (RAG − No-RAG)',
+      data: deltas,
+      backgroundColor: deltas.map(d => d >= 0 ? '#27ae60' : '#e74c3c'),
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    plugins: { legend: { position: 'top' } },
+    scales: {
+      y: { title: { display: true, text: 'Score Delta' } },
+    }
+  }
+});
+</script>
+</body>
+</html>
