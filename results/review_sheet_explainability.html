@@ -27,15 +27,37 @@ h3 { color: #2c5f8a; }
 .rating-row { margin: 10px 0; }
 .rating-row label { display: block; font-size: 0.88em; font-weight: bold; color: #333; margin-bottom: 4px; }
 .rating-row .description { font-size: 0.80em; color: #666; margin-bottom: 6px; font-style: italic; }
-.star-row { display: flex; gap: 8px; align-items: center; }
-.star-row input[type=radio] { display: none; }
-.star-row label.star { font-size: 1.6em; cursor: pointer; color: #ccc; transition: color 0.15s; }
-.star-row input[type=radio]:checked ~ label.star,
+.star-row {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  gap: 8px;
+}
+
+.star-row input[type="radio"] {
+  display: none;
+}
+
+.star-row label.star {
+  font-size: 1.6em;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+/* hover */
 .star-row label.star:hover,
-.star-row label.star:hover ~ label.star { color: #f5a623; }
-.star-row { flex-direction: row-reverse; justify-content: flex-end; }
-.star-row label.star:hover,
-.star-row label.star:hover ~ label.star { color: #f5a623; }
+.star-row label.star:hover ~ label.star {
+  color: #f5a623;
+}
+
+/* selected */
+.star-row input[type="radio"]:checked ~ label.star {
+  color: #f5a623;
+}
+
+
+
+
 .comment-box { width: 100%; box-sizing: border-box; font-size: 0.85em; padding: 8px; border: 1px solid #ccc; border-radius: 4px; resize: vertical; min-height: 60px; margin-top: 8px; font-family: inherit; }
 .instructions { background: #fff8e1; border: 1px solid #f5d060; border-radius: 8px; padding: 18px; margin: 20px 0; font-size: 0.92em; line-height: 1.6; }
 .instructions h3 { margin-top: 0; color: #7a5c00; }

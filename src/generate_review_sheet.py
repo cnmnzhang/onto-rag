@@ -229,7 +229,7 @@ def _preference_html(case_id: str) -> str:
 def generate_review_sheet(
     responses_path: Path,
     output_dir: Path,
-    model_key: str = "minilm",
+    model_key: str = "bge",
     seed: int = 42,
     task: str = "explainability",
 ) -> None:

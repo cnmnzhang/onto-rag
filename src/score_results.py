@@ -27,14 +27,9 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-DIMENSIONS = ["accuracy", "completeness", "reasoning", "reasoning_transparency", "calibration", "utility"]
+DIMENSIONS = ["completeness"]
 DIM_LABELS = {
-    "accuracy": "Diagnostic Accuracy",
-    "completeness": "Differential Completeness", 
-    "reasoning": "Reasoning Quality",
-    "reasoning_transparency": "Reasoning Transparency",
-    "calibration": "Calibration",
-    "utility": "Clinical Utility",
+    "completeness": "Differential Completeness",
 }
 
 PREFERENCE_MAP = {
@@ -185,12 +180,12 @@ def render_summary(scored_df: pd.DataFrame, analysis: dict, key: dict) -> str:
     n_cases = scored_df["case_id"].nunique()
 
     lines = [
-        "# RAG vs No-RAG: Clinician Evaluation Results",
+        "# RAG vs No-RAG: Clinician Evaluation Results (Completeness)",
         "",
         f"**Embedding model:** {model_key}  ",
         f"**Cases evaluated:** {n_cases}  ",
         "",
-        "## Dimension Scores (1–5 scale)",
+        "## Completeness Score (1–5 scale)",
         "",
         "| Dimension | RAG Mean | No-RAG Mean | Delta | Test | Result |",
         "|---|---:|---:|---:|---|---|",
@@ -217,7 +212,7 @@ def render_summary(scored_df: pd.DataFrame, analysis: dict, key: dict) -> str:
         "",
         "## Interpretation",
         "",
-        "Dimensions where RAG delta > 0 indicate the ontology-grounded response "
+        "A positive completeness delta indicates the ontology-grounded response "
         "was rated higher by the clinician. Statistical significance at p<0.05 is marked with *.",
         "",
         "**Note:** With small N, effect sizes are more meaningful than p-values. "
@@ -227,12 +222,12 @@ def render_summary(scored_df: pd.DataFrame, analysis: dict, key: dict) -> str:
         "",
     ]
 
-    # Add any per-case comments
     for _, row in scored_df.iterrows():
         if row.get("comment", "").strip():
             lines.append(f"- Case {row['case_id']} (Response {row['letter']}, {row['condition']}): {row['comment']}")
 
     return "\n".join(lines)
+
 
 def auto_explainability_score(responses_path: Path, task: str = "explainability") -> pd.DataFrame:
     """
@@ -245,11 +240,10 @@ def auto_explainability_score(responses_path: Path, task: str = "explainability"
     no_rag_col = f"{task}_no_rag"
     rag_col = f"{task}_rag"
 
-    # Fall back to legacy column names if task-specific ones don't exist
     if rag_col not in df.columns and "response_rag" in df.columns:
         rag_col, no_rag_col = "response_rag", "response_no_rag"
         print(f"  [AutoScore] Using legacy column names (response_rag / response_no_rag)")
-    
+
     ontology_markers = [
         r"per ontology",
         r"ontology (class|concept|grounding|knowledge)",
@@ -263,7 +257,7 @@ def auto_explainability_score(responses_path: Path, task: str = "explainability"
         r"diagnostic criterion for",
     ]
     pattern = re.compile("|".join(ontology_markers), re.IGNORECASE)
-    
+
     rows = []
     for _, row in df.iterrows():
         rag_hits = len(pattern.findall(str(row[rag_col])))
@@ -275,7 +269,7 @@ def auto_explainability_score(responses_path: Path, task: str = "explainability"
             "no_rag_ontology_citations": no_rag_hits,
             "delta_citations": rag_hits - no_rag_hits,
         })
-    
+
     result = pd.DataFrame(rows)
     print("\nAuto Explainability (ontology citation count):")
     print(f"  Mean RAG citations:    {result['rag_ontology_citations'].mean():.2f}")
@@ -296,7 +290,7 @@ def render_html_charts(scored_df: pd.DataFrame, analysis: dict) -> str:
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Rheumatology RAG Evaluation Results</title>
+<title>Rheumatology RAG Evaluation — Completeness</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
 body {{ font-family: sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; background:#fafafa; }}
@@ -312,14 +306,14 @@ h2 {{ color: #2c5f8a; margin-top: 30px; }}
 </style>
 </head>
 <body>
-<h1>🩺 RAG vs No-RAG — Clinician Evaluation Results</h1>
+<h1>🩺 RAG vs No-RAG — Differential Completeness</h1>
 
-<h2>Dimension Comparison</h2>
+<h2>Completeness Score Comparison</h2>
 <div class="chart-container">
   <canvas id="dimChart" height="80"></canvas>
 </div>
 
-<h2>Per-Dimension Deltas (RAG − No-RAG)</h2>
+<h2>Completeness Delta (RAG − No-RAG)</h2>
 <div class="chart-container">
   <canvas id="deltaChart" height="60"></canvas>
 </div>
@@ -423,7 +417,7 @@ def main() -> None:
     print(f"[Score] Saved: {charts_path}")
 
     print(f"\n{'='*50}")
-    print("RESULTS SUMMARY")
+    print("COMPLETENESS RESULTS SUMMARY")
     print(f"{'='*50}")
     for dim in DIMENSIONS:
         r = analysis[dim]
@@ -436,7 +430,7 @@ def main() -> None:
     pref = analysis.get("preference", {})
     print(f"\n  Overall preference: RAG={pref.get('n_prefer_rag',0)}, "
           f"Equal={pref.get('n_equal',0)}, No-RAG={pref.get('n_prefer_no_rag',0)}")
-    
+
     auto_df = auto_explainability_score(Path("results/all_responses.csv"), task=args.task)
     auto_df.to_csv(output_dir / f"explainability_auto_{args.task}.csv", index=False)
 
